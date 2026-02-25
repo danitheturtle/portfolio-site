@@ -1,15 +1,35 @@
 ---
 export interface Props {
-    variant?: 'primary' | 'secondary' | 'text'
-    size?: 'sm' | 'md' | 'lg'
-    density?: 'compact' | 'normal' | 'comfortable'
+  variant?: 'primary' | 'secondary' | 'text';
+  size?: 'sm' | 'md' | 'lg';
+  density?: 'compact' | 'normal' | 'comfortable';
+  class?: string;
+  as?: string;
 }
 const {
-    variant = "secondary",
-    size = "md",
-    density = "normal"
-} = Astro.props
-
+  as: Component = 'button',
+  variant = 'secondary',
+  size = 'md',
+  density = 'normal',
+  class: className,
+  ...rest
+} = Astro.props;
 ---
 
-<button class='btn'><slot /></button>
+<Component
+  class:list={[
+    'btn',
+    {
+      'btn-primary': variant === 'primary',
+      'btn-text': variant === 'text',
+      'btn-sm': size === 'sm',
+      'btn-lg': size === 'lg',
+      'btn-compact': density === 'compact',
+      'btn-comfortable': density === 'comfortable',
+    },
+    className,
+  ]}
+  {...rest}
+>
+  <slot />
+</Component>

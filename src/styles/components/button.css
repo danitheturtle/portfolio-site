@@ -1,0 +1,66 @@
+.btn {
+  --btn-density-x: 1;
+  --btn-density-y: 1;
+  --btn-px: calc(var(--spacing) * 6);
+  --btn-height: calc(var(--spacing) * 10);
+
+  @apply rounded-lg border-2 border-primary text-center align-middle font-sans text-md font-bold text-primary uppercase no-underline;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:focus-visible {
+    @apply bg-primary text-on-primary;
+  }
+
+  &:active {
+    @apply ring-1 ring-primary;
+  }
+
+  &.btn-primary {
+    @apply bg-primary text-on-primary;
+    &:hover,
+    &:focus-visible {
+      --tw-ring-color: var(--color-primary-lighten);
+      background-color: var(--color-primary-lighten);
+      border-color: var(--color-primary-lighten);
+    }
+  }
+
+  &.btn-compact {
+    --btn-density-x: 0.5;
+    --btn-density-y: 0.75;
+  }
+  &.btn-comfortable {
+    --btn-density-x: 1.5;
+    --btn-density-y: 1.25;
+  }
+  &.btn-sm {
+    --btn-px: calc(var(--spacing) * 4);
+    --btn-height: calc(var(--spacing) * 8);
+  }
+  &.btn-lg {
+    --btn-px: calc(var(--spacing) * 8);
+    --btn-height: calc(var(--spacing) * 12);
+  }
+
+  &.btn-text {
+    @apply border-none;
+    --btn-px: calc(var(--btn-height) / 2);
+    --btn-density-x: 1.0;
+    &.btn-compact {
+    --btn-px: calc(var(--btn-height) / 4);
+    }
+  }
+
+  padding-left: calc(var(--btn-px) * var(--btn-density-x));
+  padding-right: calc(var(--btn-px) * var(--btn-density-x));
+  height: calc(var(--btn-height) * var(--btn-density-y));
+}
+nav > .btn {
+  border-radius: 0;
+  border: none;
+  height: inherit;
+}

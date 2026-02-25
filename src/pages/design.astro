@@ -7,8 +7,38 @@ const displayString = 'The quick brown fox jumps over the lazy dog';
 ---
 
 <MainLayout>
-  <div class="pt-4">
-    <Button>Button</Button>
+  <div class="flex flex-row items-start gap-2 pt-4">
+    <Button density="compact" variant="primary" size="lg">Primary</Button>
+    <Button density="compact" variant="primary" size="md">Primary</Button>
+    <Button density="compact" variant="primary" size="sm">Primary</Button>
+    <Button density="compact" size="lg">Secondary</Button>
+    <Button density="compact" size="md">Secondary</Button>
+    <Button density="compact" size="sm">Secondary</Button>
+    <Button density="compact" variant="text" size="lg">Text</Button>
+    <Button density="compact" variant="text" size="md">Text</Button>
+    <Button density="compact" variant="text" size="sm">Text</Button>
+  </div>
+  <div class="flex flex-row items-start gap-2 pt-4">
+    <Button variant="primary" size="lg">Primary</Button>
+    <Button variant="primary" size="md">Primary</Button>
+    <Button variant="primary" size="sm">Primary</Button>
+    <Button size="lg">Secondary</Button>
+    <Button size="md">Secondary</Button>
+    <Button size="sm">Secondary</Button>
+    <Button variant="text" size="lg">Text</Button>
+    <Button variant="text" size="md">Text</Button>
+    <Button variant="text" size="sm">Text</Button>
+  </div>
+  <div class="flex flex-row items-start gap-2 pt-4">
+    <Button density="comfortable" variant="primary" size="lg">Primary</Button>
+    <Button density="comfortable" variant="primary" size="md">Primary</Button>
+    <Button density="comfortable" variant="primary" size="sm">Primary</Button>
+    <Button density="comfortable" size="lg">Secondary</Button>
+    <Button density="comfortable" size="md">Secondary</Button>
+    <Button density="comfortable" size="sm">Secondary</Button>
+    <Button density="comfortable" variant="text" size="lg">Text</Button>
+    <Button density="comfortable" variant="text" size="md">Text</Button>
+    <Button density="comfortable" variant="text" size="sm">Text</Button>
   </div>
   <Divider />
   <p class='text-xs'>text-xs {displayString}</p>

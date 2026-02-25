@@ -4,7 +4,7 @@
   .themeRoot {
     @variant rose {
       --color-text: oklch(0.25 0.1379 347.29);
-      --color-text-lighten-1: oklch(0.30 0.1379 347.29);
+      --color-text-lighten-1: oklch(0.3 0.1379 347.29);
       --color-text-lighten-2: oklch(0.35 0.1379 347.29);
       --color-surface: var(--color-rose-100);
     }
@@ -28,7 +28,7 @@
   }
 
   :focus-visible {
-    @apply border-primary ring-secondary ring-2;
+    @apply border-primary ring-2 ring-secondary;
     outline: none;
   }
 
@@ -36,7 +36,8 @@
     @apply list-disc pl-6;
   }
 
-  p,li {
+  p,
+  li {
     @apply text-lg;
   }
 
@@ -56,7 +57,7 @@
   }
 
   h2 {
-    @apply text-primary mb-1 mt-4 text-6xl font-bold;
+    @apply mt-4 mb-1 text-6xl font-bold text-primary;
   }
 
   h3 {
@@ -94,17 +95,9 @@
   }
 }
 
+/* purely CSS components */
 @layer components {
-  .btn {
-    @apply rounded-lg px-6 py-3 text-center text-primary align-middle font-sans text-md uppercase no-underline border-2 border-primary font-bold;
-    &:hover {
-      cursor: pointer;
-      @apply bg-primary;
-    }
-    &:active {
-      @apply ring-primary ring-1;
-    }
-  }
+  @import './components/button.css';
   .surface {
     background-color: var(--color-surface);
   }

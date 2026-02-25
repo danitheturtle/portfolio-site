@@ -1,6 +1,8 @@
 ---
 import ThemeSelector from '../ThemeSelector.astro';
+import Button from '../Button.astro';
 import '@/styles/main.css';
+import SiteNav from '../SiteNav.astro';
 ---
 
 <!doctype html>
@@ -11,12 +13,8 @@ import '@/styles/main.css';
   </head>
   <body class='themeRoot surface'>
     <div class='bg-primary text-on-primary h-12 w-full'>
-      <div class='mx-auto max-w-lg flex flex-row justify-between'>
-        <nav>
-          <a href='/' class="btn">Home</a>
-          <a href='/projects' class="btn">Projects</a>
-          <a href='/resume' class="btn">Resume</a>
-        </nav>
+      <div class='mx-auto max-w-lg flex flex-row justify-between h-full'>
+        <SiteNav />
         <ThemeSelector />
       </div>
     </div>

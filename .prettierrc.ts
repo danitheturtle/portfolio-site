@@ -12,7 +12,7 @@ const prettierConfig = {
   endOfLine: 'lf',
   singleAttributePerLine: false,
   plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
-  tailwindStylesheet: "./src/main.css",
+  tailwindStylesheet: "./src/styles/main.css",
   overrides: [
     {
       files: '*.astro',

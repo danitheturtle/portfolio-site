@@ -102,6 +102,7 @@
 
   /* Custom theme colors */
   --color-primary: var(--color-red-500);
+  --color-primary-lighten: oklch(from var(--color-red-500) calc(l + 0.05) calc(c - 0.01) h);
   --color-secondary: oklch(0.7351 0.1 236.3);
   --color-on-primary: var(--color-grey-50);
   --color-surface: var(--color-white);
