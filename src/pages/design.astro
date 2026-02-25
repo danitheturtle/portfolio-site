@@ -1,11 +1,16 @@
 ---
 import Divider from '@/components/Divider.astro';
+import Button from '@/components/Button.astro';
 import MainLayout from '@/components/layout/MainLayout.astro';
 
 const displayString = 'The quick brown fox jumps over the lazy dog';
 ---
 
 <MainLayout>
+  <div class="pt-4">
+    <Button>Button</Button>
+  </div>
+  <Divider />
   <p class='text-xs'>text-xs {displayString}</p>
   <p class='text-sm'>text-sm {displayString}</p>
   <p class='text-md'>text-md {displayString}</p>
@@ -22,11 +27,14 @@ const displayString = 'The quick brown fox jumps over the lazy dog';
   <p class='text-9xl'>text-9xl {displayString}</p>
   <p class='text-10xl'>text-10xl {displayString}</p>
   <Divider />
-  <h1>test</h1>
-  <h2>test</h2>
-  <h3>test</h3>
-  <h4>test</h4>
-  <h5>test</h5>
-  <h6>test</h6>
-  <p>{displayString}</p>
+  <h1>h1 - heading 1</h1>
+  <h2>h2 - heading 2</h2>
+  <h3>h3 - heading 3</h3>
+  <h4>h4 - heading 4</h4>
+  <h5>h5 - heading 5</h5>
+  <h6>h6 - heading 6</h6>
+  <p>p - {displayString}</p>
+  <a href="/">a - link text</a>
+  <Divider />
+
 </MainLayout>
