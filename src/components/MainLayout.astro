@@ -1,7 +1,7 @@
 ---
-import Button from '../Button.astro';
-import SiteNav from '../SiteNav.astro';
-import ThemeSelector from '../ThemeSelector.astro';
+import Button from './Button.astro';
+import SiteNav from './SiteNav.astro';
+import ThemeSelector from './ThemeSelector.astro';
 import '@/styles/main.css';
 ---
 
@@ -12,13 +12,13 @@ import '@/styles/main.css';
     <slot name='head' />
   </head>
   <body class='themeRoot surface'>
-    <div class='bg-primary text-on-primary h-12 w-full'>
-      <div class='mx-auto max-w-6xl flex flex-row justify-between h-full'>
+    <div class='bg-primary text-on-primary h-12 w-full top-0 sticky'>
+      <div class='mx-auto max-w-lg flex flex-row justify-between h-full'>
         <SiteNav />
         <ThemeSelector />
       </div>
     </div>
-    <div class='mx-auto max-w-6xl'>
+    <div class='mx-auto max-w-lg'>
       <slot />
     </div>
   </body>

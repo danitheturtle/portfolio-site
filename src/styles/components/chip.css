@@ -1,0 +1,34 @@
+.chip {
+  --chip-density-x: 1;
+  --chip-density-y: 1;
+  --chip-px: calc(var(--spacing) * 3);
+  --chip-height: calc(var(--spacing) * 7);
+
+  @apply rounded-full border-2 text-center align-middle font-sans text-md font-bold no-underline;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &.chip-compact {
+    --chip-density-x: 0.65;
+    --chip-density-y: 0.8125;
+  }
+  &.chip-comfortable {
+    --chip-density-x: 1.25;
+    --chip-density-y: 1.25;
+  }
+  &.chip-sm {
+    @apply text-sm;
+    --chip-px: calc(var(--spacing) * 2.5);
+    --chip-height: calc(var(--spacing) * 6);
+  }
+  &.chip-lg {
+    @apply text-lg;
+    --chip-px: calc(var(--spacing) * 4);
+    --chip-height: calc(var(--spacing) * 8);
+  }
+
+  padding-left: calc(var(--chip-px) * var(--chip-density-x));
+  padding-right: calc(var(--chip-px) * var(--chip-density-x));
+  height: calc(var(--chip-height) * var(--chip-density-y));
+}

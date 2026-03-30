@@ -1,0 +1,41 @@
+---
+import Button from '../Button.astro';
+import Chip from '../Chip.astro';
+import ProfilePicture from '../profile-picture/ProfilePicture.astro';
+const localizedText = {
+  userName: 'danitheturtle',
+  userSubtitle: 'Software Engineer // Frontend Expert // Game Designer',
+};
+---
+
+<div class='flex w-full flex-col py-8 md:flex-row'>
+  <div class='flex flex-2 flex-col items-start'>
+    <div class='flex w-full flex-row items-center justify-between gap-16'>
+      <div class='flex flex-col items-start justify-center'>
+        <h2 class='text-8xl text-red-500'>{localizedText.userName}</h2>
+        <p class='text-lg'>
+          {localizedText.userSubtitle}
+        </p>
+      </div>
+      <ProfilePicture />
+    </div>
+    <div class='py-6 text-2xl font-bold'>
+      <span>
+        Full-stack engineer based in Ottawa, passionate about simplifying
+        complexity.
+      </span><span class='text-grey-500 dark:text-grey-400'>
+        Focused on scalable architecture, user-centric design, code quality and
+        cross-functional communication.
+      </span>
+    </div>
+    <div class='flex flex-row gap-4'>
+      <Button as='a' href='mailto:dani.develops@pm.me'>Let's Connect</Button>
+      <Button variant='primary' as='a' href='assets/Dani_Resume.pdf'
+        >Download Resume</Button
+      >
+    </div>
+  </div>
+  <div class='flex flex-1 flex-col items-end'>
+    <Chip color='border-white text-white'> Active Work </Chip>
+  </div>
+</div>

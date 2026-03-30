@@ -98,6 +98,7 @@
 /* purely CSS components */
 @layer components {
   @import './components/button.css';
+  @import './components/chip.css';
   .surface {
     background-color: var(--color-surface);
   }

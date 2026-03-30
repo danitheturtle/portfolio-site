@@ -1,12 +1,16 @@
 ---
 import Button from '@/components/Button.astro';
-import MainLayout from '@/components/layout/MainLayout.astro';
+import Chip from '@/components/Chip.astro';
+import Divider from '@/components/Divider.astro';
+import IntroSection from '@/components/homepage/IntroSection.astro';
+import MainLayout from '@/components/MainLayout.astro';
 ---
 
 <MainLayout>
-  <h1 class='rose:text-rose-300 text-red-500 dark:text-blue-500'>
-    Hello, World!
-  </h1>
-  <p>test</p>
-  <Button>test</Button>
+  <div class="flex flex-col justify-start items-start">
+    <IntroSection />
+    <Chip size="lg" density="comfortable" color="border-white text-white" class="mt-8">
+        Projects
+    </Chip>
+  </div>
 </MainLayout>

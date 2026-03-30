@@ -1,0 +1,33 @@
+---
+export interface Props {
+  color?: string;
+  size?: 'sm' | 'md' | 'lg';
+  density?: 'compact' | 'normal' | 'comfortable';
+  class?: string;
+  as?: string;
+}
+const {
+  as: Component = 'span',
+  color = 'border-primary text-primary',
+  size = 'md',
+  density = 'normal',
+  class: className,
+  ...rest
+} = Astro.props;
+---
+<Component
+  class:list={[
+    'chip',
+    {
+      'chip-sm': size === 'sm',
+      'chip-lg': size === 'lg',
+      'chip-compact': density === 'compact',
+      'chip-comfortable': density === 'comfortable',
+    },
+    color,
+    className,
+  ]}
+  {...rest}
+>
+  <slot />
+</Component>
