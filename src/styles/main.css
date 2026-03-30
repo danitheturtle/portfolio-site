@@ -13,6 +13,7 @@
       --color-text-lighten-1: var(--color-grey-300);
       --color-text-lighten-2: var(--color-grey-400);
       --color-surface: var(--color-grey-800);
+      --color-on-surface: var(--color-white);
     }
 
     color: var(--color-text);
@@ -57,7 +58,7 @@
   }
 
   h2 {
-    @apply mt-4 mb-1 text-6xl font-bold text-primary;
+    @apply text-6xl font-bold;
   }
 
   h3 {
@@ -98,6 +99,8 @@
 /* purely CSS components */
 @layer components {
   @import './components/button.css';
+  @import './components/card.css';
+  @import './components/carousel.css';
   @import './components/chip.css';
   .surface {
     background-color: var(--color-surface);

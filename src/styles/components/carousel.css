@@ -1,0 +1,6 @@
+.carousel {
+  --animation-duration: 10000s;
+  & .items {
+    @apply rounded-xl bg-on-surface text-surface p-4 overflow-hidden;
+  }
+}

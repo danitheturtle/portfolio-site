@@ -1,0 +1,41 @@
+---
+import Divider from "./Divider.astro"
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  divider?: boolean;
+  density?: 'compact' | 'normal' | 'comfortable';
+  class?: string;
+}
+const {
+  title = '',
+  subtitle = '',
+  divider = false,
+  density = 'normal',
+  class: className,
+  ...rest
+} = Astro.props;
+---
+
+<div
+  class:list={[
+    'card',
+    {
+      'card-compact': density === 'compact',
+      'card-comfortable': density === 'comfortable',
+      'card-content': title == ''
+    },
+    className,
+  ]}
+  {...rest}
+>
+  {title != '' && <>
+    <h2 class="text-5xl">{title}</h2>
+    {subtitle != '' && <h3 class="text-xl text-text-lighten-1 font-normal">{subtitle}</h3>}
+    {divider && <Divider />}
+    <div class="card-content pt-1">
+      <slot />
+    </div>
+  </>}
+  {title == '' && <slot />}
+</div>

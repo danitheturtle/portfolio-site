@@ -1,6 +1,15 @@
 ---
-
+export interface Props {
+  class?: string;
+}
+const { class: className, ...rest } = Astro.props;
 ---
 
-<div class='border-grey-200 dark:border-grey-700 rose:border-rose-200 my-4 h-px w-full border-t-2'>
+<div
+  class:list={[
+    'divider my-4 h-px w-full border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200',
+    className,
+  ]}
+  {...rest}
+>
 </div>

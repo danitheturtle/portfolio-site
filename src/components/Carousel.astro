@@ -1,0 +1,25 @@
+---
+import Button from '@/components/Button.astro';
+export interface Props {
+  id: string;
+  itemCount?: number;
+  class?: string;
+}
+const { id, itemCount = 0, class: className, ...rest } = Astro.props;
+const itemsArray = Array.from(Array(itemCount).keys());
+---
+<carousel class:list={['carousel', className]} {...rest}>
+  <div class='items'>
+    <slot />
+  </div>
+  <controls role='radiogroup'>
+    {
+      itemsArray.map((i) => (
+        <label class='btn btn-sm'>
+          <input type='radio' name={id} data-i={i} class="appearance-none"/>
+          {i}
+        </label>
+      ))
+    }
+  </controls>
+</carousel>

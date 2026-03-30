@@ -1,0 +1,10 @@
+.card {
+  @apply rounded-xl border-2 border-on-surface p-4;
+
+  &.card-compact {
+    padding: calc(var(--spacing) * 2);
+  }
+  &.card-comfortable {
+    padding: calc(var(--spacing) * 8);
+  }
+}
