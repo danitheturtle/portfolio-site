@@ -2,16 +2,29 @@
 import Button from '@/components/Button.astro';
 import Card from '@/components/Card.astro';
 import Carousel from '@/components/Carousel.astro';
-import CarouselItem from '@/components/CarouselItem.astro';
+import type { Slide } from '@/components/Carousel.astro';
 import Chip from '@/components/Chip.astro';
 import Divider from '@/components/Divider.astro';
 import IntroSection from '@/components/homepage/IntroSection.astro';
 import MainLayout from '@/components/MainLayout.astro';
+
+const carouselSlides: Slide[] = [
+  { content: 'Slide 1' },
+  { content: 'Slide 2' },
+  { content: 'Slide 3' },
+  { content: 'Slide 4' },
+  { content: 'Slide 5' },
+  { content: 'Slide 6' },
+  { content: 'Slide 7' },
+];
 ---
 
 <MainLayout>
-  <div class="flex flex-col justify-start items-start px-8 lg:px-0">
+  <div class='flex flex-col items-start justify-start px-8 lg:px-0'>
     <IntroSection />
-    <h2 id="projects" class="mt-4 mb-1">Projects</h2>
+    <h2 id='showcase' class='mt-4 mb-1'>Key Projects</h2>
+    <div class='flex aspect-video w-full'>
+      <Carousel id='showcase-carousel' slides={carouselSlides} />
+    </div>
   </div>
 </MainLayout>

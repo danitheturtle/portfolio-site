@@ -136,7 +136,7 @@ const resume = {
 
 <ArticleLayout>
   <header
-    class='bg-primary text-on-primary flex flex-col p-8 xl:-mx-12 xl:px-12 xl:pt-12'
+    class='flex flex-col bg-primary p-8 text-on-primary xl:-mx-12 xl:px-12 xl:pt-12'
   >
     <h1 class='-mt-2 font-bold'>{resume.name}</h1>
     <p class='text-4xl'>{resume.position}</p>
@@ -165,7 +165,7 @@ const resume = {
         </p>
       ))
     }
-    <h2 class="mt-4 mb-1 text-primary">{resume.experienceTitle}</h2>
+    <h2 class='mt-4 mb-1 text-primary'>{resume.experienceTitle}</h2>
     {
       resume.experience.map((nextExperience, i) => (
         <div class:list={['mt-2', { 'mt-6': i > 0 }]}>
@@ -190,16 +190,12 @@ const resume = {
         </div>
       ))
     }
-    <h2 class="mt-4 mb-1 text-primary">{resume.educationTitle}</h2>
+    <h2 class='mt-4 mb-1 text-primary'>{resume.educationTitle}</h2>
     {
       resume.education.map((nextEducation, i) => (
         <div class:list={['mt-2', { 'mt-6': i > 0 }]}>
-          <h3>
-            {nextEducation.school}
-          </h3>
-          <h4 class="text-3xl">
-            {nextEducation.degree}
-          </h4>
+          <h3>{nextEducation.school}</h3>
+          <h4 class='text-3xl'>{nextEducation.degree}</h4>
           <p class='mt-1'>
             <em class='text-text-lighten-1'>
               {nextEducation.timeline[0]} &ndash; {nextEducation.timeline[1]}

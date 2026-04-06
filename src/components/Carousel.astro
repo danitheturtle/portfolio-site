@@ -1,25 +1,56 @@
 ---
-import Button from '@/components/Button.astro';
+export interface Slide {
+  content: string;
+}
 export interface Props {
   id: string;
-  itemCount?: number;
+  slides: Slide[];
   class?: string;
 }
-const { id, itemCount = 0, class: className, ...rest } = Astro.props;
-const itemsArray = Array.from(Array(itemCount).keys());
+const { id, slides, class: className, ...rest } = Astro.props;
+const lastSlideIndex = slides.length - 1;
+const indexArray = Array.from(slides.keys()); // int array from 0-itemCount
 ---
-<carousel class:list={['carousel', className]} {...rest}>
-  <div class='items'>
-    <slot />
-  </div>
-  <controls role='radiogroup'>
-    {
-      itemsArray.map((i) => (
-        <label class='btn btn-sm'>
-          <input type='radio' name={id} data-i={i} class="appearance-none"/>
-          {i}
+
+<carousel
+  class:list={[
+    'carousel',
+    'relative flex flex-1 items-end justify-center gap-4 overflow-hidden rounded-xl bg-on-surface text-surface',
+    className,
+  ]}
+  {...rest}
+>
+  {
+    indexArray.map((i) => (
+      <>
+        <label
+          for={`${id}-radio-${i}`}
+          class='carousel-label z-20 mb-4 inline-block h-6 w-6 cursor-pointer rounded-full bg-surface'
+        >
+          <input
+            checked={i === 0}
+            type='radio'
+            name={`${id}-inputs`}
+            id={`${id}-radio-${i}`}
+            class='absolute'
+          />
         </label>
-      ))
-    }
-  </controls>
+        <slide id={`${id}-slide-${i}`} class='absolute h-full w-full'>
+          <content class='relative flex h-full w-full p-4'>
+            {slides[i].content}
+          </content>
+          <controls class='relative z-20 flex w-full justify-between px-4'>
+            <label
+              class='prev-slide h-4 w-4 rotate-45 cursor-pointer border-b-2 border-l-2 border-surface'
+              for={`${id}-radio-${i > 0 ? i - 1 : lastSlideIndex}`}
+            />
+            <label
+              class='next-slide h-4 w-4 rotate-45 cursor-pointer border-t-2 border-r-2 border-surface'
+              for={`${id}-radio-${i < lastSlideIndex ? i + 1 : 0}`}
+            />
+          </controls>
+        </slide>
+      </>
+    ))
+  }
 </carousel>

@@ -1,5 +1,5 @@
 ---
-import Divider from "./Divider.astro"
+import Divider from './Divider.astro';
 export interface Props {
   title?: string;
   subtitle?: string;
@@ -23,19 +23,25 @@ const {
     {
       'card-compact': density === 'compact',
       'card-comfortable': density === 'comfortable',
-      'card-content': title == ''
+      'card-content': title == '',
     },
     className,
   ]}
   {...rest}
 >
-  {title != '' && <>
-    <h2 class="text-5xl">{title}</h2>
-    {subtitle != '' && <h3 class="text-xl text-text-lighten-1 font-normal">{subtitle}</h3>}
-    {divider && <Divider />}
-    <div class="card-content pt-1">
-      <slot />
-    </div>
-  </>}
+  {
+    title != '' && (
+      <>
+        <h2 class='text-5xl'>{title}</h2>
+        {subtitle != '' && (
+          <h3 class='text-xl font-normal text-text-lighten-1'>{subtitle}</h3>
+        )}
+        {divider && <Divider />}
+        <div class='card-content pt-1'>
+          <slot />
+        </div>
+      </>
+    )
+  }
   {title == '' && <slot />}
 </div>

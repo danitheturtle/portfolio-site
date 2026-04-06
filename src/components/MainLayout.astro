@@ -8,12 +8,12 @@ import '@/styles/main.css';
 <!doctype html>
 <html>
   <head>
-    <meta name='color-scheme' content="dark light" />
+    <meta name='color-scheme' content='dark light' />
     <slot name='head' />
   </head>
   <body class='themeRoot surface'>
-    <div class='bg-primary text-on-primary h-12 w-full top-0 sticky'>
-      <div class='mx-auto max-w-lg flex flex-row justify-between h-full'>
+    <div class='sticky top-0 h-12 w-full bg-primary text-on-primary'>
+      <div class='mx-auto flex h-full max-w-lg flex-row justify-between'>
         <SiteNav />
         <ThemeSelector />
       </div>

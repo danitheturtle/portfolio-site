@@ -1,6 +1,30 @@
-.carousel {
-  --animation-duration: 10000s;
-  & .items {
-    @apply rounded-xl bg-on-surface text-surface p-4 overflow-hidden;
+carousel {
+  & slide {
+    transition: opacity 0.5s;
+    opacity: 0;
+    & controls {
+      top: -50%;
+    }
+  }
+
+  & .carousel-label:has(input:checked) + slide {
+    opacity: 1;
+  }
+
+  & .carousel-label {
+    opacity: 0.5;
+    & input {
+      /* sets invisible but still focusable */
+      clip-path: circle(0);
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+    &:has(input:checked) {
+      opacity: 1;
+    }
+    &:has(input:focus-visible) {
+      outline: calc(var(--spacing) * 0.5) solid var(--color-secondary);
+    }
   }
 }

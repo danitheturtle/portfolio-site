@@ -16,7 +16,7 @@ export default [
   eslintConfig.configs.recommended,
   // reactPlugin.configs.flat.recommended,
   // reactPlugin.configs.flat['jsx-runtime'],
-  hooksConfigs['recommended-latest'],
+  // hooksConfigs['recommended-latest'],
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
   ...AstroConfigs.recommended,
