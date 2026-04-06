@@ -100,7 +100,6 @@
 @layer components {
   @import './components/button.css';
   @import './components/card.css';
-  @import './components/carousel.css';
   @import './components/chip.css';
   .surface {
     background-color: var(--color-surface);
