@@ -1,21 +1,22 @@
 ---
 export interface Props {
   index: number;
-  prevIndex: number;
-  nextIndex: number;
+  slideCount: number;
   carouselId?: string;
   active?: boolean;
   class?: string;
 }
 const {
   index,
-  prevIndex,
-  nextIndex,
+  slideCount,
   carouselId = 'showcase',
-  active = false,
+  active = index === 0,
   class: className,
   ...rest
 } = Astro.props;
+
+const prevIndex = index > 0 ? index - 1 : slideCount - 1;
+const nextIndex = index < slideCount - 1 ? index + 1 : 0;
 ---
 
 <>
