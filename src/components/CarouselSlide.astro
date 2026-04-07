@@ -42,10 +42,7 @@ const nextIndex = index < slideCount - 1 ? index + 1 : 0;
   <slide
     class='absolute h-full w-full opacity-0 transition-opacity duration-500'
   >
-    <content
-      class:list={['relative flex h-full w-full p-4', className]}
-      {...rest}
-    >
+    <content class:list={['relative flex h-full w-full', className]} {...rest}>
       <slot />
     </content>
     <controls class='relative -top-1/2 z-20 flex w-full justify-between px-4'>

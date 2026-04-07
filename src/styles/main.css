@@ -102,6 +102,7 @@
   @import './components/card.css';
   @import './components/chip.css';
   .surface {
+    color: var(--color-on-surface);
     background-color: var(--color-surface);
   }
   carousel {

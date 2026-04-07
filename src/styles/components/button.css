@@ -4,11 +4,7 @@
   --btn-px: calc(var(--spacing) * 6);
   --btn-height: calc(var(--spacing) * 10);
 
-  @apply rounded-lg border-2 border-primary text-center align-middle font-sans text-md font-bold text-primary uppercase no-underline;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @apply inline-flex cursor-pointer items-center justify-center rounded-lg border-2 border-primary text-center align-middle font-sans text-md font-bold text-primary uppercase no-underline;
 
   &:hover,
   &:focus-visible {
@@ -49,9 +45,9 @@
   &.btn-text {
     @apply border-none;
     --btn-px: calc(var(--btn-height) / 2);
-    --btn-density-x: 1.0;
+    --btn-density-x: 1;
     &.btn-compact {
-    --btn-px: calc(var(--btn-height) / 4);
+      --btn-px: calc(var(--btn-height) / 4);
     }
   }
 

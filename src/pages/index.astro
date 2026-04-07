@@ -2,24 +2,30 @@
 import CarouselSlide from '@/components/CarouselSlide.astro';
 import IntroSection from '@/components/intro-section/IntroSection.astro';
 import MainLayout from '@/components/MainLayout.astro';
-
-const slideCount = 7;
-const slides = Array.from(Array(slideCount).keys());
+import ZeroTierSlide from './projects/zerotier/ZeroTierSlide.astro';
+const slideCount = 3;
 ---
 
 <MainLayout>
   <div class='flex flex-col items-start justify-start px-8 lg:px-0'>
     <IntroSection />
     <h2 id='showcase' class='mt-4 mb-1'>Key Projects</h2>
-    <div class='flex aspect-video w-full'>
+    <div class='mt-4 flex aspect-video w-full'>
       <carousel>
-        {
-          slides.map((i) => (
-            <CarouselSlide carouselId='sc' index={i} slideCount={slideCount}>
-              Slide {i}
-            </CarouselSlide>
-          ))
-        }
+        <CarouselSlide
+          carouselId='sc'
+          index={0}
+          slideCount={slideCount}
+          class='overflow-hidden'
+        >
+          <ZeroTierSlide />
+        </CarouselSlide>
+        <CarouselSlide carouselId='sc' index={1} slideCount={slideCount}>
+          Slide 2
+        </CarouselSlide>
+        <CarouselSlide carouselId='sc' index={2} slideCount={slideCount}>
+          Slide 3
+        </CarouselSlide>
       </carousel>
     </div>
   </div>
