@@ -1,0 +1,63 @@
+---
+export interface Props {
+  index: number;
+  prevIndex: number;
+  nextIndex: number;
+  carouselId?: string;
+  active?: boolean;
+  class?: string;
+}
+const {
+  index,
+  prevIndex,
+  nextIndex,
+  carouselId = 'showcase',
+  active = false,
+  class: className,
+  ...rest
+} = Astro.props;
+---
+
+<>
+  <label
+    for={`${carouselId}-radio-${index}`}
+    class:list={[
+      'z-20 mb-4 inline-block h-4 w-4 cursor-pointer rounded-full border-2 border-surface opacity-40 transition-colors',
+      'hover:opacity-60 active:bg-surface',
+      'has-checked:bg-surface has-checked:opacity-80 has-checked:ring-1',
+      'has-focus-visible:ring-2 has-focus-visible:ring-secondary',
+      // tailwind is very stupid
+      '[&:has(input:checked)+slide]:opacity-100',
+    ]}
+  >
+    <input
+      checked={active}
+      type='radio'
+      name={carouselId}
+      id={`${carouselId}-radio-${index}`}
+      class='sr-only'
+    />
+  </label>
+  <slide
+    class='absolute h-full w-full opacity-0 transition-opacity duration-500'
+  >
+    <content
+      class:list={['relative flex h-full w-full p-4', className]}
+      {...rest}
+    >
+      <slot />
+    </content>
+    <controls class='relative -top-1/2 z-20 flex w-full justify-between px-4'>
+      <label
+        class='h-4 w-4 rotate-45 cursor-pointer border-b-2 border-l-2 border-surface opacity-60 hover:opacity-80 active:opacity-100'
+        for={`${carouselId}-radio-${prevIndex}`}
+      >
+      </label>
+      <label
+        class='h-4 w-4 rotate-45 cursor-pointer border-t-2 border-r-2 border-surface opacity-60 hover:opacity-80 active:opacity-100'
+        for={`${carouselId}-radio-${nextIndex}`}
+      >
+      </label>
+    </controls>
+  </slide>
+</>

@@ -104,4 +104,7 @@
   .surface {
     background-color: var(--color-surface);
   }
+  carousel {
+    @apply relative flex flex-1 items-end justify-center gap-4 overflow-hidden rounded-xl bg-on-surface text-surface;
+  }
 }

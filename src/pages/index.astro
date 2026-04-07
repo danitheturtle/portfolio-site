@@ -1,18 +1,10 @@
 ---
-import Carousel from '@/components/carousel/Carousel.astro';
-import type { Slide } from '@/components/carousel/Carousel.astro';
+import CarouselSlide from '@/components/CarouselSlide.astro';
 import IntroSection from '@/components/intro-section/IntroSection.astro';
 import MainLayout from '@/components/MainLayout.astro';
 
-const carouselSlides: Slide[] = [
-  { content: 'Slide 1' },
-  { content: 'Slide 2' },
-  { content: 'Slide 3' },
-  { content: 'Slide 4' },
-  { content: 'Slide 5' },
-  { content: 'Slide 6' },
-  { content: 'Slide 7' },
-];
+const slideCount = 7;
+const slides = Array.from(Array(slideCount).keys());
 ---
 
 <MainLayout>
@@ -20,7 +12,21 @@ const carouselSlides: Slide[] = [
     <IntroSection />
     <h2 id='showcase' class='mt-4 mb-1'>Key Projects</h2>
     <div class='flex aspect-video w-full'>
-      <Carousel id='showcase-carousel' slides={carouselSlides} />
+      <carousel>
+        {
+          slides.map((i) => (
+            <CarouselSlide
+              carouselId='sc'
+              active={i === 0}
+              index={i}
+              nextIndex={i < slideCount - 1 ? i + 1 : 0}
+              prevIndex={i > 0 ? i - 1 : slideCount - 1}
+            >
+              Slide {i}
+            </CarouselSlide>
+          ))
+        }
+      </carousel>
     </div>
   </div>
 </MainLayout>
