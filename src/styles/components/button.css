@@ -4,7 +4,7 @@
   --btn-px: calc(var(--spacing) * 6);
   --btn-height: calc(var(--spacing) * 10);
 
-  @apply inline-flex cursor-pointer items-center justify-center rounded-lg border-2 border-primary text-center align-middle font-sans text-md font-bold text-primary uppercase no-underline;
+  @apply inline-flex cursor-pointer items-center justify-center rounded-lg border-2 border-primary text-center align-middle gap-2 font-sans text-base font-bold text-primary uppercase no-underline;
 
   &:hover,
   &:focus-visible {
@@ -28,10 +28,12 @@
   &.btn-compact {
     --btn-density-x: 0.5;
     --btn-density-y: 0.75;
+    @apply text-md;
   }
   &.btn-comfortable {
     --btn-density-x: 1.5;
     --btn-density-y: 1.25;
+    @apply text-lg;
   }
   &.btn-sm {
     --btn-px: calc(var(--spacing) * 4);
@@ -54,8 +56,14 @@
   padding-left: calc(var(--btn-px) * var(--btn-density-x));
   padding-right: calc(var(--btn-px) * var(--btn-density-x));
   height: calc(var(--btn-height) * var(--btn-density-y));
+
+  & > .start-icon {
+  }
+
+  & > .end-icon {
+  }
 }
-nav > .btn {
+theme-selector > .btn,nav > .btn {
   border-radius: 0;
   border: none;
   height: inherit;

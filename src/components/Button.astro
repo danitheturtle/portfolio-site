@@ -10,7 +10,7 @@ export interface Props {
   density?: 'compact' | 'normal' | 'comfortable';
   class?: string;
   as?: string;
-  [k: string]: any
+  [k: string]: any;
 }
 const {
   as: Component = 'button',
@@ -23,10 +23,15 @@ const {
   ...rest
 } = Astro.props as Props;
 
-let fIconSize = 1.5;
-let iconSize = '1.5rem';
+let fIconSize = 1.0;
+let iconSize = '1.0rem';
 if (startIcon !== undefined || endIcon !== undefined) {
-  // icon included in button, do extra calcs
+  if (density === 'compact') {
+    fIconSize = 0.875;
+  } else if (density === 'comfortable') {
+    fIconSize = 1.125;
+  }
+  iconSize = `${fIconSize}rem`;
 }
 ---
 
@@ -45,7 +50,7 @@ if (startIcon !== undefined || endIcon !== undefined) {
   ]}
   {...rest}
 >
-  {startIcon !== undefined && <Icon icon={startIcon} class='start-icon' />}
+  {startIcon !== undefined && <Icon icon={startIcon} class='start-icon' size={iconSize} />}
   <slot />
-  {endIcon !== undefined && <Icon icon={endIcon} class='start-icon' />}
+  {endIcon !== undefined && <Icon icon={endIcon} class='end-icon' size={iconSize}/>}
 </Component>

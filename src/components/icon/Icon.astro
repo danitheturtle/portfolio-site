@@ -34,15 +34,13 @@ export type IconName = (
 
 export interface Props {
   icon: IconName;
-  width?: string;
-  height?: string;
+  size?: string;
   class?: string;
 }
 
 const {
   icon,
-  width = '1.5rem',
-  height = '1.5rem',
+  size = '1.5rem',
   class: classList = '',
 } = Astro.props as Props;
 
@@ -65,4 +63,4 @@ const iconNameToSvgComponentMap: Record<IconName, IconType> = {
 const IconComponent = iconNameToSvgComponentMap[icon];
 ---
 
-<IconComponent width={width} height={height} class:list={[classList]} />
+<IconComponent width={size} height={size} class:list={[classList]} />
