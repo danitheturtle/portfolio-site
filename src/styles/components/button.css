@@ -2,9 +2,11 @@
   --btn-density-x: 1;
   --btn-density-y: 1;
   --btn-px: calc(var(--spacing) * 6);
+  --btn-icon-mx: calc(var(--spacing) * -3.5);
+  --btn-icon-density: 1;
   --btn-height: calc(var(--spacing) * 10);
 
-  @apply inline-flex cursor-pointer items-center justify-center rounded-lg border-2 border-primary text-center align-middle gap-2 font-sans text-base font-bold text-primary uppercase no-underline;
+  @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-primary text-center align-middle font-sans text-base font-bold text-primary uppercase no-underline;
 
   &:hover,
   &:focus-visible {
@@ -19,37 +21,51 @@
     @apply bg-primary text-on-primary;
     &:hover,
     &:focus-visible {
-      --tw-ring-color: var(--color-primary-lighten);
       background-color: var(--color-primary-lighten);
       border-color: var(--color-primary-lighten);
+    }
+    &:hover {
+      --tw-ring-color: var(--color-primary-lighten);
+    }
+    &:focus-visible {
+      --tw-ring-color: var(--color-focus);
     }
   }
 
   &.btn-compact {
     --btn-density-x: 0.5;
     --btn-density-y: 0.75;
+    --btn-icon-density: 0.25;
     @apply text-md;
   }
   &.btn-comfortable {
     --btn-density-x: 1.5;
     --btn-density-y: 1.25;
+    --btn-icon-density: 1.875;
     @apply text-lg;
   }
   &.btn-sm {
     --btn-px: calc(var(--spacing) * 4);
+    --btn-icon-mx: calc(var(--spacing) * -2);
     --btn-height: calc(var(--spacing) * 8);
   }
   &.btn-lg {
     --btn-px: calc(var(--spacing) * 8);
+    --btn-icon-mx: calc(var(--spacing) * -5.75);
     --btn-height: calc(var(--spacing) * 12);
   }
 
   &.btn-text {
     @apply border-none;
     --btn-px: calc(var(--btn-height) / 2);
+    --btn-icon-mx: calc(var(--btn-height) / -4);
     --btn-density-x: 1;
     &.btn-compact {
       --btn-px: calc(var(--btn-height) / 4);
+      --btn-icon-mx: calc(var(--btn-height) / -8);
+    }
+    &.btn-comfortable {
+      --btn-icon-density: 1;
     }
   }
 
@@ -58,12 +74,15 @@
   height: calc(var(--btn-height) * var(--btn-density-y));
 
   & > .start-icon {
+    margin-left: calc(var(--btn-icon-mx) * var(--btn-icon-density));
   }
 
   & > .end-icon {
+    margin-right: calc(var(--btn-icon-mx) * var(--btn-icon-density));
   }
 }
-theme-selector > .btn,nav > .btn {
+theme-selector > .btn,
+nav > .btn {
   border-radius: 0;
   border: none;
   height: inherit;

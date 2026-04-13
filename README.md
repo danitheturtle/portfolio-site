@@ -1,6 +1,6 @@
 # danitheturtle portfolio site
 
-A showcase of my work and web dev / design expertise. **Post-framework, zero-js** (site works without javascript).
+A showcase of my work and web dev / design expertise. **Post-framework, fully accessible, zero-js** (site works without javascript).
 
 CSS-only components:
 * Theme selector

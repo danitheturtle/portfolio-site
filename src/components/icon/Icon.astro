@@ -13,7 +13,6 @@ import CircleRightIcon from './svgs/CircleRight.astro';
 import CircleDownIcon from './svgs/CircleDown.astro';
 import CaretLeftIcon from './svgs/CaretLeft.astro';
 
-
 type IconType = (_props: Record<string, any>) => any;
 // prettier-ignore
 export type IconName = (
@@ -38,11 +37,7 @@ export interface Props {
   class?: string;
 }
 
-const {
-  icon,
-  size = '1.5rem',
-  class: classList = '',
-} = Astro.props as Props;
+const { icon, size = '1.5rem', class: classList = '' } = Astro.props as Props;
 
 const iconNameToSvgComponentMap: Record<IconName, IconType> = {
   Theme: ThemeIcon,
@@ -60,7 +55,22 @@ const iconNameToSvgComponentMap: Record<IconName, IconType> = {
   CircleDown: CircleDownIcon,
 };
 
+const iconNameToMarginTopMap: Partial<Record<IconName, string>> = {
+  Send: '',
+  CaretDown: '-mt-1',
+  Plus: '-mt-0.4',
+};
+
 const IconComponent = iconNameToSvgComponentMap[icon];
 ---
 
-<IconComponent width={size} height={size} class:list={[classList]} />
+<IconComponent
+  width={size}
+  height={size}
+  class:list={[
+    iconNameToMarginTopMap[icon] !== undefined ?
+      iconNameToMarginTopMap[icon]
+    : '-mt-0.25',
+    classList,
+  ]}
+/>
