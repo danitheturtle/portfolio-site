@@ -3,6 +3,7 @@ const prettierConfig = {
   semi: true,
   singleQuote: true,
   quoteProps: 'as-needed',
+  tabWidth: 2,
   jsxSingleQuote: true,
   trailingComma: 'es5',
   bracketSpacing: true,
@@ -12,7 +13,7 @@ const prettierConfig = {
   endOfLine: 'lf',
   singleAttributePerLine: false,
   plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
-  tailwindStylesheet: "./src/styles/main.css",
+  tailwindStylesheet: './src/styles/main.css',
   overrides: [
     {
       files: '*.astro',

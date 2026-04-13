@@ -1,18 +1,49 @@
+---
+import Button from '@/components/Button.astro';
+---
+
+<style is:global>
+  #theme-dropdown {
+    position-area: bottom;
+  }
+</style>
 <theme-selector aria-label='Choose your site theme' role='radiogroup'>
-  <label>
-    <input type='radio' name='theme_picker' id='auto-theme-radio' checked />
-    auto
-  </label>
-  <label>
-    <input type='radio' name='theme_picker' id='light-theme-radio' />
-    light
-  </label>
-  <label>
-    <input type='radio' name='theme_picker' id='dark-theme-radio' />
-    dark
-  </label>
-  <label>
-    <input type='radio' name='theme_picker' id='rose-theme-radio' />
-    rose
-  </label>
+  <input
+    type='radio'
+    name='theme_picker'
+    id='auto-theme-radio'
+    class='sr-only'
+  />
+  <input
+    type='radio'
+    name='theme_picker'
+    id='light-theme-radio'
+    class='sr-only'
+    checked
+  />
+  <input
+    type='radio'
+    name='theme_picker'
+    id='dark-theme-radio'
+    class='sr-only'
+  />
+  <input
+    type='radio'
+    name='theme_picker'
+    id='rose-theme-radio'
+    class='sr-only'
+  />
+  <Button
+    id='theme-dropdown-button'
+    popovertarget='theme-dropdown'
+    variant='primary'
+  >
+    Change Theme
+  </Button>
+  <dropdown popover id='theme-dropdown' anchor='theme-dropdown-button'>
+    <Button as='label' for='auto-theme-radio' variant='primary'>Auto</Button>
+    <Button as='label' for='light-theme-radio' variant='primary'>Light</Button>
+    <Button as='label' for='dark-theme-radio' variant='primary'>Dark</Button>
+    <Button as='label' for='rose-theme-radio' variant='primary'>Rose</Button>
+  </dropdown>
 </theme-selector>

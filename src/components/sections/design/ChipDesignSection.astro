@@ -1,0 +1,36 @@
+---
+import Chip from '@/components/Chip.astro';
+---
+
+<div class='flex flex-row items-start gap-2 pt-4'>
+  <Chip density='comfortable' size='lg'>Comfortable</Chip>
+  <Chip size='lg'>Large</Chip>
+  <Chip density='compact' size='lg'>Compact</Chip>
+  <Chip density='comfortable'>Comfortable</Chip>
+  <Chip>Default</Chip>
+  <Chip density='compact'>Compact</Chip>
+  <Chip density='comfortable' size='sm'>Comfortable</Chip>
+  <Chip size='sm'>Small</Chip>
+  <Chip density='compact' size='sm'>Compact</Chip>
+</div>
+<div class='flex flex-row items-start gap-2 pt-4'>
+  <Chip density='comfortable' size='lg' color='border-blue-500 text-blue-500'
+    >Comfortable</Chip
+  >
+  <Chip size='lg' color='border-blue-500 text-blue-500'>Large</Chip>
+  <Chip density='compact' size='lg' color='border-blue-500 text-blue-500'
+    >Compact</Chip
+  >
+  <Chip density='comfortable' color='border-blue-500 text-blue-500'
+    >Comfortable</Chip
+  >
+  <Chip color='border-blue-500 text-blue-500'>Default</Chip>
+  <Chip density='compact' color='border-blue-500 text-blue-500'>Compact</Chip>
+  <Chip density='comfortable' size='sm' color='border-blue-500 text-blue-500'
+    >Comfortable</Chip
+  >
+  <Chip size='sm' color='border-blue-500 text-blue-500'>Small</Chip>
+  <Chip density='compact' size='sm' color='border-blue-500 text-blue-500'
+    >Compact</Chip
+  >
+</div>

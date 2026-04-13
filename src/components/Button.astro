@@ -1,19 +1,33 @@
 ---
+import Icon from '@/components/icon/Icon.astro';
+import type { IconName } from '@/components/icon/Icon.astro';
+
 export interface Props {
+  startIcon?: IconName;
+  endIcon?: IconName;
   variant?: 'primary' | 'secondary' | 'text';
   size?: 'sm' | 'md' | 'lg';
   density?: 'compact' | 'normal' | 'comfortable';
   class?: string;
   as?: string;
+  [k: string]: any
 }
 const {
   as: Component = 'button',
   variant = 'secondary',
   size = 'md',
   density = 'normal',
+  startIcon = undefined,
+  endIcon = undefined,
   class: className,
   ...rest
-} = Astro.props;
+} = Astro.props as Props;
+
+let fIconSize = 1.5;
+let iconSize = '1.5rem';
+if (startIcon !== undefined || endIcon !== undefined) {
+  // icon included in button, do extra calcs
+}
 ---
 
 <Component
@@ -31,5 +45,7 @@ const {
   ]}
   {...rest}
 >
+  {startIcon !== undefined && <Icon icon={startIcon} class='start-icon' />}
   <slot />
+  {endIcon !== undefined && <Icon icon={endIcon} class='start-icon' />}
 </Component>

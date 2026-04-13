@@ -1,0 +1,15 @@
+---
+import type { IconName } from '@/components/icon/Icon.astro';
+import Icon from '@/components/icon/Icon.astro';
+
+export interface Props {
+  icon: IconName;
+}
+
+const { icon } = Astro.props as Props;
+---
+
+<div class='flex flex-col items-center gap-2 rounded-lg border-2 p-2'>
+  <div>{icon}</div>
+  <Icon icon={icon} width='3rem' height='3rem' />
+</div>

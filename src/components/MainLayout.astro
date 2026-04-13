@@ -1,5 +1,4 @@
 ---
-import Button from './Button.astro';
 import SiteNav from './SiteNav.astro';
 import ThemeSelector from './ThemeSelector.astro';
 import '@/styles/main.css';
@@ -11,7 +10,7 @@ import '@/styles/main.css';
     <meta name='color-scheme' content='dark light' />
     <slot name='head' />
   </head>
-  <body class='themeRoot surface'>
+  <body class='themeRoot bg-surface text-on-surface'>
     <div class='sticky top-0 h-12 w-full bg-primary text-on-primary'>
       <div class='mx-auto flex h-full max-w-lg flex-row justify-between'>
         <SiteNav />

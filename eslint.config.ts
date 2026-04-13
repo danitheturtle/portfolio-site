@@ -7,7 +7,7 @@ import globals from 'globals';
 //Plugins
 import { importX as importPlugin } from 'eslint-plugin-import-x';
 // import reactPlugin from 'eslint-plugin-react';
-import { configs as hooksConfigs } from 'eslint-plugin-react-hooks';
+// import { configs as hooksConfigs } from 'eslint-plugin-react-hooks';
 import { configs as AstroConfigs } from 'eslint-plugin-astro';
 import prettierPlugin from 'eslint-plugin-prettier/recommended';
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
@@ -30,7 +30,6 @@ export default [
     languageOptions: {
       parser: TSLintParser,
       parserOptions: {
-        projectService: true,
         project: './tsconfig.json',
         tsconfigRootDir: import.meta.dirname,
       },
@@ -54,6 +53,13 @@ export default [
       //Custom rules here:
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-debugger': 'warn',
+    },
+  },
+  {
+    files: ['**/*.astro'],
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'error',
     },
   },
 ];

@@ -1,7 +1,6 @@
 ---
-import Button from '../Button.astro';
-import Chip from '../Chip.astro';
-import ProfilePicture from '../profile-picture/ProfilePicture.astro';
+import Button from '@/components/Button.astro';
+import ProfilePicture from '@/components/profile-picture/ProfilePicture.astro';
 const localizedText = {
   userName: 'danitheturtle',
   userSubtitle: 'Software Engineer // Game Designer',
@@ -32,10 +31,10 @@ const localizedText = {
       </span>
     </div>
     <div class='flex flex-row gap-4'>
-      <Button as='a' href='mailto:dani.develops@pm.me'>Let's Connect</Button>
-      <Button variant='primary' as='a' href='assets/Dani_Resume.pdf'
-        >Download Resume</Button
-      >
+      <Button as='a' href='mailto:dani.develops@pm.me' startIcon="Send">Let's Connect</Button>
+      <Button variant='primary' as='a' href='assets/Dani_Resume.pdf' startIcon="Download">
+        Download Resume
+      </Button>
     </div>
   </div>
   <div class='flex flex-0 flex-col items-end lg:flex-1'></div>

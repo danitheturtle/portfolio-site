@@ -1,0 +1,68 @@
+---
+import ThemeIcon from './svgs/Theme.astro';
+import DownloadIcon from './svgs/Download.astro';
+import PlusIcon from './svgs/Plus.astro';
+import LinkIcon from './svgs/Link.astro';
+import SendIcon from './svgs/Send.astro';
+import CaretUpIcon from './svgs/CaretUp.astro';
+import CaretRightIcon from './svgs/CaretRight.astro';
+import CaretDownIcon from './svgs/CaretDown.astro';
+import CircleLeftIcon from './svgs/CircleLeft.astro';
+import CircleUpIcon from './svgs/CircleUp.astro';
+import CircleRightIcon from './svgs/CircleRight.astro';
+import CircleDownIcon from './svgs/CircleDown.astro';
+import CaretLeftIcon from './svgs/CaretLeft.astro';
+
+
+type IconType = (_props: Record<string, any>) => any;
+// prettier-ignore
+export type IconName = (
+    'Theme'
+  | 'Download'
+  | 'Plus'
+  | 'Link'
+  | 'Send'
+  | 'CaretUp'
+  | 'CaretRight'
+  | 'CaretDown'
+  | 'CaretLeft'
+  | 'CircleUp'
+  | 'CircleRight'
+  | 'CircleDown'
+  | 'CircleLeft'
+);
+
+export interface Props {
+  icon: IconName;
+  width?: string;
+  height?: string;
+  class?: string;
+}
+
+const {
+  icon,
+  width = '1.5rem',
+  height = '1.5rem',
+  class: classList = '',
+} = Astro.props as Props;
+
+const iconNameToSvgComponentMap: Record<IconName, IconType> = {
+  Theme: ThemeIcon,
+  Download: DownloadIcon,
+  Plus: PlusIcon,
+  Link: LinkIcon,
+  Send: SendIcon,
+  CaretUp: CaretUpIcon,
+  CaretRight: CaretRightIcon,
+  CaretDown: CaretDownIcon,
+  CaretLeft: CaretLeftIcon,
+  CircleUp: CircleUpIcon,
+  CircleLeft: CircleLeftIcon,
+  CircleRight: CircleRightIcon,
+  CircleDown: CircleDownIcon,
+};
+
+const IconComponent = iconNameToSvgComponentMap[icon];
+---
+
+<IconComponent width={width} height={height} class:list={[classList]} />

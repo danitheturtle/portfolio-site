@@ -60,3 +60,6 @@ nav > .btn {
   border: none;
   height: inherit;
 }
+dropdown > .btn {
+  border-radius: 0;
+}
