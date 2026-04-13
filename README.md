@@ -1,13 +1,15 @@
 # danitheturtle portfolio site
 
-A showcase of my work and web dev / design expertise. Post-framework, zero-js (site works without javascript).
+A showcase of my work and web dev / design expertise. **Post-framework, zero-js** (site works without javascript).
 
 CSS-only components:
-* Dropdowns
-* Buttons
-* Cards
-* Chips
 * Theme selector
 * Carousel
+* Dropdown
+* Button
+* Card
+* Chip
 
- Made using Astro and Tailwind.
+Design system preview at `/design`
+
+Made using Astro and Tailwind.
