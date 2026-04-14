@@ -1,9 +1,19 @@
 ---
 // MIT zkreations https://github.com/zkreations/icons
-const passthrough = Astro.props;
+export interface Props {
+  class?: string;
+  [k: string]: any;
+}
+const { class: classList, ...rest } = Astro.props;
 ---
 
-<svg aria-hidden='true' role='img' viewBox='0 0 24 24' {...passthrough}>
+<svg
+  aria-hidden='true'
+  role='img'
+  viewBox='0 0 24 24'
+  class:list={['-mt-0.25', classList]}
+  {...rest}
+>
   <path
     fill='none'
     stroke='currentColor'

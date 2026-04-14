@@ -1,9 +1,13 @@
 ---
 // MIT OOUI Team https://github.com/wikimedia/oojs-ui
-const passthrough = Astro.props;
+export interface Props {
+  class?: string;
+  [k: string]: any;
+}
+const {class: classList, ...rest} = Astro.props;
 ---
 
-<svg aria-hidden='true' role='img' viewBox='0 0 20 20' {...passthrough}>
+<svg aria-hidden='true' role='img' viewBox='0 0 20 20' class:list={['-mt-0.25', classList]} {...rest}>
   <path
     fill='currentColor'
     d='M17 12v5H3v-5H1v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5z'

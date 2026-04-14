@@ -5,6 +5,8 @@ import type { IconName } from '@/components/icon/Icon.astro';
 export interface Props {
   startIcon?: IconName;
   endIcon?: IconName;
+  startIconSize?: string;
+  endIconSize?: string;
   variant?: 'primary' | 'secondary' | 'text';
   size?: 'sm' | 'md' | 'lg';
   density?: 'compact' | 'normal' | 'comfortable';
@@ -19,6 +21,8 @@ const {
   density = 'normal',
   startIcon = undefined,
   endIcon = undefined,
+  startIconSize = undefined,
+  endIconSize = undefined,
   class: className,
   ...rest
 } = Astro.props as Props;
@@ -50,7 +54,7 @@ if (startIcon !== undefined || endIcon !== undefined) {
   ]}
   {...rest}
 >
-  {startIcon !== undefined && <Icon icon={startIcon} class='start-icon' size={iconSize} />}
+  {startIcon !== undefined && <Icon icon={startIcon} class='start-icon' size={startIconSize === undefined ? iconSize : startIconSize} />}
   <slot />
-  {endIcon !== undefined && <Icon icon={endIcon} class='end-icon' size={iconSize}/>}
+  {endIcon !== undefined && <Icon icon={endIcon} class='end-icon' size={endIconSize === undefined ? iconSize : endIconSize}/>}
 </Component>

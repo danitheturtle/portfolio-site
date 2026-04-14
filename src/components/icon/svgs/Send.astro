@@ -1,9 +1,13 @@
 ---
 // MIT Cole Bemis https://github.com/feathericons/feather
-const passthrough = Astro.props;
+export interface Props {
+  class?: string;
+  [k: string]: any;
+}
+const {class: classList, ...rest} = Astro.props;
 ---
 
-<svg aria-hidden='true' role='img' viewBox='0 0 24 24' {...passthrough}>
+<svg aria-hidden='true' role='img' viewBox='0 0 24 24' class:list={[classList]} {...rest}>
   <path
     fill='none'
     stroke='currentColor'

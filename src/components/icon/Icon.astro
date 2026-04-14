@@ -40,37 +40,22 @@ export interface Props {
 const { icon, size = '1.5rem', class: classList = '' } = Astro.props as Props;
 
 const iconNameToSvgComponentMap: Record<IconName, IconType> = {
-  Theme: ThemeIcon,
-  Download: DownloadIcon,
-  Plus: PlusIcon,
-  Link: LinkIcon,
-  Send: SendIcon,
-  CaretUp: CaretUpIcon,
-  CaretRight: CaretRightIcon,
   CaretDown: CaretDownIcon,
   CaretLeft: CaretLeftIcon,
-  CircleUp: CircleUpIcon,
+  CaretRight: CaretRightIcon,
+  CaretUp: CaretUpIcon,
+  CircleDown: CircleDownIcon,
   CircleLeft: CircleLeftIcon,
   CircleRight: CircleRightIcon,
-  CircleDown: CircleDownIcon,
-};
-
-const iconNameToMarginTopMap: Partial<Record<IconName, string>> = {
-  Send: '',
-  CaretDown: '-mt-1',
-  Plus: '-mt-0.4',
+  CircleUp: CircleUpIcon,
+  Download: DownloadIcon,
+  Link: LinkIcon,
+  Plus: PlusIcon,
+  Send: SendIcon,
+  Theme: ThemeIcon,
 };
 
 const IconComponent = iconNameToSvgComponentMap[icon];
 ---
 
-<IconComponent
-  width={size}
-  height={size}
-  class:list={[
-    iconNameToMarginTopMap[icon] !== undefined ?
-      iconNameToMarginTopMap[icon]
-    : '-mt-0.25',
-    classList,
-  ]}
-/>
+<IconComponent width={size} height={size} class={classList} />

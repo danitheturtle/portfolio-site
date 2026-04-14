@@ -18,6 +18,12 @@
   }
 }
 
+@custom-variant has-open {
+  &:has(*:popover-open) {
+    @slot;
+  }
+}
+
 @theme {
   --font-sans:
     'Arial', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
