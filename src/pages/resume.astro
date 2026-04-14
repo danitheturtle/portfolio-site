@@ -138,7 +138,7 @@ const resume = {
   <header
     class='flex flex-col bg-primary p-8 text-on-primary xl:-mx-12 xl:px-12 xl:pt-12'
   >
-    <h1 class='-mt-2 font-bold'>{resume.name}</h1>
+    <h1 class='h1 -mt-2 font-bold'>{resume.name}</h1>
     <p class='text-4xl'>{resume.position}</p>
     {
       resume.stats.map((nextStat) => (
@@ -157,7 +157,7 @@ const resume = {
     <p class='text-xl leading-normal'>
       {resume.summary}
     </p>
-    <h2 class='mt-4 mb-1 text-primary'>{resume.skillsTitle}</h2>
+    <h2 class='h2 mt-4 mb-1 text-primary'>{resume.skillsTitle}</h2>
     {
       resume.skills.map((nextSkill) => (
         <p class='mt-2'>
@@ -165,11 +165,11 @@ const resume = {
         </p>
       ))
     }
-    <h2 class='mt-4 mb-1 text-primary'>{resume.experienceTitle}</h2>
+    <h2 class='h2 mt-4 mb-1 text-primary'>{resume.experienceTitle}</h2>
     {
       resume.experience.map((nextExperience, i) => (
         <div class:list={['mt-2', { 'mt-6': i > 0 }]}>
-          <h3>
+          <h3 class="h3">
             {nextExperience.job} &ndash; {nextExperience.company}
           </h3>
           <p class='mt-1'>
@@ -190,12 +190,12 @@ const resume = {
         </div>
       ))
     }
-    <h2 class='mt-4 mb-1 text-primary'>{resume.educationTitle}</h2>
+    <h2 class='h2 mt-4 mb-1 text-primary'>{resume.educationTitle}</h2>
     {
       resume.education.map((nextEducation, i) => (
         <div class:list={['mt-2', { 'mt-6': i > 0 }]}>
-          <h3>{nextEducation.school}</h3>
-          <h4 class='text-3xl'>{nextEducation.degree}</h4>
+          <h3 class="h3">{nextEducation.school}</h3>
+          <h4 class='h4 text-3xl'>{nextEducation.degree}</h4>
           <p class='mt-1'>
             <em class='text-text-lighten-1'>
               {nextEducation.timeline[0]} &ndash; {nextEducation.timeline[1]}

@@ -1,28 +1,5 @@
 @import 'tailwindcss';
-
-/* Custom themes. Works without JS */
-@custom-variant dark {
-  &:where(:has(#auto-theme-radio:checked) *) {
-    @media (prefers-color-scheme: dark) {
-      @slot;
-    }
-  }
-  &:where(:has(#dark-theme-radio:checked) *) {
-    @slot;
-  }
-}
-
-@custom-variant rose {
-  &:where(:has(#rose-theme-radio:checked) *) {
-    @slot;
-  }
-}
-
-@custom-variant has-open {
-  &:has(*:popover-open) {
-    @slot;
-  }
-}
+@import './theme.css';
 
 @theme {
   --font-sans:

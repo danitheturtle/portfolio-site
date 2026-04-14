@@ -11,7 +11,7 @@ const localizedText = {
   <div class='flex flex-2 flex-col items-start'>
     <div class='flex w-full flex-row items-center justify-between gap-16'>
       <div class='flex flex-col items-start self-end'>
-        <h1 class='mb-1 text-8xl font-bold text-primary'>
+        <h1 class='h1 mb-1 text-8xl font-bold text-primary'>
           {localizedText.userName}
         </h1>
         <p class='text-lg'>
@@ -31,8 +31,15 @@ const localizedText = {
       </span>
     </div>
     <div class='flex flex-row gap-4'>
-      <Button as='a' href='mailto:dani.develops@pm.me' startIcon="Send">Let's Connect</Button>
-      <Button variant='primary' as='a' href='assets/Dani_Resume.pdf' startIcon="Download">
+      <Button as='a' href='mailto:dani.develops@pm.me' startIcon='Send'
+        >Let's Connect</Button
+      >
+      <Button
+        variant='primary'
+        as='a'
+        href='assets/Dani_Resume.pdf'
+        startIcon='Download'
+      >
         Download Resume
       </Button>
     </div>

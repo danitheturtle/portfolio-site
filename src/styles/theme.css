@@ -1,0 +1,36 @@
+@custom-variant dark {
+  &:where(:has(#auto-theme-radio:checked) *) {
+    @media (prefers-color-scheme: dark) {
+      @slot;
+    }
+  }
+  &:where(:has(#dark-theme-radio:checked) *) {
+    @slot;
+  }
+}
+
+@custom-variant rose {
+  &:where(:has(#rose-theme-radio:checked) *) {
+    @slot;
+  }
+}
+
+@layer theme {
+  .themeRoot {
+    @variant rose {
+      --color-text: oklch(0.25 0.1379 347.29);
+      --color-text-lighten-1: oklch(0.3 0.1379 347.29);
+      --color-text-lighten-2: oklch(0.35 0.1379 347.29);
+      --color-surface: var(--color-rose-100);
+    }
+    @variant dark {
+      --color-text: var(--color-grey-50);
+      --color-text-lighten-1: var(--color-grey-300);
+      --color-text-lighten-2: var(--color-grey-400);
+      --color-surface: var(--color-grey-800);
+      --color-on-surface: var(--color-white);
+    }
+
+    color: var(--color-text);
+  }
+}
