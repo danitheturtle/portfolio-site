@@ -1,17 +1,64 @@
 ---
-import zeroTierShowcase from './zerotier-showcase.webp';
+import Chip from '@/components/Chip.astro';
+import zeroTierShowcase from './ZeroTierCarouselBackground.webp';
+import { Image } from 'astro:assets';
+import Button from '@/components/Button.astro';
 ---
 
-<img
-  src={zeroTierShowcase.src}
-  width={zeroTierShowcase.width}
-  height={zeroTierShowcase.height}
-  decoding='async'
-  alt='ZeroTier video showcase'
+<style>
+  .bg-gradient-1 {
+    background: radial-gradient(circle,rgba(76, 72, 216, 0.6) 20%, rgba(255, 255, 255, 0.0) 80%);
+  }
+  .bg-gradient-2 {
+    background: radial-gradient(circle, rgba(255, 179, 73, 0.75) 20%, rgba(255, 255, 255, 0.0) 70%);
+  }
+  .bg-gradient-3 {
+    background: radial-gradient(circle, rgba(53, 60, 66, 0.75) 5%, rgba(255, 255, 255, 0.0) 55%);
+  }
+</style>
+<div class="absolute w-[150%] h-[175%] bg-gradient-1 -top-3/4 -left-3/4" />
+<div class="absolute w-[150%] h-[225%] bg-gradient-2 -bottom-[125%] -right-3/4" />
+<div class="absolute w-[250%] h-[250%] bg-gradient-3 -bottom-[150%] -left-[125%]" />
+<Image
+  src={zeroTierShowcase}
+  alt='Three screenshots of the ZeroTier Central SaaS application, showcasing various user input states.'
   class='absolute'
 />
-<div class='flex items-center justify-center'>
-  <div class='text-on-surface backdrop-blur-xs dark:text-surface'>
-    <h3 class='p-6'>ZeroTier</h3>
+<div class='z-10 flex w-full items-start justify-end gap-4 px-12 py-5'>
+  <div
+    class='flex h-full flex-col items-end justify-start rounded-xl p-2 text-right'
+  >
+    <h3 class='mt-2 text-8xl font-bold text-grey-950'>ZeroTier</h3>
+    <div class='flex flex-row gap-1'>
+      <Chip color='text-blue-600 border-blue-600' density='compact' size='md'
+        >TypeScript</Chip
+      >
+      <Chip
+        color='text-purple-600 border-purple-600'
+        density='compact'
+        size='md'>Vue</Chip
+      >
+      <Chip color='text-sky-600 border-sky-600' density='compact' size='md'
+        >Vuetify</Chip
+      >
+      <Chip
+        color='text-orange-600 border-orange-600'
+        density='compact'
+        size='md'>Pinia</Chip
+      >
+    </div>
+    <p class='pt-2 text-xl text-grey-700 font-semibold'>Primary Frontend Architect</p>
+    <p class='w-70 pt-2 text-base text-grey-950'>
+      Fully-featured SaaS platform with deeply integrated user feedback and
+      relationship-based access control.
+    </p>
+    <Button
+      as='a'
+      href='/projects/zerotier'
+      size='lg'
+      density='comfortable'
+      class='mt-32 lg:mt-48'
+      color='secondary'>Dive Deeper</Button
+    >
   </div>
 </div>

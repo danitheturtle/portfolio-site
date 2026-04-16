@@ -7,6 +7,7 @@ export interface Props {
   endIcon?: IconName;
   startIconSize?: string;
   endIconSize?: string;
+  color?: string;
   variant?: 'primary' | 'secondary' | 'text';
   size?: 'sm' | 'md' | 'lg';
   density?: 'compact' | 'normal' | 'comfortable';
@@ -19,6 +20,7 @@ const {
   variant = 'secondary',
   size = 'md',
   density = 'normal',
+  color = undefined,
   startIcon = undefined,
   endIcon = undefined,
   startIconSize = undefined,
@@ -52,6 +54,7 @@ if (startIcon !== undefined || endIcon !== undefined) {
     },
     className,
   ]}
+  {...(color === undefined ? {} : {style: `--btn-color:var(--color-${color})`})}
   {...rest}
 >
   {startIcon !== undefined && <Icon icon={startIcon} class='start-icon' size={startIconSize === undefined ? iconSize : startIconSize} />}

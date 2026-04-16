@@ -6,26 +6,37 @@
   --btn-icon-density: 1;
   --btn-height: calc(var(--spacing) * 10);
 
-  @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-primary text-center align-middle font-sans text-base font-bold text-primary uppercase no-underline;
+  --btn-color: var(--color-primary);
+  --btn-color-lighten: oklch(from var(--btn-color) calc(l + 0.05) calc(c - 0.01) h);
+  --btn-on-color: var(--color-on-primary);
+
+  @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border-2 text-center align-middle font-sans text-base font-bold uppercase no-underline;
+
+  border-color: var(--btn-color);
+  color: var(--btn-color);
 
   &:hover,
   &:focus-visible {
-    @apply bg-primary text-on-primary;
+    background-color: var(--btn-color);
+    color: var(--btn-on-color);
   }
 
   &:active {
-    @apply ring-1 ring-primary;
+    @apply ring-1;
+    --tw-ring-color: var(--btn-color);
   }
 
   &.btn-primary {
     @apply bg-primary text-on-primary;
+    background-color: var(--btn-color);
+    color: var(--btn-on-color);
     &:hover,
     &:focus-visible {
-      background-color: var(--color-primary-lighten);
-      border-color: var(--color-primary-lighten);
+      background-color: var(--btn-color-lighten);
+      border-color: var(--btn-color-lighten);
     }
     &:hover {
-      --tw-ring-color: var(--color-primary-lighten);
+      --tw-ring-color: var(--btn-color-lighten);
     }
     &:focus-visible {
       --tw-ring-color: var(--color-focus);
