@@ -42,7 +42,13 @@ const nextIndex = index < slideCount - 1 ? index + 1 : 0;
   />
 </label>
 <slide class='absolute h-full w-full opacity-0 transition-opacity duration-500'>
-  <content class:list={['relative flex h-full w-full', className]} {...rest}>
+  <content
+    class:list={[
+      'relative flex h-full w-full',
+      className,
+    ]}
+    {...rest}
+  >
     <slot />
   </content>
   <controls
