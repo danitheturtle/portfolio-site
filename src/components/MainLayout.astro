@@ -1,7 +1,10 @@
 ---
+import Divider from './Divider.astro';
 import SiteNav from './SiteNav.astro';
 import ThemeSelector from './ThemeSelector.astro';
 import '@/styles/main.css';
+
+const currentYear = new Date(Date.now()).getFullYear();
 ---
 
 <!doctype html>
@@ -11,14 +14,21 @@ import '@/styles/main.css';
     <slot name='head' />
   </head>
   <body class='themeRoot bg-surface text-on-surface'>
-    <div class='sticky top-0 h-12 w-full bg-primary text-on-primary'>
+    <header class='sticky top-0 h-12 w-full bg-primary text-on-primary'>
       <div class='mx-auto flex h-full max-w-lg flex-row justify-between'>
         <SiteNav />
         <ThemeSelector />
       </div>
-    </div>
+    </header>
     <div class='mx-auto max-w-lg'>
       <slot />
+      <footer class='text-center text-text-lighten-2'>
+        <Divider />
+        <p class='mb-2'>
+          Made by <span class="font-bold">danitheturtle</span> using her human brain
+        </p>
+        <p class="italic"><span class="font-extrabold">No Copyright</span> {currentYear}; Do what you want, I'm not your mother</p>
+      </footer>
     </div>
   </body>
 </html>

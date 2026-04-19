@@ -1,5 +1,7 @@
 ---
 import Button from '@/components/Button.astro';
+import Card from '@/components/Card.astro';
+import Divider from '@/components/Divider.astro';
 import ProfilePicture from '@/components/profile-picture/ProfilePicture.astro';
 const localizedText = {
   userName: 'danitheturtle',
@@ -7,7 +9,7 @@ const localizedText = {
 };
 ---
 
-<section id='intro' class='flex w-full flex-col py-8 md:flex-row'>
+<section id='intro' class='flex w-full flex-col gap-16 py-8 md:flex-row'>
   <div class='flex flex-2 flex-col items-start'>
     <div class='flex w-full flex-row items-center justify-between gap-16'>
       <div class='flex flex-col items-start self-end'>
@@ -44,5 +46,32 @@ const localizedText = {
       </Button>
     </div>
   </div>
-  <div class='flex flex-0 flex-col items-end lg:flex-1'></div>
+  <div class='mt-8 flex flex-1 flex-col items-end'>
+    <h3 class='text-2xl font-bold'>Current Roles</h3>
+    <Divider class='w-24' />
+    <Button
+      as='a'
+      href='mailto:dani.develops@pm.me'
+      target="_blank"
+      class='flex-1 h-[inherit] w-full flex-col items-start gap-0 p-2 normal-case'
+      variant='primary'
+      color='grey-700'
+    >
+      <p class='text-xl font-bold'>Software Engineering</p>
+      <p class='text-md text-text-lighten-2'>Available to Work</p>
+      <p class='text-md'>Nothing asadf asdf asdf asdf asdf</p>
+    </Button>
+    <Button
+      as='a'
+      href='https://github.com/danitheturtle/godly-pets-delivery-service'
+      target="_blank"
+      class='mt-4 flex-1 h-[inherit] w-full flex-col items-start gap-0 p-2 normal-case'
+      variant='primary'
+      color='grey-700'
+    >
+      <p class='text-xl font-bold'>Game Design</p>
+      <p class='text-md text-text-lighten-2'>Committed</p>
+      <p class='text-md'>Godly Pets Delivery Service</p>
+    </Button>
+  </div>
 </section>

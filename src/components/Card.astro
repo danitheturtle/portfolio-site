@@ -6,6 +6,7 @@ export interface Props {
   divider?: boolean;
   density?: 'compact' | 'normal' | 'comfortable';
   class?: string;
+  contentClass?: string;
   [k: string]: any;
 }
 const {
@@ -14,6 +15,7 @@ const {
   divider = false,
   density = 'normal',
   class: className,
+  contentClass = '',
   ...rest
 } = Astro.props as Props;
 ---
@@ -21,10 +23,12 @@ const {
 <div
   class:list={[
     'card',
+    'flex flex-col',
     {
       'card-compact': density === 'compact',
       'card-comfortable': density === 'comfortable',
       'card-content': title == '',
+      [contentClass]: title == '',
     },
     className,
   ]}
@@ -38,7 +42,7 @@ const {
           <h3 class='text-xl font-normal text-text-lighten-1'>{subtitle}</h3>
         )}
         {divider && <Divider />}
-        <div class='card-content pt-1'>
+        <div class:list={['card-content pt-1', contentClass]}>
           <slot />
         </div>
       </>

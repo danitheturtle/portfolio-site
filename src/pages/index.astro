@@ -2,7 +2,7 @@
 import CarouselSlide from '@/components/CarouselSlide.astro';
 import IntroSection from '@/components/sections/home/IntroSection.astro';
 import MainLayout from '@/components/MainLayout.astro';
-import ZeroTierSlide from './projects/zerotier/ZeroTierSlide.astro';
+import ZeroTierSlide from '@/components/carousel-slides/zerotier/ZeroTierSlide.astro';
 const slideCount = 3;
 ---
 
@@ -28,5 +28,6 @@ const slideCount = 3;
         </CarouselSlide>
       </carousel>
     </div>
+    <h2 id='recommendations' class='h2 mt-12 mb-1'>Highly Recommended</h2>
   </div>
 </MainLayout>
