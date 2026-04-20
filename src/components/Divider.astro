@@ -9,6 +9,7 @@ const { class: className, vertical = false, ...rest } = Astro.props as Props;
 
 <div
   class:list={[
+    'divider',
     {
       'my-4 h-px border-t-2': !vertical,
       'mx-4 w-px border-l-2': vertical

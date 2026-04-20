@@ -74,24 +74,49 @@ const hiddenRecommendations = [
 ---
 
 <h2 id='recommendations' class='h2 order-6 mt-12 mb-1 w-full'>
-  Highly Recommended
+  What Others Say
 </h2>
-<div class='order-7 flex w-full flex-row'>
-  <div class='hidden flex-1 items-center justify-end mr-4 sm:flex'>
+<section
+  class='order-7 flex w-full flex-row [&:has(*:checked)>.divider]:hidden lg:px-20'
+>
+  <div class='mr-8 hidden items-center justify-end lg:flex'>
     <Icon icon='Quote' size='12rem' class='text-text-lighten-2' />
   </div>
-  <Divider vertical class='my-12' />
-  <div class='flex flex-2 flex-col items-center gap-4 p-4'>
+  <Divider vertical class='my-12 mr-0 ml-0 hidden lg:flex' />
+  <div
+    class:list={[
+      'my-4 flex max-h-128 flex-1 flex-col items-center gap-4',
+      'overflow-x-hidden overflow-y-auto',
+      '[direction:rtl] [scrollbar-color:var(--color-text-lighten-2)_var(--color-card)] [scrollbar-width:thin]',
+      'lg:pl-6 lg:[scrollbar-gutter:stable]',
+    ]}
+  >
+    <Button
+      as='label'
+      for='show-more-quotes-checkbox'
+      color='grey-400'
+      class:list={[
+        'moreQuotesButton order-last min-h-10 px-4 [direction:ltr]',
+        'has-focus-visible:ring-2 has-focus-visible:ring-focus',
+        'has-checked:mb-4 has-checked:[&>.less]:inline has-checked:[&>.more]:hidden has-checked:[&~.card]:ml-4 has-checked:[&~.card]:flex lg:has-checked:[&~.card]:ml-0',
+      ]}
+    >
+      <Icon icon='More' size='2rem' />
+      <span class='more inline'>More</span><span class='less hidden'>Less</span>
+      <input class='sr-only' type='checkbox' id='show-more-quotes-checkbox' />
+    </Button>
     {
       recommendations.map((nextQuote) => (
-        <Card>
+        <Card class='[direction:ltr]'>
           {nextQuote.quoteParagraphs.map((nextParagraph, i) => (
             <p class='mb-2 text-text-lighten-1'>
-              <span class='-mr-1'>{i === 0 ? '"' : ''}</span>
+              {i === 0 ?
+                <span class='-mr-1'>"</span>
+              : ''}
               <span>{nextParagraph}</span>
-              <span class='-ml-1'>
-                {i === nextQuote.quoteParagraphs.length - 1 ? '"' : ''}
-              </span>
+              {i === nextQuote.quoteParagraphs.length - 1 ?
+                <span class='-ml-1'>"</span>
+              : ''}
             </p>
           ))}
           <p class='font-bold'>
@@ -100,8 +125,25 @@ const hiddenRecommendations = [
         </Card>
       ))
     }
-    <Button color='grey-300' class="max-w-min px-4">
-      <Icon icon='More' size='2rem' />
-    </Button>
+    {
+      hiddenRecommendations.map((nextQuote) => (
+        <Card class='hidden [direction:ltr]'>
+          {nextQuote.quoteParagraphs.map((nextParagraph, i) => (
+            <p class='mb-2 text-text-lighten-1'>
+              {i === 0 ?
+                <span class='-mr-1'>"</span>
+              : ''}
+              <span>{nextParagraph}</span>
+              {i === nextQuote.quoteParagraphs.length - 1 ?
+                <span class='-ml-1'>"</span>
+              : ''}
+            </p>
+          ))}
+          <p class='font-bold'>
+            {nextQuote.name} &mdash; {nextQuote.role}
+          </p>
+        </Card>
+      ))
+    }
   </div>
-</div>
+</section>
