@@ -1,0 +1,15 @@
+---
+import Divider from './Divider.astro';
+
+const currentYear = new Date(Date.now()).getFullYear();
+---
+
+<footer class='text-center text-text-lighten-2 mb-24'>
+  <Divider />
+  <p class='mb-2'>
+    Made by <span class='font-bold'>danitheturtle</span> using her human brain
+  </p>
+  <p class='italic'>
+    No Copyright {currentYear}; Do what you want, I'm not your mother
+  </p>
+</footer>

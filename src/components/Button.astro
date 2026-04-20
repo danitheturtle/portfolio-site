@@ -8,6 +8,7 @@ export interface Props {
   startIconSize?: string;
   endIconSize?: string;
   color?: string;
+  hoverColor?: string;
   variant?: 'primary' | 'secondary' | 'text';
   size?: 'sm' | 'md' | 'lg';
   density?: 'compact' | 'normal' | 'comfortable';
@@ -21,6 +22,7 @@ const {
   size = 'md',
   density = 'normal',
   color = undefined,
+  hoverColor = undefined,
   startIcon = undefined,
   endIcon = undefined,
   startIconSize = undefined,
@@ -39,6 +41,14 @@ if (startIcon !== undefined || endIcon !== undefined) {
   }
   iconSize = `${fIconSize}rem`;
 }
+
+let style = '';
+if (color !== undefined) {
+  style += `--btn-color:var(--color-${color});`;
+}
+if (hoverColor !== undefined) {
+  style += `--btn-color-lighten:var(--color-${hoverColor});`;
+}
 ---
 
 <Component
@@ -54,10 +64,26 @@ if (startIcon !== undefined || endIcon !== undefined) {
     },
     className,
   ]}
-  {...(color === undefined ? {} : {style: `--btn-color:var(--color-${color})`})}
+  {...style === '' ? {} : { style }}
   {...rest}
 >
-  {startIcon !== undefined && <Icon icon={startIcon} class='start-icon' size={startIconSize === undefined ? iconSize : startIconSize} />}
+  {
+    startIcon !== undefined && (
+      <Icon
+        icon={startIcon}
+        class='start-icon'
+        size={startIconSize === undefined ? iconSize : startIconSize}
+      />
+    )
+  }
   <slot />
-  {endIcon !== undefined && <Icon icon={endIcon} class='end-icon' size={endIconSize === undefined ? iconSize : endIconSize}/>}
+  {
+    endIcon !== undefined && (
+      <Icon
+        icon={endIcon}
+        class='end-icon'
+        size={endIconSize === undefined ? iconSize : endIconSize}
+      />
+    )
+  }
 </Component>

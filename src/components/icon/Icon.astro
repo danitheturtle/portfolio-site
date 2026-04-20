@@ -1,38 +1,40 @@
 ---
-import ThemeIcon from './svgs/Theme.astro';
-import DownloadIcon from './svgs/Download.astro';
-import PlusIcon from './svgs/Plus.astro';
-import LinkIcon from './svgs/Link.astro';
-import SendIcon from './svgs/Send.astro';
-import QuoteIcon from './svgs/Quote.astro';
-import DotIcon from './svgs/Dot.astro';
-import CaretUpIcon from './svgs/CaretUp.astro';
-import CaretRightIcon from './svgs/CaretRight.astro';
 import CaretDownIcon from './svgs/CaretDown.astro';
-import CircleLeftIcon from './svgs/CircleLeft.astro';
-import CircleUpIcon from './svgs/CircleUp.astro';
-import CircleRightIcon from './svgs/CircleRight.astro';
-import CircleDownIcon from './svgs/CircleDown.astro';
 import CaretLeftIcon from './svgs/CaretLeft.astro';
+import CaretRightIcon from './svgs/CaretRight.astro';
+import CaretUpIcon from './svgs/CaretUp.astro';
+import CircleDownIcon from './svgs/CircleDown.astro';
+import CircleLeftIcon from './svgs/CircleLeft.astro';
+import CircleRightIcon from './svgs/CircleRight.astro';
+import CircleUpIcon from './svgs/CircleUp.astro';
+import DotIcon from './svgs/Dot.astro';
+import DownloadIcon from './svgs/Download.astro';
+import LinkIcon from './svgs/Link.astro';
+import MoreIcon from './svgs/More.astro';
+import PlusIcon from './svgs/Plus.astro';
+import QuoteIcon from './svgs/Quote.astro';
+import SendIcon from './svgs/Send.astro';
+import ThemeIcon from './svgs/Theme.astro';
 
 type IconType = (_props: Record<string, any>) => any;
 // prettier-ignore
 export type IconName = (
-    'Theme'
-  | 'Download'
-  | 'Plus'
-  | 'Link'
-  | 'Send'
-  | 'Quote'
-  | 'Dot'
-  | 'CaretUp'
-  | 'CaretRight'
-  | 'CaretDown'
+    'CaretDown'
   | 'CaretLeft'
-  | 'CircleUp'
-  | 'CircleRight'
+  | 'CaretRight'
+  | 'CaretUp'
   | 'CircleDown'
   | 'CircleLeft'
+  | 'CircleRight'
+  | 'CircleUp'
+  | 'Dot'
+  | 'Download'
+  | 'Link'
+  | 'More'
+  | 'Plus'
+  | 'Quote'
+  | 'Send'
+  | 'Theme'
 );
 
 export interface Props {
@@ -52,9 +54,10 @@ const iconNameToSvgComponentMap: Record<IconName, IconType> = {
   CircleLeft: CircleLeftIcon,
   CircleRight: CircleRightIcon,
   CircleUp: CircleUpIcon,
-  Download: DownloadIcon,
   Dot: DotIcon,
+  Download: DownloadIcon,
   Link: LinkIcon,
+  More: MoreIcon,
   Plus: PlusIcon,
   Quote: QuoteIcon,
   Send: SendIcon,

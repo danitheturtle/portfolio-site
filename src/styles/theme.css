@@ -29,6 +29,8 @@
       --color-text-lighten-2: var(--color-grey-400);
       --color-surface: var(--color-grey-800);
       --color-on-surface: var(--color-white);
+      --color-card: var(--color-grey-700);
+      --color-card-hover: var(--color-grey-600);
     }
 
     color: var(--color-text);

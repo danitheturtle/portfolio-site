@@ -1,10 +1,16 @@
 ---
 import Button from './Button.astro';
+import ThemeSelector from './ThemeSelector.astro';
 ---
 
-<nav class='no-wrap mx-2 my-0 h-full xl:-mx-6'>
-  <Button as='a' href='/' variant='primary'>Home</Button>
-  <Button as='a' href='/projects' variant='primary'>Projects</Button>
-  <Button as='a' href='/resume' variant='primary'>Resume</Button>
-  <Button as='a' href='/design' variant='primary'>Design</Button>
-</nav>
+<header class='sticky top-0 z-50 h-12 w-full bg-primary text-on-primary'>
+  <div class='mx-auto flex h-full max-w-lg flex-row justify-between'>
+    <nav class='no-wrap mx-2 my-0 h-full xl:-mx-6'>
+      <Button as='a' href='/' variant='primary'>Home</Button>
+      <Button as='a' href='/projects' variant='primary'>Projects</Button>
+      <Button as='a' href='/resume' variant='primary'>Resume</Button>
+      <Button as='a' href='/design' variant='primary'>Design</Button>
+    </nav>
+    <ThemeSelector />
+  </div>
+</header>

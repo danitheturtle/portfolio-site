@@ -1,0 +1,107 @@
+---
+import Button from '@/components/Button.astro';
+import Card from '@/components/Card.astro';
+import Divider from '@/components/Divider.astro';
+import Icon from '@/components/icon/Icon.astro';
+const recommendations = [
+  {
+    name: 'Kerry H.',
+    role: 'Principal Product Manager',
+    quoteParagraphs: [
+      'Dani has a real gift for making complex concepts clear. She jumped into tough problems without hesitation, ' +
+        'and her thorough, careful code gave the team confidence that we were building on solid ground. ' +
+        "Any team that gets her is lucky - she'll raise the bar for everyone around her.",
+    ],
+  },
+  {
+    name: 'James L.',
+    role: 'Senior Product Designer',
+    quoteParagraphs: [
+      "Dani is the kind of engineer every designer hopes to work with. She's incredibly UX-minded " +
+        'and always pushing for better experiences. She ' +
+        'knows when to push for ideal solutions and when to craft smart, workable compromises.',
+      'Her proactive communication, especially around design feasibility and improvements, made the collaboration ' +
+        "not just productive, but genuinely fun. She made my job easier and the product better. She's the real deal.",
+    ],
+  },
+];
+const hiddenRecommendations = [
+  {
+    name: 'Jules P.',
+    role: 'Head of Engineering',
+    quoteParagraphs: [
+      "If you want some work done fast and done right - Dani is your dev! She's a highly collaborative " +
+        "engineer with a no-nonsense perspective. She'll tell you how it should be done, how it could be " +
+        'done and how you can slice and dice the work to meet deadlines and business goals. She seems to ' +
+        'do her best work when given context, direction and a collaborative team. If you include a mission, ' +
+        'watch out! Strongly recommend Dani if you have need of a fantastic product engineer.',
+    ],
+  },
+  {
+    name: 'Duygu K.',
+    role: 'Software Engineer',
+    quoteParagraphs: [
+      'It was a pleasure to work with Dani and learn from her huge experience and creative perspective in frontend, ' +
+        'she is someone who carries out a lot of complex work in a project and leads in a good way. I would definitely ' +
+        'recommend her to any team and would definitely want to work with her again!',
+    ],
+  },
+  {
+    name: 'Constantijn V.',
+    role: 'Lead Platform Engineer',
+    quoteParagraphs: [
+      "I really enjoyed working with Dani, she's capable of handling anything frontend from js, ts, react, vue " +
+        'to css (including all the flavors that comes in). She also has no problem picking up new conepts and frameworks',
+      "Show her a prioritized backlog or figma designs and she'll chew through all the tickets in no time flat with great results.",
+    ],
+  },
+  {
+    name: 'Travis D.',
+    role: 'Senior Software Engineer',
+    quoteParagraphs: [
+      "Dani joined the team and was immediately productive. It\'s great to have team members that you trust to just get " +
+        'it done. Cares about the user and their experience, and the company, and the team.',
+    ],
+  },
+  {
+    name: 'Grant L.',
+    role: 'Director of Service Engineering',
+    quoteParagraphs: [
+      'Dani is an absolutely fantastic frontend developer. I was continually impressed by her work here at ZeroTier.',
+    ],
+  },
+];
+---
+
+<h2 id='recommendations' class='h2 order-6 mt-12 mb-1 w-full'>
+  Highly Recommended
+</h2>
+<div class='order-7 flex w-full flex-row'>
+  <div class='hidden flex-1 items-center justify-end mr-4 sm:flex'>
+    <Icon icon='Quote' size='12rem' class='text-text-lighten-2' />
+  </div>
+  <Divider vertical class='my-12' />
+  <div class='flex flex-2 flex-col items-center gap-4 p-4'>
+    {
+      recommendations.map((nextQuote) => (
+        <Card>
+          {nextQuote.quoteParagraphs.map((nextParagraph, i) => (
+            <p class='mb-2 text-text-lighten-1'>
+              <span class='-mr-1'>{i === 0 ? '"' : ''}</span>
+              <span>{nextParagraph}</span>
+              <span class='-ml-1'>
+                {i === nextQuote.quoteParagraphs.length - 1 ? '"' : ''}
+              </span>
+            </p>
+          ))}
+          <p class='font-bold'>
+            {nextQuote.name} &mdash; {nextQuote.role}
+          </p>
+        </Card>
+      ))
+    }
+    <Button color='grey-300' class="max-w-min px-4">
+      <Icon icon='More' size='2rem' />
+    </Button>
+  </div>
+</div>

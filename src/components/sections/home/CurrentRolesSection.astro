@@ -23,14 +23,15 @@ const buttonClasses =
     target='_blank'
     class={buttonClasses}
     variant='primary'
-    color='grey-700'
+    color="card"
+    hoverColor="card-hover"
   >
-    <div class='flex flex-col items-start gap-0 text-left'>
+    <div class='flex flex-col items-start gap-0 text-left min-w-48 text-text'>
       <p class='text-lg font-bold'>Software Engineering</p>
-      <p class='text-md text-green-400'>Available to Work</p>
-      <p class='mt-1 text-md'>Actively applying to open positions</p>
+      <p class='text-md text-green-500 dark:text-green-400'>Available to Work</p>
+      <p class='mt-1 text-md'>Actively applying for full-time roles</p>
     </div>
-    <Icon icon='Dot' size='2rem' class='mr-2 text-green-400' />
+    <Icon icon='Dot' size='2rem' class='mr-2 shrink-0 text-green-400' />
   </Button>
   <Button
     as='a'
@@ -39,13 +40,14 @@ const buttonClasses =
     class={buttonClasses}
     class:list={[buttonClasses, '[&:hover>svg]:mr-0']}
     variant='primary'
-    color='grey-700'
+    color="card"
+    hoverColor="card-hover"
   >
-    <div class='flex flex-col items-start gap-0 text-left'>
+    <div class='flex flex-col items-start gap-0 text-left min-w-48 text-text'>
       <p class='text-lg font-bold'>Game Design</p>
       <p class='text-md text-text-lighten-2'>Currently Committed</p>
       <p class='mt-1 text-md'>Godly Pets Delivery Service</p>
     </div>
-    <Icon icon='CircleRight' size='2rem' class='mr-2 transition-all' />
+    <Icon icon='CircleRight' size='2rem' class='mr-2 shrink-0 transition-all text-text' />
   </Button>
 </div>

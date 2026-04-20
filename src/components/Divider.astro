@@ -1,14 +1,19 @@
 ---
 export interface Props {
   class?: string;
+  vertical?: boolean;
   [k: string]: any;
 }
-const { class: className, ...rest } = Astro.props as Props;
+const { class: className, vertical = false, ...rest } = Astro.props as Props;
 ---
 
 <div
   class:list={[
-    'divider my-4 box-content h-px border-t-2 border-grey-200 dark:border-grey-700 rose:border-rose-200',
+    {
+      'my-4 h-px border-t-2': !vertical,
+      'mx-4 w-px border-l-2': vertical
+    },
+    'box-content border-grey-200 dark:border-grey-700 rose:border-rose-200',
     className,
   ]}
   {...rest}

@@ -85,14 +85,20 @@
 
   /* Custom theme colors */
   --color-primary: var(--color-red-500);
-  --color-primary-lighten: oklch(from var(--color-red-500) calc(l + 0.05) calc(c - 0.01) h);
+  --color-primary-lighten: oklch(
+    from var(--color-red-500) calc(l + 0.05) calc(c - 0.01) h
+  );
   --color-secondary: var(--color-blue-600);
-  --color-secondary-lighten: oklch(from var(--color-blue-600) calc(l + 0.05) calc(c - 0.01) h);
+  --color-secondary-lighten: oklch(
+    from var(--color-blue-600) calc(l + 0.05) calc(c - 0.01) h
+  );
   --color-focus: oklch(0.7351 0.1 236.3);
   --color-on-primary: var(--color-grey-50);
   --color-surface: var(--color-white);
   --color-on-surface: var(--color-grey-800);
   --color-text: var(--color-grey-950);
+  --color-card: var(--color-taupe-100);
+  --color-card-hover: var(--color-taupe-200);
   --color-text-lighten-1: var(--color-grey-600);
   --color-text-lighten-2: var(--color-grey-500);
 
@@ -101,10 +107,10 @@
   --container-2xs: 32rem;
   --container-xs: 40rem;
   --container-sm: 48rem; /* 768 - most tablets above this */
-  --container-md: 56rem; 
+  --container-md: 56rem;
   --container-lg: 64rem; /* 1024 - content width. above this site has margins */
   --container-xl: 72rem; /* 1152 - most laptops above this*/
-  --container-2xl: 80rem; 
+  --container-2xl: 80rem;
   --container-3xl: 88rem;
   --container-4xl: 96rem;
   --container-5xl: 104rem;
