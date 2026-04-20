@@ -1,33 +1,17 @@
 ---
-import CarouselSlide from '@/components/CarouselSlide.astro';
 import IntroSection from '@/components/sections/home/IntroSection.astro';
 import MainLayout from '@/components/MainLayout.astro';
-import ZeroTierSlide from '@/components/carousel-slides/zerotier/ZeroTierSlide.astro';
-const slideCount = 3;
+import ShowcaseSection from '@/components/sections/home/ShowcaseSection.astro';
+import CurrentRolesSection from '@/components/sections/home/CurrentRolesSection.astro';
 ---
 
 <MainLayout>
-  <div class='flex flex-col items-start justify-start px-8 lg:px-0'>
+  <div class='flex flex-row flex-wrap items-start justify-start px-8 xl:px-0'>
     <IntroSection />
-    <h2 id='showcase' class='h2 mt-4 mb-1'>Showcase</h2>
-    <div class='mt-4 flex aspect-video w-full'>
-      <carousel>
-        <CarouselSlide
-          carouselId='sc'
-          index={0}
-          slideCount={slideCount}
-          class='overflow-hidden bg-[#edcbbf]'
-        >
-          <ZeroTierSlide />
-        </CarouselSlide>
-        <CarouselSlide carouselId='sc' index={1} slideCount={slideCount}>
-          Slide 2
-        </CarouselSlide>
-        <CarouselSlide carouselId='sc' index={2} slideCount={slideCount}>
-          Slide 3
-        </CarouselSlide>
-      </carousel>
-    </div>
-    <h2 id='recommendations' class='h2 mt-12 mb-1'>Highly Recommended</h2>
+    <CurrentRolesSection />
+    <ShowcaseSection />
+    <h2 id='recommendations' class='h2 order-6 mt-12 mb-1 w-full'>
+      Highly Recommended
+    </h2>
   </div>
 </MainLayout>

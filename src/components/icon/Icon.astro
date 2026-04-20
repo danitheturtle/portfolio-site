@@ -5,6 +5,7 @@ import PlusIcon from './svgs/Plus.astro';
 import LinkIcon from './svgs/Link.astro';
 import SendIcon from './svgs/Send.astro';
 import QuoteIcon from './svgs/Quote.astro';
+import DotIcon from './svgs/Dot.astro';
 import CaretUpIcon from './svgs/CaretUp.astro';
 import CaretRightIcon from './svgs/CaretRight.astro';
 import CaretDownIcon from './svgs/CaretDown.astro';
@@ -23,6 +24,7 @@ export type IconName = (
   | 'Link'
   | 'Send'
   | 'Quote'
+  | 'Dot'
   | 'CaretUp'
   | 'CaretRight'
   | 'CaretDown'
@@ -51,6 +53,7 @@ const iconNameToSvgComponentMap: Record<IconName, IconType> = {
   CircleRight: CircleRightIcon,
   CircleUp: CircleUpIcon,
   Download: DownloadIcon,
+  Dot: DotIcon,
   Link: LinkIcon,
   Plus: PlusIcon,
   Quote: QuoteIcon,

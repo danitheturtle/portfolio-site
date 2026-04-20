@@ -1,0 +1,18 @@
+---
+// custom, no copyright
+export interface Props {
+  class?: string;
+  [k: string]: any;
+}
+const { class: classList, ...rest } = Astro.props;
+---
+
+<svg
+  aria-hidden='true'
+  role='img'
+  viewBox='0 0 24 24'
+  class:list={[classList]}
+  {...rest}
+>
+  <circle cx='12' cy='12' r='10' fill='currentColor'></circle>
+</svg>
