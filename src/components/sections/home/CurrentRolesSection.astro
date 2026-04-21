@@ -6,14 +6,15 @@ const buttonClasses =
   'h-[inherit] justify-between w-full flex-1 p-4 normal-case lg:py-0';
 ---
 
-<div
+<section
+  id='currentRoles'
   class:list={[
-    'relative order-5 flex w-full flex-1 flex-wrap gap-4',
+    'relative order-4 mt-16 flex w-full flex-1 flex-wrap gap-4',
     'lg:order-2 lg:mt-12 lg:ml-16 lg:w-[unset] lg:flex-col lg:self-stretch lg:py-8',
   ]}
 >
   <h2
-    class='h2 mt-12 w-full font-bold lg:absolute lg:-top-1 lg:mt-0 lg:text-right lg:text-2xl'
+    class='h2 w-full font-bold lg:absolute lg:-top-1 lg:text-right lg:text-2xl'
   >
     Current Roles
   </h2>
@@ -23,12 +24,14 @@ const buttonClasses =
     target='_blank'
     class={buttonClasses}
     variant='primary'
-    color="card"
-    hoverColor="card-hover"
+    color='card'
+    hoverColor='card-hover'
   >
-    <div class='flex flex-col items-start gap-0 text-left min-w-48 text-text'>
+    <div class='flex min-w-48 flex-col items-start gap-0 text-left text-text'>
       <p class='text-lg font-bold'>Software Engineering</p>
-      <p class='text-md text-green-500 dark:text-green-400'>Available to Work</p>
+      <p class='text-md text-green-500 dark:text-green-400'>
+        Available to Work
+      </p>
       <p class='mt-1 text-md'>Actively applying for full-time roles</p>
     </div>
     <Icon icon='Dot' size='2rem' class='mr-2 shrink-0 text-green-400' />
@@ -40,14 +43,18 @@ const buttonClasses =
     class={buttonClasses}
     class:list={[buttonClasses, '[&:hover>svg]:mr-0']}
     variant='primary'
-    color="card"
-    hoverColor="card-hover"
+    color='card'
+    hoverColor='card-hover'
   >
-    <div class='flex flex-col items-start gap-0 text-left min-w-48 text-text'>
+    <div class='flex min-w-48 flex-col items-start gap-0 text-left text-text'>
       <p class='text-lg font-bold'>Game Design</p>
       <p class='text-md text-text-lighten-2'>Currently Committed</p>
       <p class='mt-1 text-md'>Godly Pets Delivery Service</p>
     </div>
-    <Icon icon='CircleRight' size='2rem' class='mr-2 shrink-0 transition-all text-text' />
+    <Icon
+      icon='CircleRight'
+      size='2rem'
+      class='mr-2 shrink-0 text-text transition-all'
+    />
   </Button>
-</div>
+</section>

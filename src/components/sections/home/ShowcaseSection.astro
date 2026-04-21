@@ -5,22 +5,24 @@ import CarouselSlide from '@/components/CarouselSlide.astro';
 const slideCount = 3;
 ---
 
-<h2 id='showcase' class='h2 order-3 mt-4 mb-1 w-full'>Showcase</h2>
-<div class='order-4 mt-4 flex aspect-video w-full'>
-  <carousel>
-    <CarouselSlide
-      carouselId='sc'
-      index={0}
-      slideCount={slideCount}
-      class='overflow-hidden bg-[#edcbbf]'
-    >
-      <ZeroTierSlide />
-    </CarouselSlide>
-    <CarouselSlide carouselId='sc' index={1} slideCount={slideCount}>
-      Slide 2
-    </CarouselSlide>
-    <CarouselSlide carouselId='sc' index={2} slideCount={slideCount}>
-      Slide 3
-    </CarouselSlide>
-  </carousel>
-</div>
+<section id='showcase' class='order-3 mt-8 w-full'>
+  <h2 class='h2'>Showcase</h2>
+  <div class='mt-4 flex aspect-video w-full'>
+    <carousel>
+      <CarouselSlide
+        carouselId='sc'
+        index={0}
+        slideCount={slideCount}
+        class='overflow-hidden bg-[#edcbbf]'
+      >
+        <ZeroTierSlide />
+      </CarouselSlide>
+      <CarouselSlide carouselId='sc' index={1} slideCount={slideCount}>
+        Slide 2
+      </CarouselSlide>
+      <CarouselSlide carouselId='sc' index={2} slideCount={slideCount}>
+        Slide 3
+      </CarouselSlide>
+    </carousel>
+  </div>
+</section>
