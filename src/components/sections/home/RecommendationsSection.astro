@@ -77,18 +77,17 @@ const hiddenRecommendations = [
   What Others Say
 </h2>
 <section
-  class='order-7 flex w-full flex-row [&:has(*:checked)>.divider]:hidden lg:px-16'
+  class='order-7 flex w-full flex-row'
 >
-  <div class='mr-8 hidden items-center justify-end lg:flex'>
-    <Icon icon='Quote' size='12rem' class='text-text-lighten-2' />
+  <div class='hidden flex-1 items-center justify-center lg:flex'>
+    <Icon icon='Quote' size='12rem' class='text-primary' />
   </div>
-  <Divider vertical class='my-12 mr-0 ml-0 hidden lg:flex' />
   <div
     class:list={[
-      'my-4 flex max-h-128 flex-1 flex-col items-center gap-4',
+      'my-4 flex max-h-128 flex-2 flex-col items-center gap-4',
       'overflow-x-hidden overflow-y-auto',
-      '[direction:rtl] [scrollbar-color:var(--color-text-lighten-2)_var(--color-card)] [scrollbar-width:thin]',
-      'lg:pl-6 lg:[scrollbar-gutter:stable]',
+      '[direction:rtl]',
+      'lg:pl-6 lg:mr-16 lg:[scrollbar-gutter:stable]',
     ]}
   >
     <Button

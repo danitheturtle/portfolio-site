@@ -34,5 +34,7 @@
     }
 
     color: var(--color-text);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-text-lighten-2) var(--color-card);
   }
 }
