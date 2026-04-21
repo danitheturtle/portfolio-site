@@ -1,7 +1,73 @@
 ---
+import Button from '@/components/Button.astro';
+import Divider from '@/components/Divider.astro';
+import Icon, { IconName } from '@/components/icon/Icon.astro';
 
+type SocialLink = {
+  name: string;
+  icon: IconName;
+  link: string;
+};
+const socialLinks: SocialLink[] = [
+  {
+    name: 'GitHub',
+    icon: 'GitHub',
+    link: 'https://github.com/danitheturtle',
+  },
+  {
+    name: 'LinkedIn',
+    icon: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/danidevelops/',
+  },
+  {
+    name: 'Itch.io',
+    icon: 'ItchIO',
+    link: 'https://danitheturtle.itch.io/',
+  },
+  {
+    name: 'Email',
+    icon: 'Mail',
+    link: 'mailto:dani.develops@pm.me',
+  },
+];
 ---
 
-<section id='contact' class='order-7 mt-16 w-full'>
-  <h2 class='h2'>Keep in Touch</h2>
+<section id='contact' class='order-7 mt-16 flex w-full flex-wrap'>
+  <h2 class='h2 w-full'>Keep in Touch</h2>
+  <div class='w-full'>
+    <Divider
+      class='w-48 my-6 border-primary dark:border-primary rose:border-primary'
+    />
+  </div>
+  <div class='flex flex-3 flex-col gap-6'>
+    <p class='text-2xl font-bold'>
+      <span>
+        Whether you want to hire me, ask about my projects or just pick my
+        brain, please don't hesitate to reach out!
+      </span>
+      <span class='text-text-lighten-2'>
+        Hearing that you found my site and want to talk about my work is
+        garunteed to brighten my day; thanks for visiting.
+      </span>
+    </p>
+    <div class='flex flex-row justify-center gap-4'>
+      {
+        socialLinks.map((nextSocial) => (
+          <Button
+            as='a'
+            href={nextSocial.link}
+            target='_blank'
+            variant='text'
+            color='primary'
+            class='text-lg'
+            size='lg'
+          >
+            <Icon icon={nextSocial.icon} class='start-icon' size='1.5rem' />
+            {nextSocial.name}
+          </Button>
+        ))
+      }
+    </div>
+  </div>
+  <div class='hidden flex-1 lg:flex'></div>
 </section>

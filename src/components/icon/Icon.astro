@@ -9,7 +9,11 @@ import CircleRightIcon from './svgs/CircleRight.astro';
 import CircleUpIcon from './svgs/CircleUp.astro';
 import DotIcon from './svgs/Dot.astro';
 import DownloadIcon from './svgs/Download.astro';
+import GitHubIcon from './svgs/GitHub.astro';
+import ItchIOIcon from './svgs/ItchIO.astro';
 import LinkIcon from './svgs/Link.astro';
+import LinkedInIcon from './svgs/LinkedIn.astro';
+import MailIcon from './svgs/Mail.astro';
 import MoreIcon from './svgs/More.astro';
 import PlusIcon from './svgs/Plus.astro';
 import QuoteIcon from './svgs/Quote.astro';
@@ -29,7 +33,11 @@ export type IconName = (
   | 'CircleUp'
   | 'Dot'
   | 'Download'
+  | 'GitHub'
+  | 'ItchIO'
   | 'Link'
+  | 'LinkedIn'
+  | 'Mail'
   | 'More'
   | 'Plus'
   | 'Quote'
@@ -56,7 +64,11 @@ const iconNameToSvgComponentMap: Record<IconName, IconType> = {
   CircleUp: CircleUpIcon,
   Dot: DotIcon,
   Download: DownloadIcon,
+  GitHub: GitHubIcon,
+  ItchIO: ItchIOIcon,
   Link: LinkIcon,
+  LinkedIn: LinkedInIcon,
+  Mail: MailIcon,
   More: MoreIcon,
   Plus: PlusIcon,
   Quote: QuoteIcon,

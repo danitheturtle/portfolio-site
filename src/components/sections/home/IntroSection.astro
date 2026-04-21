@@ -1,25 +1,17 @@
 ---
 import Button from '@/components/Button.astro';
 import ProfilePicture from '@/components/profile-picture/ProfilePicture.astro';
-const localizedText = {
-  userName: 'danitheturtle',
-  userSubtitle: 'Software Engineer // Game Designer',
-};
 ---
 
 <section id='intro' class='order-1 flex flex-2 flex-col items-start py-8'>
   <div class='flex w-full flex-row items-center justify-between gap-16'>
     <div class='flex flex-col items-start self-end'>
-      <h1 class='h1 mb-1 text-8xl font-bold text-primary'>
-        {localizedText.userName}
-      </h1>
-      <p class='text-lg'>
-        {localizedText.userSubtitle}
-      </p>
+      <h1 class='h1 mb-1 text-8xl font-bold text-primary'>danitheturtle</h1>
+      <p class='text-lg'>Software Engineer // Game Designer</p>
     </div>
     <ProfilePicture />
   </div>
-  <div class='py-6 text-2xl font-bold'>
+  <p class='py-6 text-2xl font-bold'>
     <span>
       Full-stack engineer based in Ottawa, passionate about simplifying
       complexity.
@@ -28,7 +20,7 @@ const localizedText = {
       Focused on scalable architecture, user-centric design, code quality and
       cross-functional communication.
     </span>
-  </div>
+  </p>
   <div class='flex flex-row gap-4'>
     <Button as='a' href='mailto:dani.develops@pm.me' startIcon='Send'
       >Let's Connect</Button
