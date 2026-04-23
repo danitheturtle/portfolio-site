@@ -53,11 +53,6 @@ export default [
       //Custom rules here:
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-debugger': 'warn',
-    },
-  },
-  {
-    files: ['**/*.astro'],
-    rules: {
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
     },

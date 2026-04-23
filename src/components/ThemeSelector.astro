@@ -1,6 +1,5 @@
 ---
 import Button from '@/components/Button.astro';
-import Icon from './icon/Icon.astro';
 const buttonClasses =
   'rounded-none w-32 ' +
   'has-checked:border-primary-lighten has-checked:bg-primary-lighten has-checked:ring-primary-lighten ' +
@@ -11,7 +10,7 @@ const buttonClasses =
   aria-label='Choose your site theme'
   role='radiogroup'
   class:list={[
-    'xl:-mr-8 h-full',
+    'h-full xl:-mr-8',
     '[&:has(*:popover-open)>#theme-dropdown-button]:bg-primary-lighten',
     '[&:has(#auto-theme-radio:checked)>#theme-dropdown-button>.theme-auto]:inline',
     '[&:has(#light-theme-radio:checked)>#theme-dropdown-button>.theme-light]:inline',

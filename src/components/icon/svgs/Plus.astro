@@ -4,9 +4,15 @@ export interface Props {
   class?: string;
   [k: string]: any;
 }
-const {class: classList, ...rest} = Astro.props;
+const { class: classList, ...rest } = Astro.props;
 ---
 
-<svg aria-hidden='true' role='img' viewBox='0 0 8 8' class:list={['-mt-0.4', classList]} {...rest}>
+<svg
+  aria-hidden='true'
+  role='img'
+  viewBox='0 0 8 8'
+  class:list={['-mt-0.4', classList]}
+  {...rest}
+>
   <path fill='currentColor' d='M3 0v3H0v2h3v3h2V5h3V3H5V0z'></path>
 </svg>
