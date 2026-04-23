@@ -32,25 +32,25 @@ const socialLinks: SocialLink[] = [
 ];
 ---
 
-<section id='contact' class='order-7 mt-16 flex w-full flex-wrap'>
+<section id='contact' class='order-7 mt-24 flex w-full flex-wrap'>
   <h2 class='h2 w-full'>Keep in Touch</h2>
   <div class='w-full'>
     <Divider
       class='w-48 my-6 border-primary dark:border-primary rose:border-primary'
     />
   </div>
-  <div class='flex flex-3 flex-col gap-6'>
+  <div class='flex w-full lg:w-xs flex-col gap-6'>
     <p class='text-2xl font-bold'>
       <span>
         Whether you want to hire me, ask about my projects, or simply pick my
-        brain - please don't hesitate to reach out!
+        brain &mdash; please don't hesitate to reach out!
       </span>
       <span class='text-text-lighten-2'>
         Hearing that you found my site and want to talk about my work is
         garunteed to brighten my day; thanks for visiting.
       </span>
     </p>
-    <div class='flex flex-row justify-center gap-4'>
+    <div class='flex flex-row justify-center lg:justify-start gap-2'>
       {
         socialLinks.map((nextSocial) => (
           <Button
@@ -69,5 +69,4 @@ const socialLinks: SocialLink[] = [
       }
     </div>
   </div>
-  <div class='hidden flex-1 lg:flex'></div>
 </section>

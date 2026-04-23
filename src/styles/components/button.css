@@ -7,10 +7,12 @@
   --btn-height: calc(var(--spacing) * 10);
 
   --btn-color: var(--color-primary);
-  --btn-color-lighten: oklch(from var(--btn-color) calc(l + 0.05) calc(c - 0.01) h);
+  --btn-color-lighten: oklch(
+    from var(--btn-color) calc(l + 0.05) calc(c - 0.01) h
+  );
   --btn-on-color: var(--color-on-primary);
 
-  @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border-2 text-center align-middle font-sans text-base font-bold uppercase no-underline;
+  @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border-2 text-center align-middle font-sans text-base font-bold uppercase no-underline transition-all;
 
   border-color: var(--btn-color);
   color: var(--btn-color);

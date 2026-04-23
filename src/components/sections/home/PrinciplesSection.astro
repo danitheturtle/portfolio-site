@@ -1,7 +1,72 @@
 ---
+import Divider from '@/components/Divider.astro';
 
+const principles = [
+  {
+    title: "Don't Re-invent",
+    description:
+      'Someone has already done it better, faster and cleaner. Sharing knowledge is a human superpower; use it.',
+  },
+  {
+    title: 'Invert Control',
+    description:
+      'Devs are users, so code needs excellent UX. Future proof code with dependency injection, robust configuration and modularity.',
+  },
+  {
+    title: 'Focus on the User',
+    description:
+      'No design survives user testing. Talk to users early and talk to them often.',
+  },
+  {
+    title: 'Testing is Foundational',
+    description:
+      'Test Driven Development combined with User Testing is the only way to assure sustainable project growth.',
+  },
+  {
+    title: 'UX from Accessibility',
+    description:
+      'Good, clean UX flows directly from good accessibility. Following a11y best practices often spotlights UI/UX issues.',
+  },
+  {
+    title: 'Expect Change',
+    description:
+      'Be it stakeholder requests, user feedback or architecture shifts: anticipate change and operate with systemic flexibility.',
+  },
+];
 ---
 
 <section id='principles' class='order-6 mt-16 w-full'>
   <h2 class='h2'>My Principles</h2>
+  <div class='w-full'>
+    <Divider
+      class='my-6 w-48 border-primary dark:border-primary rose:border-primary'
+    />
+  </div>
+  <p class='my-6 text-2xl font-bold'>
+    Derived from years of on-the-job experience,
+    <span class='text-text-lighten-2'>
+      combined with my hyper-effective fusion of design and engineering
+      expertise.
+    </span>
+  </p>
+  <div class='flex w-full flex-row flex-wrap gap-12'>
+    {
+      principles.map((nextPrinciple) => (
+        <div
+          class:list={[
+            '-m-4 min-w-4xs flex-1 self-start rounded-xl p-4 transition-all',
+            'hover:bg-card hover:[&_.divider]:border-primary hover:[&_.principleTitle]:text-primary-lighten',
+          ]}
+        >
+          <div class='max-w-max'>
+            <p class='principleTitle text-3xl font-bold text-primary'>
+              {nextPrinciple.title}
+            </p>
+            <Divider class='mt-3 mb-3 transition-all' />
+          </div>
+          <p class='text-xl'>{nextPrinciple.description}</p>
+        </div>
+      ))
+    }
+  </div>
 </section>

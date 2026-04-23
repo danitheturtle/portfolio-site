@@ -103,6 +103,7 @@
   --color-text-lighten-2: var(--color-grey-500);
 
   /* breakpoints and container sizes */
+  --container-4xs: 18rem; /* smallest phone, accounting for margins */
   --container-3xs: 24rem; /* 384 - most phones above this */
   --container-2xs: 32rem;
   --container-xs: 40rem;
