@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv, UserConfig } from 'vite';
+import { defineConfig, UserConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { fileURLToPath } from 'url';
