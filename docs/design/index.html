@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="color-scheme" content="dark light">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <link rel="stylesheet" href="/_astro/MainLayout.C85rjsCC.css"></head>
+  <body class="themeRoot bg-surface text-on-surface">
+    <header class="sticky top-0 z-50 h-12 w-full bg-primary text-on-primary">
+  <div class="mx-auto flex h-full max-w-lg flex-row justify-between">
+    <nav class="no-wrap mx-2 my-0 h-full xl:-mx-6">
+      <a href="/" class="btn btn-primary">Home
+  </a>
+      <!-- <Button as='a' href='/projects' variant='primary'>Projects</Button> -->
+      <a href="/resume" class="btn btn-primary">Resume
+  </a>
+    </nav>
+    <theme-selector aria-label="Choose your site theme" role="radiogroup" class="h-full xl:-mr-8 [&#38;:has(*:popover-open)>#theme-dropdown-button]:bg-primary-lighten [&#38;:has(#auto-theme-radio:checked)>#theme-dropdown-button>.theme-auto]:inline [&#38;:has(#light-theme-radio:checked)>#theme-dropdown-button>.theme-light]:inline [&#38;:has(#dark-theme-radio:checked)>#theme-dropdown-button>.theme-dark]:inline [&#38;:has(#rose-theme-radio:checked)>#theme-dropdown-button>.theme-rose]:inline">
+  <button id="theme-dropdown-button" popovertarget="theme-dropdown" class="btn btn-primary w-32"><svg aria-hidden="true" role="img" viewBox="0 0 512 512" class="-mt-0.5 start-icon" width="1.5rem" height="1.5rem">
+  <path fill="currentColor" fill-rule="evenodd" d="M277.333 405.333v85.333h-42.667v-85.333zm99.346-58.824l60.34 60.34l-30.17 30.17l-60.34-60.34zm-241.359 0l30.17 30.17l-60.34 60.34l-30.17-30.17zM256 139.353c64.422 0 116.647 52.224 116.647 116.647c0 64.422-52.225 116.647-116.647 116.647A116.427 116.427 0 0 1 139.352 256c0-64.423 52.225-116.647 116.648-116.647m0 42.666c-40.859 0-73.981 33.123-73.981 74.062a73.76 73.76 0 0 0 21.603 52.296c13.867 13.867 32.685 21.64 52.378 21.603zm234.666 52.647v42.667h-85.333v-42.667zm-384 0v42.667H21.333v-42.667zM105.15 74.98l60.34 60.34l-30.17 30.17l-60.34-60.34zm301.7 0l30.169 30.17l-60.34 60.34l-30.17-30.17zM277.332 21.333v85.333h-42.667V21.333z">
+  </path>
+</svg>
+    <span class="theme-auto hidden">Auto</span>
+    <span class="theme-light hidden">Light</span>
+    <span class="theme-dark hidden">Dark</span>
+    <span class="theme-rose hidden">Rose</span>
+  
+  </button>
+  <dropdown popover id="theme-dropdown" anchor="theme-dropdown-button" class="overflow-visible bg-primary [position-area:bottom]">
+    <div class="flex flex-col">
+      <label for="auto-theme-radio" class="btn btn-primary rounded-none w-32 has-checked:border-primary-lighten has-checked:bg-primary-lighten has-checked:ring-primary-lighten has-focus-visible:z-30 has-focus-visible:ring-2 has-focus-visible:ring-focus">
+        <input type="radio" name="theme-picker" id="auto-theme-radio" class="sr-only" checked>
+        Auto
+      
+  </label>
+      <label for="light-theme-radio" class="btn btn-primary rounded-none w-32 has-checked:border-primary-lighten has-checked:bg-primary-lighten has-checked:ring-primary-lighten has-focus-visible:z-30 has-focus-visible:ring-2 has-focus-visible:ring-focus">
+        <input type="radio" name="theme-picker" id="light-theme-radio" class="sr-only">
+        Light
+      
+  </label>
+      <label for="dark-theme-radio" class="btn btn-primary rounded-none w-32 has-checked:border-primary-lighten has-checked:bg-primary-lighten has-checked:ring-primary-lighten has-focus-visible:z-30 has-focus-visible:ring-2 has-focus-visible:ring-focus">
+        <input type="radio" name="theme-picker" id="dark-theme-radio" class="sr-only">
+        Dark
+      
+  </label>
+      <label for="rose-theme-radio" class="btn btn-primary rounded-none w-32 has-checked:border-primary-lighten has-checked:bg-primary-lighten has-checked:ring-primary-lighten has-focus-visible:z-30 has-focus-visible:ring-2 has-focus-visible:ring-focus">
+        <input type="radio" name="theme-picker" id="rose-theme-radio" class="sr-only">
+        Rose
+      
+  </label>
+    </div>
+  </dropdown>
+</theme-selector>
+  </div>
+</header>
+    <div class="mx-auto max-w-lg">
+      
+  <div class="flex flex-row items-start gap-2 pt-4">
+    <div class="card flex flex-col mt-8">
+  
+        <h2 class="text-5xl">Card Title</h2>
+        <h3 class="text-xl font-normal text-text-lighten-1">Card Subtitle is longer</h3><div class="divider my-4 h-px border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200">
+</div><div class="card-content pt-1">
+          
+      <p>
+        Test Project description lorum ipsum dolor atsdfe nwap;oinv; wienrinower
+      </p>
+    
+        </div>
+      
+  
+</div>
+    <div class="card flex flex-col mt-8">
+  
+        <h2 class="text-5xl">Card Title</h2>
+        <h3 class="text-xl font-normal text-text-lighten-1">Card Subtitle is longer</h3><div class="divider my-4 h-px border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200">
+</div><div class="card-content pt-1">
+          
+      <p>
+        Test Project description lorum ipsum dolor atsdfe nwap;oinv; wienrinower
+      </p>
+    
+        </div>
+      
+  
+</div>
+    <div class="card flex flex-col mt-8">
+  
+        <h2 class="text-5xl">Card Title</h2>
+        <h3 class="text-xl font-normal text-text-lighten-1">Card Subtitle is longer</h3><div class="divider my-4 h-px border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200">
+</div><div class="card-content pt-1">
+          
+      <p>
+        Test Project description lorum ipsum dolor atsdfe nwap;oinv; wienrinower
+      </p>
+    
+        </div>
+      
+  
+</div>
+  </div>
+  <div class="divider my-4 h-px border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200">
+</div>
+  <div>Attribution in source files on git</div>
+<div class="flex flex-row flex-wrap gap-2">
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>CaretDown</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 1024 1024" class="-mt-1" width="3rem" height="3rem">
+  <path fill="currentColor" d="m192 384l320 384l320-384z"></path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>CaretLeft</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 1024 1024" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="currentColor" d="M672 192L288 512l384 320z"></path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>CaretRight</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 1024 1024" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="currentColor" d="M384 192v640l384-320z"></path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>CaretUp</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 1024 1024" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="currentColor" d="M512 320L192 704h640z"></path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>CircleDown</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 24 24" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 11l-3 3l-3-3m12 1a9 9 0 1 0-18 0a9 9 0 0 0 18 0">
+  </path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>CircleLeft</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 24 24" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13 15l-3-3l3-3m8 3a9 9 0 1 0-18 0a9 9 0 0 0 18 0">
+  </path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>CircleRight</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 24 24" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 9l3 3l-3 3m10-3a9 9 0 1 0-18 0a9 9 0 0 0 18 0">
+  </path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>CircleUp</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 24 24" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 13l3-3l3 3m6-1a9 9 0 1 0-18 0a9 9 0 0 0 18 0">
+  </path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>Dot</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 24 24" width="3rem" height="3rem">
+  <circle cx="12" cy="12" r="10" fill="currentColor"></circle>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>Download</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 20 20" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="currentColor" d="M17 12v5H3v-5H1v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5z">
+  </path><path fill="currentColor" d="M15 9h-4V1H9v8H5l5 6z"></path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>Link</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 24 24" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13a5 5 0 0 0 8 1l4-4a1 1 0 0 0-7-7l-2 2m3 6a5 5 0 0 0-8-1l-4 4a1 1 0 0 0 7 7l2-2">
+  </path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>More</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 20 20" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="currentColor" fill-rule="evenodd" d="M2.5 7.5a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m15 0a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m-7.274 0a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5">
+  </path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>Plus</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4" width="3rem" height="3rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>Quote</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" class="-mt-0.25" width="3rem" height="3rem">
+  <path fill="currentColor" d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48m-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48">
+  </path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>Send</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 24 24" width="3rem" height="3rem">
+  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 2L11 13M22 2l-7 20l-4-9l-9-4z">
+  </path>
+</svg>
+</div>
+  <div class="flex flex-col items-center gap-2 rounded-lg border-2 p-2">
+  <div>Theme</div>
+  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" class="-mt-0.5" width="3rem" height="3rem">
+  <path fill="currentColor" fill-rule="evenodd" d="M277.333 405.333v85.333h-42.667v-85.333zm99.346-58.824l60.34 60.34l-30.17 30.17l-60.34-60.34zm-241.359 0l30.17 30.17l-60.34 60.34l-30.17-30.17zM256 139.353c64.422 0 116.647 52.224 116.647 116.647c0 64.422-52.225 116.647-116.647 116.647A116.427 116.427 0 0 1 139.352 256c0-64.423 52.225-116.647 116.648-116.647m0 42.666c-40.859 0-73.981 33.123-73.981 74.062a73.76 73.76 0 0 0 21.603 52.296c13.867 13.867 32.685 21.64 52.378 21.603zm234.666 52.647v42.667h-85.333v-42.667zm-384 0v42.667H21.333v-42.667zM105.15 74.98l60.34 60.34l-30.17 30.17l-60.34-60.34zm301.7 0l30.169 30.17l-60.34 60.34l-30.17-30.17zM277.332 21.333v85.333h-42.667V21.333z">
+  </path>
+</svg>
+</div>
+</div>
+  <div class="divider my-4 h-px border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200">
+</div>
+  <div class="flex flex-row flex-wrap gap-4">
+  <div class="flex flex-col items-start gap-2">
+    <h3 class="h3">compact</h3>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-primary btn-lg btn-compact">Prime
+  </button>
+      <button class="btn btn-primary btn-compact">Prime
+  </button>
+      <button class="btn btn-primary btn-sm btn-compact">Prime
+  </button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-lg btn-compact">Second
+  </button>
+      <button class="btn btn-compact">Second
+  </button>
+      <button class="btn btn-sm btn-compact">Second
+  </button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-text btn-lg btn-compact">Text
+  </button>
+      <button class="btn btn-text btn-compact">Text
+  </button>
+      <button class="btn btn-text btn-sm btn-compact">Text
+  </button>
+    </div>
+  </div>
+  <div class="flex flex-col items-start gap-2">
+    <h3 class="h3">compact icons</h3>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-primary btn-lg btn-compact"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Prime
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-primary btn-compact"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Prime
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-primary btn-sm btn-compact"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Prime
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-lg btn-compact"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Second
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-compact"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Second
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-sm btn-compact"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Second
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-text btn-lg btn-compact"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Text
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-text btn-compact"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Text
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-text btn-sm btn-compact"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Text
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="0.875rem" height="0.875rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+    </div>
+  </div>
+  <div class="flex flex-col items-start gap-2">
+    <h3 class="h3">normal</h3>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-primary btn-lg">Prime
+  </button>
+      <button class="btn btn-primary">Prime
+  </button>
+      <button class="btn btn-primary btn-sm">Prime
+  </button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-lg">Second
+  </button>
+      <button class="btn">Second
+  </button>
+      <button class="btn btn-sm">Second
+  </button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-text btn-lg">Text
+  </button>
+      <button class="btn btn-text">Text
+  </button>
+      <button class="btn btn-text btn-sm">Text
+  </button>
+    </div>
+  </div>
+  <div class="flex flex-col items-start gap-2">
+    <h3 class="h3">normal icons</h3>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-primary btn-lg"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Prime
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-primary"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Prime
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-primary btn-sm"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Prime
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-lg"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Second
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Second
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-sm"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Second
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-text btn-lg"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Text
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-text"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Text
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-text btn-sm"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Text
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1rem" height="1rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+    </div>
+  </div>
+  <div class="flex flex-col items-start gap-2">
+    <h3 class="h3">comfortable</h3>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-primary btn-lg btn-comfortable">Prime
+  </button>
+      <button class="btn btn-primary btn-comfortable">Prime
+  </button>
+      <button class="btn btn-primary btn-sm btn-comfortable">Prime
+  </button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-lg btn-comfortable">Second
+  </button>
+      <button class="btn btn-comfortable">Second
+  </button>
+      <button class="btn btn-sm btn-comfortable">Second
+  </button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-text btn-lg btn-comfortable">Text
+  </button>
+      <button class="btn btn-text btn-comfortable">Text
+  </button>
+      <button class="btn btn-text btn-sm btn-comfortable">Text
+  </button>
+    </div>
+  </div>
+  <div class="flex flex-col items-start gap-2">
+    <h3 class="h3">comfortable icons</h3>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-primary btn-lg btn-comfortable"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Prime
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-primary btn-comfortable"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Prime
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-primary btn-sm btn-comfortable"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Prime
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-lg btn-comfortable"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Second
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-comfortable"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Second
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-sm btn-comfortable"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Second
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+    </div>
+    <div class="flex flex-row items-start gap-2">
+      <button class="btn btn-text btn-lg btn-comfortable"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Text
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-text btn-comfortable"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Text
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+      <button class="btn btn-text btn-sm btn-comfortable"><svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 start-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg>Text
+  <svg aria-hidden="true" role="img" viewBox="0 0 8 8" class="-mt-0.4 end-icon" width="1.125rem" height="1.125rem">
+  <path fill="currentColor" d="M3 0v3H0v2h3v3h2V5h3V3H5V0z"></path>
+</svg></button>
+    </div>
+  </div>
+</div>
+  <div class="divider my-4 h-px border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200">
+</div>
+  <div class="flex flex-row items-start gap-2 pt-4">
+  <span class="chip chip-lg chip-comfortable border-primary text-primary">
+  Comfortable
+</span>
+  <span class="chip chip-lg border-primary text-primary">
+  Large
+</span>
+  <span class="chip chip-lg chip-compact border-primary text-primary">
+  Compact
+</span>
+  <span class="chip chip-comfortable border-primary text-primary">
+  Comfortable
+</span>
+  <span class="chip border-primary text-primary">
+  Default
+</span>
+  <span class="chip chip-compact border-primary text-primary">
+  Compact
+</span>
+  <span class="chip chip-sm chip-comfortable border-primary text-primary">
+  Comfortable
+</span>
+  <span class="chip chip-sm border-primary text-primary">
+  Small
+</span>
+  <span class="chip chip-sm chip-compact border-primary text-primary">
+  Compact
+</span>
+</div>
+<div class="flex flex-row items-start gap-2 pt-4">
+  <span class="chip chip-lg chip-comfortable border-secondary text-secondary">
+  Comfortable
+</span>
+  <span class="chip chip-lg border-secondary text-secondary">
+  Large
+</span>
+  <span class="chip chip-lg chip-compact border-secondary text-secondary">
+  Compact
+</span>
+  <span class="chip chip-comfortable border-secondary text-secondary">
+  Comfortable
+</span>
+  <span class="chip border-blue-500 text-blue-500">
+  Default
+</span>
+  <span class="chip chip-compact border-blue-500 text-blue-500">
+  Compact
+</span>
+  <span class="chip chip-sm chip-comfortable border-secondary text-secondary">
+  Comfortable
+</span>
+  <span class="chip chip-sm border-blue-500 text-blue-500">
+  Small
+</span>
+  <span class="chip chip-sm chip-compact border-secondary text-secondary">
+  Compact
+</span>
+</div>
+  <div class="divider my-4 h-px border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200">
+</div>
+  <p class="text-xs">text-xs The quick brown fox jumps over the lazy dog</p>
+  <p class="text-sm">text-sm The quick brown fox jumps over the lazy dog</p>
+  <p class="text-md">text-md The quick brown fox jumps over the lazy dog</p>
+  <p class="text-base">text-base The quick brown fox jumps over the lazy dog</p>
+  <p class="text-lg">text-lg The quick brown fox jumps over the lazy dog</p>
+  <p class="text-xl">text-xl The quick brown fox jumps over the lazy dog</p>
+  <p class="text-2xl">text-2xl The quick brown fox jumps over the lazy dog</p>
+  <p class="text-3xl">text-3xl The quick brown fox jumps over the lazy dog</p>
+  <p class="text-4xl">text-4xl The quick brown fox jumps over the lazy dog</p>
+  <p class="text-5xl">text-5xl The quick brown fox jumps over the lazy dog</p>
+  <p class="text-6xl">text-6xl The quick brown fox jumps over the lazy dog</p>
+  <p class="text-7xl">text-7xl The quick brown fox jumps over the lazy dog</p>
+  <p class="text-8xl">text-8xl The quick brown fox jumps over the lazy dog</p>
+  <p class="text-9xl">text-9xl The quick brown fox jumps over the lazy dog</p>
+  <p class="text-10xl">text-10xl The quick brown fox jumps over the lazy dog</p>
+  <div class="divider my-4 h-px border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200">
+</div>
+  <h1 class="h1">h1 - heading 1</h1>
+  <h2 class="h2">h2 - heading 2</h2>
+  <h3 class="h3">h3 - heading 3</h3>
+  <h4 class="h4">h4 - heading 4</h4>
+  <h5 class="h5">h5 - heading 5</h5>
+  <h6 class="h6">h6 - heading 6</h6>
+  <p>p - The quick brown fox jumps over the lazy dog</p>
+  <a href="/">a - link text</a>
+  <div class="divider my-4 h-px border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200">
+</div>
+
+      <footer class="mb-24 text-center text-text-lighten-2">
+  <div class="divider my-4 h-px border-t-2 box-content border-grey-200 dark:border-grey-700 rose:border-rose-200">
+</div>
+  <p class="mb-2">
+    Made by <span class="font-bold">danitheturtle</span> using her human brain
+  </p>
+  <p class="italic">
+    No Copyright 2026; Do what you want, I'm not your mother
+  </p>
+</footer>
+    </div>
+  </body></html>
