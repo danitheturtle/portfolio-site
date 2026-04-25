@@ -1,7 +1,7 @@
 # danitheturtle portfolio site
 
 A showcase of my work and web dev / design expertise. **Post-framework, fully accessible, zero-js** (site works without javascript).
-You can see the site here: [danitheturtle.dev](https://www.danitheturtle.dev)
+Site is under active development and is a work in progress. You can see the latest version here, hosted on github pages using github actions: [danitheturtle.dev](https://www.danitheturtle.dev)
 
 CSS-only components:
 * Theme selector
