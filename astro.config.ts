@@ -15,6 +15,8 @@ export default defineConfig({
   integrations: [react()],
   compressHTML: false,
   outDir: './dist',
+  site: 'https://danitheturtle.github.io',
+  base: '/portfolio-site',
   server: {
     port: parseInt(uiPort ?? '8080'),
   },
