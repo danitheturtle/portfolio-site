@@ -1,0 +1,69 @@
+---
+import Chip from '@/components/Chip.astro';
+import krogerShowcase from './KrogerCarouselBackground.webp';
+// eslint-disable-next-line import-x/no-unresolved
+import { Image } from 'astro:assets';
+import Button from '@/components/Button.astro';
+---
+
+<style>
+  .bg-gradient-1 {
+    background: radial-gradient(
+      circle,
+      rgba(14, 81, 161, 0.6) 10%,
+      rgba(255, 255, 255, 0) 80%
+    );
+  }
+</style>
+<div class='bg-gradient-1 absolute -top-3/4 -left-3/4 h-[225%] w-[225%]'></div>
+<Image
+  src={krogerShowcase}
+  alt='Two screenshots of the Kroger vaccination scheduling form from 2021.'
+  class='absolute'
+/>
+<div class='z-10 flex w-full items-center justify-start'>
+  <div
+    class='ml-12 flex h-full w-80 flex-col items-center py-8 text-center xl:ml-16'
+  >
+    <div class='flex flex-1 flex-col justify-center'>
+      <h3 class='-mt-12 text-8xl font-bold text-grey-950 xl:-mt-6'>Kroger</h3>
+      <div class='flex flex-row gap-1'>
+        <Chip color='text-blue-600 border-blue-600' density='compact' size='md'
+          >TypeScript</Chip
+        >
+        <Chip color='text-primary border-primary' density='compact' size='md'
+          >React</Chip
+        >
+        <Chip
+          color='text-secondary border-secondary'
+          density='compact'
+          size='md'>Redux</Chip
+        >
+        <Chip
+          color='text-orange-600 border-orange-600'
+          density='compact'
+          size='md'>Kotlin</Chip
+        >
+      </div>
+      <p class='pt-2 text-xl font-semibold text-grey-700'>
+        Full-Stack Engineer
+      </p>
+      <p class='w-70 pt-2 text-base text-grey-950'>
+        COVID-19 Rolling Vaccine Eligibility
+      </p>
+    </div>
+    <div class='flex flex-1 flex-col justify-center'>
+      <!-- <Button
+        as='a'
+        href='/projects/zerotier'
+        size='lg'
+        variant='primary'
+        density='comfortable'
+        color='secondary'
+        class='-mt-6'
+      >
+        Dive Deeper
+      </Button> -->
+    </div>
+  </div>
+</div>
