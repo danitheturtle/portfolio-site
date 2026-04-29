@@ -1,0 +1,28 @@
+---
+export interface Props {
+  class?: string;
+  [k: string]: any;
+}
+const { class: className, ...rest } = Astro.props as Props;
+---
+
+<style>
+  .carousel {
+    --carousel-controls-normal: var(--color-grey-700);
+    --carousel-controls-hover: var(--color-grey-900);
+    &:has(.light-controls:checked) {
+      --carousel-controls-normal: var(--color-white);
+      --carousel-controls-hover: var(--color-grey-300);
+    }
+  }
+</style>
+<carousel
+  class:list={[
+    'carousel',
+    'relative flex flex-1 items-end justify-center gap-4 overflow-hidden rounded-xl bg-on-surface text-surface',
+    className,
+  ]}
+  {...rest}
+>
+  <slot />
+</carousel>

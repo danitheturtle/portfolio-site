@@ -88,8 +88,4 @@
   @import './components/button.css';
   @import './components/card.css';
   @import './components/chip.css';
-
-  carousel {
-    @apply relative flex flex-1 items-end justify-center gap-4 overflow-hidden rounded-xl bg-on-surface text-surface;
-  }
 }

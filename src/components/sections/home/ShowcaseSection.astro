@@ -1,6 +1,7 @@
 ---
 import KrogerSlide from '@/components/carousel-slides/kroger/KrogerSlide.astro';
 import ZeroTierSlide from '@/components/carousel-slides/zerotier/ZeroTierSlide.astro';
+import Carousel from '@/components/Carousel.astro';
 import CarouselSlide from '@/components/CarouselSlide.astro';
 
 const slideCount = 3;
@@ -9,21 +10,27 @@ const slideCount = 3;
 <section id='showcase' class='order-3 mt-8 w-full'>
   <h2 class='h2'>Showcase</h2>
   <div class='mt-4 flex aspect-video w-full'>
-    <carousel>
+    <Carousel>
       <CarouselSlide
         carouselId='sc'
+        id='kroger-slide'
+        lightControls={true}
         index={0}
+        slideCount={slideCount}
+      >
+        <KrogerSlide />
+      </CarouselSlide>
+      <CarouselSlide
+        carouselId='sc'
+        index={1}
         slideCount={slideCount}
         class='overflow-hidden bg-[#edcbbf]'
       >
         <ZeroTierSlide />
       </CarouselSlide>
-      <CarouselSlide carouselId='sc' index={1} slideCount={slideCount}>
-        <KrogerSlide />
-      </CarouselSlide>
       <CarouselSlide carouselId='sc' index={2} slideCount={slideCount}>
         Slide 3
       </CarouselSlide>
-    </carousel>
+    </Carousel>
   </div>
 </section>
