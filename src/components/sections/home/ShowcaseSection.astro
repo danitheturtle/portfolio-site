@@ -13,20 +13,20 @@ const slideCount = 3;
     <Carousel>
       <CarouselSlide
         carouselId='sc'
-        id='kroger-slide'
-        lightControls={true}
         index={0}
-        slideCount={slideCount}
-      >
-        <KrogerSlide />
-      </CarouselSlide>
-      <CarouselSlide
-        carouselId='sc'
-        index={1}
         slideCount={slideCount}
         class='overflow-hidden bg-[#edcbbf]'
       >
         <ZeroTierSlide />
+      </CarouselSlide>
+      <CarouselSlide
+        carouselId='sc'
+        id='kroger-slide'
+        lightControls={true}
+        index={1}
+        slideCount={slideCount}
+      >
+        <KrogerSlide />
       </CarouselSlide>
       <CarouselSlide carouselId='sc' index={2} slideCount={slideCount}>
         Slide 3
