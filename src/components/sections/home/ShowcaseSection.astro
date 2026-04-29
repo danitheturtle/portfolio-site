@@ -1,4 +1,5 @@
 ---
+import CrownSlide from '@/components/carousel-slides/crown/CrownSlide.astro';
 import KrogerSlide from '@/components/carousel-slides/kroger/KrogerSlide.astro';
 import ZeroTierSlide from '@/components/carousel-slides/zerotier/ZeroTierSlide.astro';
 import Carousel from '@/components/Carousel.astro';
@@ -29,7 +30,7 @@ const slideCount = 3;
         <KrogerSlide />
       </CarouselSlide>
       <CarouselSlide carouselId='sc' index={2} slideCount={slideCount}>
-        Slide 3
+        <CrownSlide />
       </CarouselSlide>
     </Carousel>
   </div>
