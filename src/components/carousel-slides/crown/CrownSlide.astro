@@ -1,46 +1,53 @@
 ---
 import Chip from '@/components/Chip.astro';
-// import krogerShowcase from './KrogerCarouselBackground.webp';
+import crownShowcase from './CrownCarouselBackground.webp';
 // eslint-disable-next-line import-x/no-unresolved
-// import { Image } from 'astro:assets';
+import { Image } from 'astro:assets';
 // import Button from '@/components/Button.astro';
 ---
 
-<div class='absolute top-0 left-0 h-full w-full bg-orange-400'></div>
-<!-- <Image
-  src={krogerShowcase}
+<div class='absolute top-0 left-0 h-full w-full bg-[#FDA949]'></div>
+<Image
+  src={crownShowcase}
   alt='Two screenshots of the Kroger vaccination scheduling form from 2021.'
   class='absolute'
-/> -->
-<div class='z-10 flex w-full items-center justify-start'>
+/>
+<div class='z-10 flex w-full items-center justify-end'>
   <div
-    class='ml-12 flex h-full w-80 flex-col items-center py-8 text-center xl:ml-16'
+    class='mr-12 flex h-full w-80 flex-col items-center py-8 text-center xl:mr-16'
   >
     <div class='flex flex-1 flex-col justify-center'>
-      <h3 class='-mt-12 mb-2 text-8xl font-bold text-white xl:-mt-6'>
-        Crown Equipment
+      <h3 class='-mt-12 mb-1 text-8xl font-bold text-grey-800 xl:-mt-6'>
+        Crown
       </h3>
       <div class='flex flex-row gap-1'>
+        <Chip color='text-grey-800 border-grey-800' density='compact' size='md'>
+          TypeScript
+        </Chip>
+        <Chip color='text-red-700 border-red-700' density='compact' size='md'>
+          Angular
+        </Chip>
         <Chip
-          color='text-purple-300 border-purple-300'
+          color='text-slate-600 border-slate-600'
           density='compact'
           size='md'
         >
-          TypeScript
-        </Chip>
-        <Chip color='text-sky-200 border-sky-200' density='compact' size='md'>
-          Angular
-        </Chip>
-        <Chip color='text-teal-200 border-teal-200' density='compact' size='md'>
           RxJS
         </Chip>
-        <Chip color='text-pink-300 border-pink-300' density='compact' size='md'>
-          NxJS
+        <Chip
+          color='text-orange-800 border-orange-800'
+          density='compact'
+          size='md'
+        >
+          NgRx
         </Chip>
       </div>
-      <p class='pt-2 text-xl font-semibold text-white'>Frontend Engineer</p>
-      <p class='w-70 pt-2 text-base text-white'>
-        Complex data entry flow with myriad side effects and realtime data vis.
+      <p class='pt-2 text-xl font-semibold text-grey-700'>
+        Frontend Optimization Expert
+      </p>
+      <p class='w-70 pt-2 text-base text-grey-950'>
+        Forklift sales tool with realtime data visualization and hundreds of
+        business rules / factory constraints.
       </p>
     </div>
     <div class='flex flex-1 flex-col justify-center'>
@@ -50,8 +57,8 @@ import Chip from '@/components/Chip.astro';
         size='lg'
         variant='primary'
         density='comfortable'
-        color='kroger-button'
-        hoverColor='kroger-dark'
+        color='grey-800'
+        hoverColor='grey-700'
         class='-mt-6'
       >
         Dive Deeper
