@@ -3,6 +3,7 @@ import Chip from '@/components/Chip.astro';
 import zeroTierShowcase from './ZeroTierCarouselBackground.webp';
 // eslint-disable-next-line import-x/no-unresolved
 import { Image } from 'astro:assets';
+import InnerSlide from '@/components/carousel-slides/InnerSlide.astro';
 ---
 
 <style>
@@ -40,56 +41,25 @@ import { Image } from 'astro:assets';
   alt='Three screenshots of the ZeroTier Central SaaS application, showcasing various user input states.'
   class='absolute'
 />
-<div class='z-10 flex w-full items-center justify-end'>
-  <div
-    class='mr-12 flex h-full w-80 flex-col items-center py-8 text-center xl:mr-16'
-  >
-    <div class='flex flex-1 flex-col justify-center'>
-      <h3 class='-mt-12 mb-1 text-8xl font-bold text-grey-950 xl:-mt-6'>
-        ZeroTier
-      </h3>
-      <div class='flex flex-row gap-1'>
-        <Chip color='text-blue-600 border-blue-600' density='compact' size='md'>
-          TypeScript
-        </Chip>
-        <Chip
-          color='text-purple-600 border-purple-600'
-          density='compact'
-          size='md'
-        >
-          Vue
-        </Chip>
-        <Chip color='text-sky-600 border-sky-600' density='compact' size='md'>
-          Vuetify
-        </Chip>
-        <Chip
-          color='text-orange-600 border-orange-600'
-          density='compact'
-          size='md'
-        >
-          Pinia
-        </Chip>
-      </div>
-      <p class='pt-2 text-xl font-semibold text-grey-700'>
-        Primary Frontend Architect
-      </p>
-      <p class='w-70 pt-2 text-base text-grey-950'>
-        Fully-featured SaaS platform with deeply integrated user feedback and
-        relationship-based access control.
-      </p>
-    </div>
-    <div class='flex flex-1 flex-col justify-center'>
-      <!-- <Button
-        as='a'
-        href='/projects/zerotier'
-        size='lg'
-        variant='primary'
-        density='comfortable'
-        color='secondary'
-        class="-mt-6"
-      >
-        Dive Deeper
-      </Button> -->
-    </div>
-  </div>
-</div>
+<InnerSlide align='right' textClass='text-grey-950' roleClass='text-grey-700'>
+  <Fragment slot='title'>ZeroTier</Fragment>
+  <Fragment slot='chips'>
+    <Chip color='text-blue-600 border-blue-600' density='compact' size='md'>
+      TypeScript
+    </Chip>
+    <Chip color='text-purple-600 border-purple-600' density='compact' size='md'>
+      Vue
+    </Chip>
+    <Chip color='text-sky-600 border-sky-600' density='compact' size='md'>
+      Vuetify
+    </Chip>
+    <Chip color='text-orange-600 border-orange-600' density='compact' size='md'>
+      Pinia
+    </Chip>
+  </Fragment>
+  <Fragment slot='role'>Primary Frontend Architect</Fragment>
+  <Fragment slot='description'>
+    Fully-featured SaaS platform with deeply integrated user feedback and
+    relationship-based access control.
+  </Fragment>
+</InnerSlide>

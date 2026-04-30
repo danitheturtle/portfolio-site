@@ -3,6 +3,7 @@ import Chip from '@/components/Chip.astro';
 import krogerShowcase from './KrogerCarouselBackground.webp';
 // eslint-disable-next-line import-x/no-unresolved
 import { Image } from 'astro:assets';
+import InnerSlide from '@/components/carousel-slides/InnerSlide.astro';
 // import Button from '@/components/Button.astro';
 ---
 
@@ -27,53 +28,25 @@ import { Image } from 'astro:assets';
   alt='Two screenshots of the Kroger vaccination scheduling form from 2021.'
   class='absolute'
 />
-<div class='z-10 flex w-full items-center justify-start'>
-  <div
-    class='ml-12 flex h-full w-80 flex-col items-center py-8 text-center xl:ml-16'
-  >
-    <div class='flex flex-1 flex-col justify-center'>
-      <h3 class='-mt-12 mb-2 text-8xl font-bold text-white xl:-mt-6'>Kroger</h3>
-      <div class='flex flex-row gap-1'>
-        <Chip
-          color='text-purple-300 border-purple-300'
-          density='compact'
-          size='md'
-        >
-          TypeScript
-        </Chip>
-        <Chip color='text-sky-200 border-sky-200' density='compact' size='md'>
-          React
-        </Chip>
-        <Chip color='text-teal-200 border-teal-200' density='compact' size='md'>
-          Redux
-        </Chip>
-        <Chip
-          color='text-yellow-300 border-yellow-300'
-          density='compact'
-          size='md'
-        >
-          Kotlin
-        </Chip>
-      </div>
-      <p class='pt-2 text-xl font-semibold text-white'>Full-Stack Engineer</p>
-      <p class='w-70 pt-2 text-base text-white'>
-        COVID-19 rolling vaccine eligibility with city-specific logic, zero
-        downtime and $1.5 mil/mo in saved SaaS fees.
-      </p>
-    </div>
-    <div class='flex flex-1 flex-col justify-center'>
-      <!-- <Button
-        as='a'
-        href='/projects/zerotier'
-        size='lg'
-        variant='primary'
-        density='comfortable'
-        color='kroger-button'
-        hoverColor='kroger-dark'
-        class='-mt-6'
-      >
-        Dive Deeper
-      </Button> -->
-    </div>
-  </div>
-</div>
+<InnerSlide textClass='text-white' titleClass='text-white mb-2'>
+  <Fragment slot='title'>Kroger</Fragment>
+  <Fragment slot='chips'>
+    <Chip color='text-purple-300 border-purple-300' density='compact' size='md'>
+      TypeScript
+    </Chip>
+    <Chip color='text-sky-200 border-sky-200' density='compact' size='md'>
+      React
+    </Chip>
+    <Chip color='text-teal-200 border-teal-200' density='compact' size='md'>
+      Redux
+    </Chip>
+    <Chip color='text-yellow-300 border-yellow-300' density='compact' size='md'>
+      Kotlin
+    </Chip>
+  </Fragment>
+  <Fragment slot='role'>Essential Healthcare Engineer</Fragment>
+  <Fragment slot='description'>
+    COVID-19 rolling vaccine eligibility with city-specific logic, zero downtime
+    and $1.5 mil/mo in saved SaaS fees.
+  </Fragment>
+</InnerSlide>

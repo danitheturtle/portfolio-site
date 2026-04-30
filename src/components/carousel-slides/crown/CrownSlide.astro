@@ -1,6 +1,7 @@
 ---
 import Chip from '@/components/Chip.astro';
 import crownShowcase from './CrownCarouselBackground.webp';
+import InnerSlide from '@/components/carousel-slides/InnerSlide.astro';
 // eslint-disable-next-line import-x/no-unresolved
 import { Image } from 'astro:assets';
 // import Button from '@/components/Button.astro';
@@ -12,7 +13,34 @@ import { Image } from 'astro:assets';
   alt='Two screenshots of the Kroger vaccination scheduling form from 2021.'
   class='absolute'
 />
-<div class='z-10 flex w-full items-center justify-end'>
+<InnerSlide
+  align='right'
+  descriptionClass='text-grey-950'
+  roleClass='text-grey-700'
+  titleClass='text-grey-800'
+>
+  <Fragment slot='title'>Crown</Fragment>
+  <Fragment slot='chips'>
+    <Chip color='text-grey-800 border-grey-800' density='compact' size='md'>
+      TypeScript
+    </Chip>
+    <Chip color='text-red-700 border-red-700' density='compact' size='md'>
+      Angular
+    </Chip>
+    <Chip color='text-slate-600 border-slate-600' density='compact' size='md'>
+      RxJS
+    </Chip>
+    <Chip color='text-orange-800 border-orange-800' density='compact' size='md'>
+      NgRx
+    </Chip>
+  </Fragment>
+  <Fragment slot='role'>Frontend Optimization Expert</Fragment>
+  <Fragment slot='description'>
+    Forklift sales tool with realtime data visualization and hundreds of
+    business rules / factory constraints.
+  </Fragment>
+</InnerSlide>
+<!-- <div class='z-10 flex w-full items-center justify-end'>
   <div
     class='mr-12 flex h-full w-80 flex-col items-center py-8 text-center xl:mr-16'
   >
@@ -51,7 +79,7 @@ import { Image } from 'astro:assets';
       </p>
     </div>
     <div class='flex flex-1 flex-col justify-center'>
-      <!-- <Button
+      <Button
         as='a'
         href='/projects/zerotier'
         size='lg'
@@ -62,7 +90,7 @@ import { Image } from 'astro:assets';
         class='-mt-6'
       >
         Dive Deeper
-      </Button> -->
+      </Button>
     </div>
   </div>
-</div>
+</div> -->

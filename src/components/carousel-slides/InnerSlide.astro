@@ -1,0 +1,66 @@
+---
+export interface Props {
+  align?: 'left' | 'right';
+  textClass?: string;
+  titleClass?: string;
+  roleClass?: string;
+  descriptionClass?: string;
+  class?: string;
+  [k: string]: any;
+}
+const {
+  align = 'left',
+  textClass = 'text-on-surface',
+  titleClass,
+  roleClass,
+  descriptionClass,
+  class: className,
+  ...rest
+} = Astro.props as Props;
+
+const titleClassList = titleClass ?? textClass;
+const roleClassList = roleClass ?? textClass;
+const descriptionClassList = descriptionClass ?? textClass;
+---
+
+<div
+  class:list={[
+    'z-10 flex w-full items-center',
+    {
+      'justify-start': align === 'left',
+      'justify-end': align === 'right',
+    },
+    className,
+  ]}
+  {...rest}
+>
+  <div
+    class:list={[
+      'flex h-full w-80 flex-col items-center py-8 text-center',
+      {
+        'ml-12 xl:ml-16': align === 'left',
+        'mr-12 xl:mr-12': align === 'right',
+      },
+    ]}
+  >
+    <div class='flex w-70 flex-1 flex-col items-center justify-center'>
+      <h3
+        class:list={['-mt-12 mb-1 text-8xl font-bold xl:-mt-6', titleClassList]}
+      >
+        <slot name='title' />
+      </h3>
+      <div class='flex flex-row gap-1'>
+        <slot name='chips' />
+      </div>
+      <p class:list={['min-w-max pt-2 text-xl font-semibold', roleClassList]}>
+        <slot name='role' />
+      </p>
+      <p class:list={['max-w-full pt-2 text-base', descriptionClassList]}>
+        <slot name='description' />
+      </p>
+    </div>
+    <div class='flex flex-1 flex-col justify-center'>
+      <slot name='button' />
+    </div>
+  </div>
+</div>
