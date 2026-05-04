@@ -1,7 +1,7 @@
 ---
-import ArticleLayout from '@/components/MainLayout.astro';
+import MainLayout from '@/components/MainLayout.astro';
 const resume = {
-  name: 'Dani T.',
+  name: 'Dani T',
   position: 'Software Engineer',
   stats: [
     { label: 'Location', value: 'Ottawa, ON' },
@@ -25,23 +25,23 @@ const resume = {
     'Seasoned full-stack engineer with a proven track record delivering critical features for top tier companies.' +
     ' Expertise in React, Vue, Angular, Agile methodologies and cross-functional collaboration. Led numerous' +
     ' overhauls of legacy codebases, showcasing problem-solving prowess, technical acumen and product development' +
-    ' strategy. Drove significant cost savings and improved user experiences across multiple projects. Known for' +
-    ' effective teamwork and communication, with key skills in UI/UX development and systems architecture.',
+    ' strategy. Drove significant cost savings and improved user experiences across multiple projects. Graduated <em>summa ' +
+    ' cum laude</em> in 2019. Known for effective teamwork and communication, with key skills in UI/UX development and systems architecture.',
   skillsTitle: 'Skills',
   skills: [
     {
       label: 'Languages',
-      value: 'JavaScript, TypeScript, HTML5, CSS3, Python, C#, Java, SQL',
+      value: 'JavaScript, TypeScript, HTML5, CSS3, Python, C#, Java, C++, SQL',
     },
     {
       label: 'Tools and Frameworks',
       value:
-        'React, Node.js, Docker, Angular, Vue, Vuetify, Redux, Express, Vite, Webpack, PostCSS, Sass, Tailwind, Tanstack, Astro, MaterialUI, Nginx, Spring, Next.js, PostgreSQL, MySQL, Git, Azure, AWS',
+        'React, Node.js, Docker, Angular, Vue, Vuetify, Redux, Express, Vite, Webpack, PostCSS, Sass, Tailwind, Tanstack, Astro, MaterialUI, Nginx, Spring, Next.js, GraphQL, Jest, Vitest, Selenium, PostgreSQL, MySQL, Git, Azure, AWS',
     },
     {
       label: 'Skills and Methodologies',
       value:
-        'Agile/Scrum, Test Driven Development (TDD), Continuous Integration and Development (CI/CD), UI/UX Design, Project Planning, Time Management and Prioritization, Systems Architecture, Technical Writing, "Vibe Coding" Cleanup',
+        'Agile/Scrum, Accessibility (a11y), Test Driven Development (TDD), Continuous Integration and Development (CI/CD), UI/UX Design, Post-framework Web Design, Internationalization (i18n), Systems Architecture, Project Planning, Time Management, Prioritization, Technical Writing, Product Development, Leadership, Collaboration, "Vibe Coding" Cleanup',
     },
   ],
   experienceTitle: 'Professional Experience',
@@ -52,11 +52,12 @@ const resume = {
       timeline: ['July 2023', 'September 2025 (2 years 3 months)'],
       achievements: [
         "Spearheaded greenfield rebuild of ZeroTier's legacy SaaS product using Vue, Vuetify, and SASS with a critical focus on relationship-based access control (ReBAC).",
-        'Led development of a Vuetify component library.',
+        'Led development of pixel-perfect, reactive Vuetify component library.',
+        'Added cross-app product analytics using PostHog and Google Analytics that uncovered a 2% conversion rate, increasing revenue by $300k in the first year alone.',
         'Integrated React Query into legacy code base, deprecating bloated Redux state and improving frontend performance by 29%.',
-        'Added cross-app product analytics using PostHog and Google Analytics that uncovered a 2% conversion rate, helping pivot company strategic focus to user onboarding.',
         'Retrofitted Gatsby.js marketing site to use self-hosted Strapi CMS, saving $3600 per year.',
-        'Partnered with Product Manager and Designer in strategic and tactical product planning.',
+        'Worked with Product and Design to shape product vision and translate strategy into actionable plans and deliverables.',
+        'Mentored less senior developers by offering career guidance and teaching ESNext best practices.',
       ],
     },
     {
@@ -76,7 +77,7 @@ const resume = {
       timeline: ['November 2022', 'July 2023 (8 months)'],
       achievements: [
         'Migrated frontend from Angular 10 to 14, boosting performance by 54% and enabling a ground-up, accessible rearchitecting of UX with reactive components, accelerating sales ability to answer customer questions from minutes to seconds.',
-        'Developed dynamic error validation system for highly technical user interface with input change side effects capable of handling 100s of rules and edge cases.',
+        'Designed complex, stateful user interface representing mechanical constraints of a custom forklift factory. It included a dynamic error validation system with input change side effects capable of handling 100s of rules and edge cases.',
       ],
     },
     {
@@ -85,9 +86,8 @@ const resume = {
       subtitle: 'Contracted via Callibrity',
       timeline: ['January 2022', 'October 2023 (10 months)'],
       achievements: [
-        'Collaborated with hardware engineers to deliver cloud-configurable IoT parking kiosks used by garage customers and attendants.',
-        'Implemented flow that conditionally handled myriad entry configurations - from hardware camera with AR to RFID to ticketing system - which was able to handle dozens of client-configured discounts and price points.',
-        'Used React and Redux to build kiosk configuration UI with role based access control (RBAC), coupon/ticket printing, physical cash exchange, access groups, and variable time pricing.',
+        'Built a cloud-first, scalable tooling suite in close collaboration with hardware engineers, enabling remote configuration of IoT parking kiosks used by garage customers and attendants.',
+        'Implemented complex entry flow using React and Redux that conditionally used myriad entry configurations - AR camera, RFID, ticketing, credit, physical cash exchange - and was able to handle dozens of client-set discounts and price points.',
       ],
     },
     {
@@ -96,8 +96,8 @@ const resume = {
       subtitle: 'Contracted via Callibrity',
       timeline: ['November 2019', 'December 2021 (2 years 1 month)'],
       achievements: [
+        'Built a zero deploy vaccine scheduling chatbot with rapidly changing, county-specific logic using a bespoke directed graph state machine. It served 30 million users by facilitating 2 million vaccinations in the first half of 2021. This solution saved Kroger ~$1,500,000/month on SaaS fees.',
         'Created high priority telehealth and drive thru scheduling flows using React in 2 weeks to aid in COVID response.',
-        'Built a zero deploy vaccine scheduling chatbot with rapidly changing, county-specific logic. It served 30 million users by facilitating 2 million vaccinations in the first half of 2021. This solution saved Kroger ~$1,500,000/month on SaaS fees',
         'Developed a generic scheduler framework library using TypeScript and React, empowering the team to build any type of healthcare scheduler the business asked for.',
       ],
     },
@@ -129,17 +129,21 @@ const resume = {
       degree: 'Bachelor of Science: Game Design and Development',
       timeline: ['August 2015', 'May 2019'],
       description: 'Graduated <em>summa cum laude</em>.',
+      achievements: [
+        'Led 30-student team in creating a large-scale Skyrim mod complete with new locations, armors, scripts and quests. Gleaned invaluable experience in team management and delegation.',
+        'Built a game engine capstone project in C++ and DirectX that included Physically Based Rendering (PBR), an entity-component game object model, particles, and terrain.',
+      ],
     },
   ],
 };
 ---
 
-<ArticleLayout>
-  <header
-    class='flex flex-col bg-primary p-8 text-on-primary lg:-mx-12 lg:px-12 lg:pt-12'
+<MainLayout>
+  <div
+    class='flex flex-col bg-primary px-4 py-4 text-on-primary md:px-8 md:py-6 lg:-mx-8 lg:px-8 lg:py-8'
   >
     <h1 class='h1 -mt-2 font-bold'>{resume.name}</h1>
-    <p class='text-4xl'>{resume.position}</p>
+    <p class='h3 font-normal'>{resume.position}</p>
     {
       resume.stats.map((nextStat) => (
         <p class='mt-2'>
@@ -152,15 +156,15 @@ const resume = {
         </p>
       ))
     }
-  </header>
-  <div class='px-8 py-8 lg:px-0'>
-    <p class='text-xl leading-normal'>
-      {resume.summary}
+  </div>
+  <div class='px-4 py-4 md:px-8 md:pt-6 lg:px-0 lg:pt-8'>
+    <p class='text-larger'>
+      <Fragment set:html={resume.summary} />
     </p>
     <h2 class='h2 mt-4 mb-1 text-primary'>{resume.skillsTitle}</h2>
     {
       resume.skills.map((nextSkill) => (
-        <p class='mt-2'>
+        <p class='mt-2 leading-snug'>
           <strong>{nextSkill.label}</strong> &ndash; {nextSkill.value}
         </p>
       ))
@@ -195,7 +199,9 @@ const resume = {
       resume.education.map((nextEducation, i) => (
         <div class:list={['mt-2', { 'mt-6': i > 0 }]}>
           <h3 class='h3'>{nextEducation.school}</h3>
-          <h4 class='h4 text-3xl'>{nextEducation.degree}</h4>
+          <h4 class='mt-1 text-md md:text-xl lg:text-3xl'>
+            {nextEducation.degree}
+          </h4>
           <p class='mt-1'>
             <em class='text-text-lighten-1'>
               {nextEducation.timeline[0]} &ndash; {nextEducation.timeline[1]}
@@ -204,8 +210,13 @@ const resume = {
           <p>
             <Fragment set:html={nextEducation.description} />
           </p>
+          <ul>
+            {nextEducation.achievements.map((nextAchievement) => (
+              <li>{nextAchievement}</li>
+            ))}
+          </ul>
         </div>
       ))
     }
   </div>
-</ArticleLayout>
+</MainLayout>

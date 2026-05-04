@@ -36,12 +36,27 @@
     }
   }
 
+  .text-larger {
+    @apply text-base;
+
+    @variant sm {
+      @apply text-lg;
+    }
+
+    @variant lg {
+      @apply text-xl;
+    }
+  }
+
   ul {
-    @apply list-disc pl-6;
+    @apply list-disc pl-4;
+    @variant lg {
+      @apply pl-6;
+    }
   }
 
   li {
-    @apply mt-1;
+    @apply mt-1 leading-snug;
   }
 
   .link {

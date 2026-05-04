@@ -16,12 +16,11 @@ const { class: className, ...rest } = Astro.props as Props;
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <slot name='head' />
   </head>
-  <body class='themeRoot bg-surface text-on-surface'>
+  <body
+    class='themeRoot h-full w-full overflow-x-hidden overflow-y-auto bg-surface text-on-surface'
+  >
     <SiteNav />
-    <div
-      class:list={['mx-auto w-full overflow-hidden lg:max-w-lg', className]}
-      {...rest}
-    >
+    <div class:list={['mx-auto w-full lg:max-w-lg', className]} {...rest}>
       <slot />
       <SiteFooter />
     </div>

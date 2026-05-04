@@ -2,7 +2,6 @@
   --btn-density-x: 1;
   --btn-density-y: 1;
   --btn-icon-density: 1;
-  --btn-text-top-margin: 2px;
 
   --btn-icon-mx: calc(var(--spacing) * -2.5);
   --btn-px: calc(var(--spacing) * 4);
@@ -14,8 +13,7 @@
   );
   --btn-on-color: var(--color-on-primary);
 
-  @apply inline-flex cursor-pointer items-center justify-center gap-1 rounded-lg border-2 text-center align-middle font-sans text-md leading-none font-bold uppercase no-underline;
-  /* @apply transition-all; */
+  @apply inline-flex cursor-pointer items-center justify-center gap-1 rounded-lg border-2 text-center align-middle font-sans text-md leading-none font-bold uppercase no-underline transition-all;
 
   @variant lg {
     @apply gap-2 text-base;
@@ -59,7 +57,6 @@
     --btn-density-x: 0.5;
     --btn-density-y: 0.8;
     --btn-icon-density: 0.4;
-    --btn-text-top-margin: 0px;
     @apply text-sm;
     @variant lg {
       @apply text-md;
@@ -69,7 +66,6 @@
     --btn-density-x: 1.5;
     --btn-density-y: 1.25;
     --btn-icon-density: 1.65;
-    --btn-text-top-margin: 1px;
     @apply gap-2 text-base;
     @variant lg {
       @apply text-lg;
@@ -107,20 +103,12 @@
     }
     &.btn-comfortable {
       --btn-icon-density: 1;
-      --btn-text-top-margin: 3px;
-      @variant lg {
-        --btn-text-top-margin: 1px;
-      }
     }
   }
 
   padding-left: calc(var(--btn-px) * var(--btn-density-x));
   padding-right: calc(var(--btn-px) * var(--btn-density-x));
   height: calc(var(--btn-height) * var(--btn-density-y));
-
-  & > .btn-content {
-    margin-top: var(--btn-text-top-margin);
-  }
 
   & > .start-icon {
     margin-left: calc(var(--btn-icon-mx) * var(--btn-icon-density));

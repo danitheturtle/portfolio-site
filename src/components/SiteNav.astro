@@ -3,9 +3,11 @@ import Button from './Button.astro';
 import ThemeSelector from './ThemeSelector.astro';
 ---
 
-<header class='sticky top-0 z-50 h-12 w-full bg-primary text-on-primary'>
+<header
+  class='sticky top-0 z-50 h-10 w-full bg-primary text-on-primary lg:h-12'
+>
   <div class='mx-auto flex h-full max-w-lg flex-row justify-between'>
-    <nav class='no-wrap mx-2 my-0 h-full lg:-mx-6'>
+    <nav class='no-wrap my-0 h-full md:mx-4 lg:-mx-6'>
       <Button as='a' href='/' variant='primary'>Home</Button>
       <!-- <Button as='a' href='/projects' variant='primary'>Projects</Button> -->
       <Button as='a' href='/resume' variant='primary'>Resume</Button>

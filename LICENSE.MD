@@ -1,3 +1,2 @@
-Do what you want, I'm not your mother.
-
+Do what you want
 For more information, please refer to <https://unlicense.org/>
