@@ -38,14 +38,14 @@ const descriptionClassList = descriptionClass ?? textClass;
     class:list={[
       'flex h-full w-80 flex-col items-center py-8 text-center',
       {
-        'ml-12 xl:ml-16': align === 'left',
-        'mr-12 xl:mr-12': align === 'right',
+        'ml-12 lg:ml-16': align === 'left',
+        'mr-12 lg:mr-12': align === 'right',
       },
     ]}
   >
     <div class='flex w-70 flex-1 flex-col items-center justify-center'>
       <h3
-        class:list={['-mt-12 mb-1 text-8xl font-bold xl:-mt-6', titleClassList]}
+        class:list={['-mt-12 mb-1 text-8xl font-bold lg:-mt-6', titleClassList]}
       >
         <slot name='title' />
       </h3>

@@ -1,10 +1,12 @@
 .btn {
   --btn-density-x: 1;
   --btn-density-y: 1;
-  --btn-px: calc(var(--spacing) * 6);
-  --btn-icon-mx: calc(var(--spacing) * -3.5);
   --btn-icon-density: 1;
-  --btn-height: calc(var(--spacing) * 10);
+  --btn-text-top-margin: 2px;
+
+  --btn-icon-mx: calc(var(--spacing) * -2.5);
+  --btn-px: calc(var(--spacing) * 4);
+  --btn-height: calc(var(--spacing) * 8);
 
   --btn-color: var(--color-primary);
   --btn-color-lighten: oklch(
@@ -12,7 +14,15 @@
   );
   --btn-on-color: var(--color-on-primary);
 
-  @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border-2 text-center align-middle font-sans text-base font-bold uppercase no-underline transition-all;
+  @apply inline-flex cursor-pointer items-center justify-center gap-1 rounded-lg border-2 text-center align-middle font-sans text-md leading-none font-bold uppercase no-underline;
+  /* @apply transition-all; */
+
+  @variant lg {
+    @apply gap-2 text-base;
+    --btn-icon-mx: calc(var(--spacing) * -3.5);
+    --btn-px: calc(var(--spacing) * 6);
+    --btn-height: calc(var(--spacing) * 10);
+  }
 
   border-color: var(--btn-color);
   color: var(--btn-color);
@@ -47,29 +57,47 @@
 
   &.btn-compact {
     --btn-density-x: 0.5;
-    --btn-density-y: 0.75;
-    --btn-icon-density: 0.25;
-    @apply text-md;
+    --btn-density-y: 0.8;
+    --btn-icon-density: 0.4;
+    --btn-text-top-margin: 0px;
+    @apply text-sm;
+    @variant lg {
+      @apply text-md;
+    }
   }
   &.btn-comfortable {
     --btn-density-x: 1.5;
     --btn-density-y: 1.25;
-    --btn-icon-density: 1.875;
-    @apply text-lg;
+    --btn-icon-density: 1.65;
+    --btn-text-top-margin: 1px;
+    @apply gap-2 text-base;
+    @variant lg {
+      @apply text-lg;
+    }
   }
   &.btn-sm {
-    --btn-px: calc(var(--spacing) * 4);
-    --btn-icon-mx: calc(var(--spacing) * -2);
-    --btn-height: calc(var(--spacing) * 8);
+    --btn-icon-mx: calc(var(--spacing) * -1);
+    --btn-px: calc(var(--spacing) * 3);
+    --btn-height: calc(var(--spacing) * 7);
+    @variant lg {
+      --btn-icon-mx: calc(var(--spacing) * -2);
+      --btn-px: calc(var(--spacing) * 4);
+      --btn-height: calc(var(--spacing) * 8);
+    }
   }
   &.btn-lg {
-    --btn-px: calc(var(--spacing) * 8);
-    --btn-icon-mx: calc(var(--spacing) * -5.75);
-    --btn-height: calc(var(--spacing) * 12);
+    --btn-px: calc(var(--spacing) * 6);
+    --btn-icon-mx: calc(var(--spacing) * -4.5);
+    --btn-height: calc(var(--spacing) * 9);
+    @variant lg {
+      --btn-px: calc(var(--spacing) * 8);
+      --btn-icon-mx: calc(var(--spacing) * -5.75);
+      --btn-height: calc(var(--spacing) * 12);
+    }
   }
 
   &.btn-text {
-    @apply border-none;
+    border-style: none;
     --btn-px: calc(var(--btn-height) / 2);
     --btn-icon-mx: calc(var(--btn-height) / -4);
     --btn-density-x: 1;
@@ -79,12 +107,20 @@
     }
     &.btn-comfortable {
       --btn-icon-density: 1;
+      --btn-text-top-margin: 3px;
+      @variant lg {
+        --btn-text-top-margin: 1px;
+      }
     }
   }
 
   padding-left: calc(var(--btn-px) * var(--btn-density-x));
   padding-right: calc(var(--btn-px) * var(--btn-density-x));
   height: calc(var(--btn-height) * var(--btn-density-y));
+
+  & > .btn-content {
+    margin-top: var(--btn-text-top-margin);
+  }
 
   & > .start-icon {
     margin-left: calc(var(--btn-icon-mx) * var(--btn-icon-density));
@@ -94,6 +130,7 @@
     margin-right: calc(var(--btn-icon-mx) * var(--btn-icon-density));
   }
 }
+
 theme-selector > .btn,
 nav > .btn {
   border-radius: 0;

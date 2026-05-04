@@ -2,7 +2,8 @@
 import Chip from '@/components/Chip.astro';
 ---
 
-<div class='flex flex-row items-start gap-2 pt-4'>
+<h2 class='h2'>Chips</h2>
+<div class='mt-4 flex flex-row flex-wrap items-start gap-2'>
   <Chip density='comfortable' size='lg'>Comfortable</Chip>
   <Chip size='lg'>Large</Chip>
   <Chip density='compact' size='lg'>Compact</Chip>
@@ -13,7 +14,7 @@ import Chip from '@/components/Chip.astro';
   <Chip size='sm'>Small</Chip>
   <Chip density='compact' size='sm'>Compact</Chip>
 </div>
-<div class='flex flex-row items-start gap-2 pt-4'>
+<div class='mt-4 flex flex-row flex-wrap items-start gap-2'>
   <Chip density='comfortable' size='lg' color='border-secondary text-secondary'
     >Comfortable</Chip
   >
@@ -24,12 +25,12 @@ import Chip from '@/components/Chip.astro';
   <Chip density='comfortable' color='border-secondary text-secondary'
     >Comfortable</Chip
   >
-  <Chip color='border-blue-500 text-blue-500'>Default</Chip>
-  <Chip density='compact' color='border-blue-500 text-blue-500'>Compact</Chip>
+  <Chip color='border-secondary text-secondary'>Default</Chip>
+  <Chip density='compact' color='border-secondary text-secondary'>Compact</Chip>
   <Chip density='comfortable' size='sm' color='border-secondary text-secondary'
     >Comfortable</Chip
   >
-  <Chip size='sm' color='border-blue-500 text-blue-500'>Small</Chip>
+  <Chip size='sm' color='border-secondary text-secondary'>Small</Chip>
   <Chip density='compact' size='sm' color='border-secondary text-secondary'
     >Compact</Chip
   >

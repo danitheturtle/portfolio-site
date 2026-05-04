@@ -2,6 +2,11 @@
 import SiteNav from './SiteNav.astro';
 import SiteFooter from './SiteFooter.astro';
 import '@/styles/main.css';
+export interface Props {
+  class?: string;
+  [k: string]: any;
+}
+const { class: className, ...rest } = Astro.props as Props;
 ---
 
 <!doctype html>
@@ -13,7 +18,10 @@ import '@/styles/main.css';
   </head>
   <body class='themeRoot bg-surface text-on-surface'>
     <SiteNav />
-    <div class='mx-auto max-w-lg'>
+    <div
+      class:list={['mx-auto w-full overflow-hidden lg:max-w-lg', className]}
+      {...rest}
+    >
       <slot />
       <SiteFooter />
     </div>

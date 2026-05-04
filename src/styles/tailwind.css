@@ -88,7 +88,7 @@
   --color-primary-lighten: oklch(
     from var(--color-red-500) calc(l + 0.05) calc(c - 0.01) h
   );
-  --color-secondary: var(--color-blue-600);
+  --color-secondary: var(--color-blue-500);
   --color-secondary-lighten: oklch(
     from var(--color-blue-600) calc(l + 0.05) calc(c - 0.01) h
   );
@@ -103,6 +103,7 @@
   --color-text-lighten-2: var(--color-grey-500);
 
   /* breakpoints and container sizes */
+  /* Styles should only change at sm, lg, and 6xl (tablet, laptop, desktop) */
   --container-4xs: 18rem; /* smallest phone, accounting for margins */
   --container-3xs: 24rem; /* 384 - most phones above this */
   --container-2xs: 32rem;
@@ -123,12 +124,6 @@
 /* non-default breakpoints */
 @custom-variant 6xl {
   @media (min-width: 112rem) {
-    @slot;
-  }
-}
-
-@custom-variant 8xl {
-  @media (min-width: 128rem) {
     @slot;
   }
 }

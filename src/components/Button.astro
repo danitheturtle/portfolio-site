@@ -76,7 +76,9 @@ if (hoverColor !== undefined) {
       />
     )
   }
-  <slot />
+  <span class='btn-content'>
+    <slot />
+  </span>
   {
     endIcon !== undefined && (
       <Icon

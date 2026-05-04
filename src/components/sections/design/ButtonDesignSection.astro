@@ -2,209 +2,234 @@
 import Button from '@/components/Button.astro';
 ---
 
-<div class='flex flex-row flex-wrap gap-4'>
-  <div class='flex flex-col items-start gap-2'>
-    <h3 class='h3'>compact</h3>
-    <div class='flex flex-row items-start gap-2'>
-      <Button density='compact' variant='primary' size='lg'>Prime</Button>
-      <Button density='compact' variant='primary' size='md'>Prime</Button>
-      <Button density='compact' variant='primary' size='sm'>Prime</Button>
-    </div>
-    <div class='flex flex-row items-start gap-2'>
-      <Button density='compact' size='lg'>Second</Button>
-      <Button density='compact' size='md'>Second</Button>
-      <Button density='compact' size='sm'>Second</Button>
-    </div>
-    <div class='flex flex-row items-start gap-2'>
-      <Button density='compact' variant='text' size='lg'>Text</Button>
-      <Button density='compact' variant='text' size='md'>Text</Button>
-      <Button density='compact' variant='text' size='sm'>Text</Button>
-    </div>
-  </div>
-  <div class='flex flex-col items-start gap-2'>
-    <h3 class='h3'>compact icons</h3>
-    <div class='flex flex-row items-start gap-2'>
-      <Button
-        density='compact'
-        variant='primary'
-        size='lg'
-        startIcon='Plus'
-        endIcon='Plus'>Prime</Button
-      >
-      <Button
-        density='compact'
-        variant='primary'
-        size='md'
-        startIcon='Plus'
-        endIcon='Plus'>Prime</Button
-      >
-      <Button
-        density='compact'
-        variant='primary'
-        size='sm'
-        startIcon='Plus'
-        endIcon='Plus'>Prime</Button
-      >
-    </div>
-    <div class='flex flex-row items-start gap-2'>
-      <Button density='compact' size='lg' startIcon='Plus' endIcon='Plus'
-        >Second</Button
-      >
-      <Button density='compact' size='md' startIcon='Plus' endIcon='Plus'
-        >Second</Button
-      >
-      <Button density='compact' size='sm' startIcon='Plus' endIcon='Plus'
-        >Second</Button
-      >
-    </div>
-    <div class='flex flex-row items-start gap-2'>
-      <Button
-        density='compact'
-        variant='text'
-        size='lg'
-        startIcon='Plus'
-        endIcon='Plus'>Text</Button
-      >
-      <Button
-        density='compact'
-        variant='text'
-        size='md'
-        startIcon='Plus'
-        endIcon='Plus'>Text</Button
-      >
-      <Button
-        density='compact'
-        variant='text'
-        size='sm'
-        startIcon='Plus'
-        endIcon='Plus'>Text</Button
-      >
-    </div>
-  </div>
-  <div class='flex flex-col items-start gap-2'>
-    <h3 class='h3'>normal</h3>
-    <div class='flex flex-row items-start gap-2'>
-      <Button variant='primary' size='lg'>Prime</Button>
-      <Button variant='primary' size='md'>Prime</Button>
-      <Button variant='primary' size='sm'>Prime</Button>
-    </div>
-    <div class='flex flex-row items-start gap-2'>
-      <Button size='lg'>Second</Button>
-      <Button size='md'>Second</Button>
-      <Button size='sm'>Second</Button>
-    </div>
-    <div class='flex flex-row items-start gap-2'>
-      <Button variant='text' size='lg'>Text</Button>
-      <Button variant='text' size='md'>Text</Button>
-      <Button variant='text' size='sm'>Text</Button>
-    </div>
-  </div>
-  <div class='flex flex-col items-start gap-2'>
-    <h3 class='h3'>normal icons</h3>
-    <div class='flex flex-row items-start gap-2'>
-      <Button variant='primary' size='lg' startIcon='Plus' endIcon='Plus'
-        >Prime</Button
-      >
-      <Button variant='primary' size='md' startIcon='Plus' endIcon='Plus'
-        >Prime</Button
-      >
-      <Button variant='primary' size='sm' startIcon='Plus' endIcon='Plus'
-        >Prime</Button
-      >
-    </div>
-    <div class='flex flex-row items-start gap-2'>
-      <Button size='lg' startIcon='Plus' endIcon='Plus'>Second</Button>
-      <Button size='md' startIcon='Plus' endIcon='Plus'>Second</Button>
-      <Button size='sm' startIcon='Plus' endIcon='Plus'>Second</Button>
-    </div>
-    <div class='flex flex-row items-start gap-2'>
-      <Button variant='text' size='lg' startIcon='Plus' endIcon='Plus'
-        >Text</Button
-      >
-      <Button variant='text' size='md' startIcon='Plus' endIcon='Plus'
-        >Text</Button
-      >
-      <Button variant='text' size='sm' startIcon='Plus' endIcon='Plus'
-        >Text</Button
-      >
-    </div>
-  </div>
-  <div class='flex flex-col items-start gap-2'>
+<h2 class='h2'>Buttons</h2>
+<div class='mt-4 flex flex-col flex-wrap gap-x-0 gap-y-4 lg:flex-row'>
+  <div class='flex flex-col items-start gap-2 lg:w-1/2'>
     <h3 class='h3'>comfortable</h3>
-    <div class='flex flex-row items-start gap-2'>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
       <Button density='comfortable' variant='primary' size='lg'>Prime</Button>
       <Button density='comfortable' variant='primary' size='md'>Prime</Button>
       <Button density='comfortable' variant='primary' size='sm'>Prime</Button>
     </div>
-    <div class='flex flex-row items-start gap-2'>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
       <Button density='comfortable' size='lg'>Second</Button>
       <Button density='comfortable' size='md'>Second</Button>
       <Button density='comfortable' size='sm'>Second</Button>
     </div>
-    <div class='flex flex-row items-start gap-2'>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
       <Button density='comfortable' variant='text' size='lg'>Text</Button>
       <Button density='comfortable' variant='text' size='md'>Text</Button>
       <Button density='comfortable' variant='text' size='sm'>Text</Button>
     </div>
   </div>
-  <div class='flex flex-col items-start gap-2'>
+  <div class='flex flex-col items-start gap-2 lg:w-1/2'>
     <h3 class='h3'>comfortable icons</h3>
-    <div class='flex flex-row items-start gap-2'>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
       <Button
         density='comfortable'
         variant='primary'
         size='lg'
         startIcon='Plus'
-        endIcon='Plus'>Prime</Button
+        endIcon='Plus'
       >
+        Prime
+      </Button>
       <Button
         density='comfortable'
         variant='primary'
         size='md'
         startIcon='Plus'
-        endIcon='Plus'>Prime</Button
+        endIcon='Plus'
       >
+        Prime
+      </Button>
       <Button
         density='comfortable'
         variant='primary'
         size='sm'
         startIcon='Plus'
-        endIcon='Plus'>Prime</Button
+        endIcon='Plus'
       >
+        Prime
+      </Button>
     </div>
-    <div class='flex flex-row items-start gap-2'>
-      <Button density='comfortable' size='lg' startIcon='Plus' endIcon='Plus'
-        >Second</Button
-      >
-      <Button density='comfortable' size='md' startIcon='Plus' endIcon='Plus'
-        >Second</Button
-      >
-      <Button density='comfortable' size='sm' startIcon='Plus' endIcon='Plus'
-        >Second</Button
-      >
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button density='comfortable' size='lg' startIcon='Plus' endIcon='Plus'>
+        Second
+      </Button>
+      <Button density='comfortable' size='md' startIcon='Plus' endIcon='Plus'>
+        Second
+      </Button>
+      <Button density='comfortable' size='sm' startIcon='Plus' endIcon='Plus'>
+        Second
+      </Button>
     </div>
-    <div class='flex flex-row items-start gap-2'>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
       <Button
         density='comfortable'
         variant='text'
         size='lg'
         startIcon='Plus'
-        endIcon='Plus'>Text</Button
+        endIcon='Plus'
       >
+        Text
+      </Button>
       <Button
         density='comfortable'
         variant='text'
         size='md'
         startIcon='Plus'
-        endIcon='Plus'>Text</Button
+        endIcon='Plus'
       >
+        Text
+      </Button>
       <Button
         density='comfortable'
         variant='text'
         size='sm'
         startIcon='Plus'
-        endIcon='Plus'>Text</Button
+        endIcon='Plus'
       >
+        Text
+      </Button>
+    </div>
+  </div>
+  <div class='flex flex-col items-start gap-2 lg:w-1/2'>
+    <h3 class='h3'>normal</h3>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button variant='primary' size='lg'>Prime</Button>
+      <Button variant='primary' size='md'>Prime</Button>
+      <Button variant='primary' size='sm'>Prime</Button>
+    </div>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button size='lg'>Second</Button>
+      <Button size='md'>Second</Button>
+      <Button size='sm'>Second</Button>
+    </div>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button variant='text' size='lg'>Text</Button>
+      <Button variant='text' size='md'>Text</Button>
+      <Button variant='text' size='sm'>Text</Button>
+    </div>
+  </div>
+  <div class='flex flex-col items-start gap-2 lg:w-1/2'>
+    <h3 class='h3'>normal icons</h3>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button variant='primary' size='lg' startIcon='Plus' endIcon='Plus'>
+        Prime
+      </Button>
+      <Button variant='primary' size='md' startIcon='Plus' endIcon='Plus'>
+        Prime
+      </Button>
+      <Button variant='primary' size='sm' startIcon='Plus' endIcon='Plus'>
+        Prime
+      </Button>
+    </div>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button size='lg' startIcon='Plus' endIcon='Plus'>Second</Button>
+      <Button size='md' startIcon='Plus' endIcon='Plus'>Second</Button>
+      <Button size='sm' startIcon='Plus' endIcon='Plus'>Second</Button>
+    </div>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button variant='text' size='lg' startIcon='Plus' endIcon='Plus'>
+        Text
+      </Button>
+      <Button variant='text' size='md' startIcon='Plus' endIcon='Plus'>
+        Text
+      </Button>
+      <Button variant='text' size='sm' startIcon='Plus' endIcon='Plus'>
+        Text
+      </Button>
+    </div>
+  </div>
+  <div class='flex flex-col items-start gap-2 lg:w-1/2'>
+    <h3 class='h3'>compact</h3>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button density='compact' variant='primary' size='lg'>Prime</Button>
+      <Button density='compact' variant='primary' size='md'>Prime</Button>
+      <Button density='compact' variant='primary' size='sm'>Prime</Button>
+    </div>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button density='compact' size='lg'>Second</Button>
+      <Button density='compact' size='md'>Second</Button>
+      <Button density='compact' size='sm'>Second</Button>
+    </div>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button density='compact' variant='text' size='lg'>Text</Button>
+      <Button density='compact' variant='text' size='md'>Text</Button>
+      <Button density='compact' variant='text' size='sm'>Text</Button>
+    </div>
+  </div>
+  <div class='flex flex-col items-start gap-2 lg:w-1/2'>
+    <h3 class='h3'>compact icons</h3>
+    <div class='flex flex-row flex-wrap items-start gap-2'>
+      <Button
+        density='compact'
+        variant='primary'
+        size='lg'
+        startIcon='Plus'
+        endIcon='Plus'
+      >
+        Prime
+      </Button>
+      <Button
+        density='compact'
+        variant='primary'
+        size='md'
+        startIcon='Plus'
+        endIcon='Plus'
+      >
+        Prime
+      </Button>
+      <Button
+        density='compact'
+        variant='primary'
+        size='sm'
+        startIcon='Plus'
+        endIcon='Plus'
+      >
+        Prime
+      </Button>
+    </div>
+    <div class='flex flex-row items-start gap-2 lg:w-1/2'>
+      <Button density='compact' size='lg' startIcon='Plus' endIcon='Plus'>
+        Second
+      </Button>
+      <Button density='compact' size='md' startIcon='Plus' endIcon='Plus'>
+        Second
+      </Button>
+      <Button density='compact' size='sm' startIcon='Plus' endIcon='Plus'>
+        Second
+      </Button>
+    </div>
+    <div class='flex flex-row items-start gap-2 lg:w-1/2'>
+      <Button
+        density='compact'
+        variant='text'
+        size='lg'
+        startIcon='Plus'
+        endIcon='Plus'
+      >
+        Text
+      </Button>
+      <Button
+        density='compact'
+        variant='text'
+        size='md'
+        startIcon='Plus'
+        endIcon='Plus'
+      >
+        Text
+      </Button>
+      <Button
+        density='compact'
+        variant='text'
+        size='sm'
+        startIcon='Plus'
+        endIcon='Plus'
+      >
+        Text
+      </Button>
     </div>
   </div>
 </div>

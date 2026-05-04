@@ -9,13 +9,14 @@ import IconDesignSection from '@/components/sections/design/IconDesignSection.as
 const displayString = 'The quick brown fox jumps over the lazy dog';
 ---
 
-<MainLayout>
-  <div class='flex flex-row items-start gap-2 pt-4'>
+<MainLayout class='px-4 lg:px-0'>
+  <h2 class='h2 mt-4'>Cards</h2>
+  <div class='flex flex-row flex-wrap items-start gap-2 pt-4'>
     <Card
       title='Card Title'
       subtitle='Card Subtitle is longer'
       divider
-      class='mt-8'
+      class='min-w-4xs flex-1'
     >
       <p>
         Test Project description lorum ipsum dolor atsdfe nwap;oinv; wienrinower
@@ -25,7 +26,7 @@ const displayString = 'The quick brown fox jumps over the lazy dog';
       title='Card Title'
       subtitle='Card Subtitle is longer'
       divider
-      class='mt-8'
+      class='min-w-4xs flex-1'
     >
       <p>
         Test Project description lorum ipsum dolor atsdfe nwap;oinv; wienrinower
@@ -35,7 +36,7 @@ const displayString = 'The quick brown fox jumps over the lazy dog';
       title='Card Title'
       subtitle='Card Subtitle is longer'
       divider
-      class='mt-8'
+      class='min-w-4xs flex-1'
     >
       <p>
         Test Project description lorum ipsum dolor atsdfe nwap;oinv; wienrinower
@@ -49,6 +50,17 @@ const displayString = 'The quick brown fox jumps over the lazy dog';
   <Divider />
   <ChipDesignSection />
   <Divider />
+  <h2 class='h2 mb-4'>Font Class Sizing</h2>
+  <p class='h1'>.h1 - heading 1</p>
+  <p class='h2'>.h2 - heading 2</p>
+  <p class='h3'>.h3 - heading 3</p>
+  <p class='h4'>.h4 - heading 4</p>
+  <p class='h5'>.h5 - heading 5</p>
+  <p class='h6'>.h6 - heading 6</p>
+  <p class='text'>.text - {displayString}</p>
+  <a href='/' class='link'>.link - link text</a>
+  <Divider />
+  <h2 class='h2 mb-4'>Absolute Text Sizes</h2>
   <p class='text-xs'>text-xs {displayString}</p>
   <p class='text-sm'>text-sm {displayString}</p>
   <p class='text-md'>text-md {displayString}</p>
@@ -64,14 +76,5 @@ const displayString = 'The quick brown fox jumps over the lazy dog';
   <p class='text-8xl'>text-8xl {displayString}</p>
   <p class='text-9xl'>text-9xl {displayString}</p>
   <p class='text-10xl'>text-10xl {displayString}</p>
-  <Divider />
-  <h1 class='h1'>h1 - heading 1</h1>
-  <h2 class='h2'>h2 - heading 2</h2>
-  <h3 class='h3'>h3 - heading 3</h3>
-  <h4 class='h4'>h4 - heading 4</h4>
-  <h5 class='h5'>h5 - heading 5</h5>
-  <h6 class='h6'>h6 - heading 6</h6>
-  <p>p - {displayString}</p>
-  <a href='/'>a - link text</a>
   <Divider />
 </MainLayout>
