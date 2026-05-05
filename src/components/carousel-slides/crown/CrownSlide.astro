@@ -5,6 +5,8 @@ import InnerSlide from '@/components/carousel-slides/InnerSlide.astro';
 // eslint-disable-next-line import-x/no-unresolved
 import { Image } from 'astro:assets';
 // import Button from '@/components/Button.astro';
+const chipClasses =
+  'text-[1.37cqw] tracking-[0.031cqw] leading-[117.5%] border-[0.3cqw] md:border-[0.2cqw]';
 ---
 
 <div class='absolute top-0 left-0 h-full w-full bg-[#FDA949]'></div>
@@ -21,16 +23,36 @@ import { Image } from 'astro:assets';
 >
   <Fragment slot='title'>Crown</Fragment>
   <Fragment slot='chips'>
-    <Chip color='text-grey-800 border-grey-800' density='compact' size='md'>
+    <Chip
+      color='text-grey-800 border-grey-800'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       TypeScript
     </Chip>
-    <Chip color='text-red-700 border-red-700' density='compact' size='md'>
+    <Chip
+      color='text-red-700 border-red-700'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       Angular
     </Chip>
-    <Chip color='text-slate-600 border-slate-600' density='compact' size='md'>
+    <Chip
+      color='text-slate-600 border-slate-600'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       RxJS
     </Chip>
-    <Chip color='text-orange-800 border-orange-800' density='compact' size='md'>
+    <Chip
+      color='text-orange-800 border-orange-800'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       NgRx
     </Chip>
   </Fragment>

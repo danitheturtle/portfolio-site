@@ -4,6 +4,9 @@ import zeroTierShowcase from './ZeroTierCarouselBackground.webp';
 // eslint-disable-next-line import-x/no-unresolved
 import { Image } from 'astro:assets';
 import InnerSlide from '@/components/carousel-slides/InnerSlide.astro';
+
+const chipClasses =
+  'text-[1.37cqw] tracking-[0.031cqw] leading-[117.5%] border-[0.3cqw] md:border-[0.2cqw]';
 ---
 
 <style>
@@ -30,10 +33,10 @@ import InnerSlide from '@/components/carousel-slides/InnerSlide.astro';
   }
 </style>
 <div class='bg-gradient-1 absolute -top-3/4 -left-3/4 h-[175%] w-[150%]'></div>
-<div class='bg-gradient-2 absolute -right-3/4 -bottom-[125%] h-[225%] w-[150%]'>
+<div class='bg-gradient-2 absolute -right-3/4 bottom-[-125%] h-[225%] w-[150%]'>
 </div>
 <div
-  class='bg-gradient-3 absolute -bottom-[150%] -left-[125%] h-[250%] w-[250%]'
+  class='bg-gradient-3 absolute bottom-[-150%] left-[-125%] h-[250%] w-[250%]'
 >
 </div>
 <Image
@@ -44,16 +47,36 @@ import InnerSlide from '@/components/carousel-slides/InnerSlide.astro';
 <InnerSlide align='right' textClass='text-grey-950' roleClass='text-grey-700'>
   <Fragment slot='title'>ZeroTier</Fragment>
   <Fragment slot='chips'>
-    <Chip color='text-blue-600 border-blue-600' density='compact' size='md'>
+    <Chip
+      color='text-blue-600 border-blue-600'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       TypeScript
     </Chip>
-    <Chip color='text-purple-600 border-purple-600' density='compact' size='md'>
+    <Chip
+      color='text-purple-600 border-purple-600'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       Vue
     </Chip>
-    <Chip color='text-sky-600 border-sky-600' density='compact' size='md'>
+    <Chip
+      color='text-sky-600 border-sky-600'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       Vuetify
     </Chip>
-    <Chip color='text-orange-600 border-orange-600' density='compact' size='md'>
+    <Chip
+      color='text-orange-600 border-orange-600'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       Pinia
     </Chip>
   </Fragment>

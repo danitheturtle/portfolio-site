@@ -36,26 +36,41 @@ const descriptionClassList = descriptionClass ?? textClass;
 >
   <div
     class:list={[
-      'flex h-full w-80 flex-col items-center py-8 text-center',
+      'flex h-full w-[31.25cqw] flex-col items-center py-[3.13cqw] text-center',
       {
-        'ml-12 lg:ml-16': align === 'left',
-        'mr-12 lg:mr-12': align === 'right',
+        'ml-[6.25cqw]': align === 'left',
+        'mr-[6.25cqw]': align === 'right',
       },
     ]}
   >
-    <div class='flex w-70 flex-1 flex-col items-center justify-center'>
+    <div
+      class='flex w-full flex-1 flex-col items-center justify-center lg:w-[27.34cqw]'
+    >
       <h3
-        class:list={['-mt-12 mb-1 text-8xl font-bold lg:-mt-6', titleClassList]}
+        class:list={[
+          'mt-[-4.69cqw] mb-[0.39cqw] text-[5.47cqw] leading-none font-bold tracking-[0.016cqw] lg:mt-[-2.34cqw]',
+          titleClassList,
+        ]}
       >
         <slot name='title' />
       </h3>
-      <div class='flex flex-row gap-1'>
+      <div class='flex flex-row gap-1' style='--spacing:0.39cqw;'>
         <slot name='chips' />
       </div>
-      <p class:list={['min-w-max pt-2 text-xl font-semibold', roleClassList]}>
+      <p
+        class:list={[
+          'min-w-max pt-[0.78cqw] text-[1.95cqw] leading-[130%] font-semibold tracking-[0.016cqw]',
+          roleClassList,
+        ]}
+      >
         <slot name='role' />
       </p>
-      <p class:list={['max-w-full pt-2 text-base', descriptionClassList]}>
+      <p
+        class:list={[
+          'max-w-full pt-[0.78cqw] text-[1.8cqw] leading-[120%] tracking-[0.016cqw] md:text-[1.56cqw]',
+          descriptionClassList,
+        ]}
+      >
         <slot name='description' />
       </p>
     </div>

@@ -31,15 +31,17 @@ const {
 
 const prevIndex = index > 0 ? index - 1 : slideCount - 1;
 const nextIndex = index < slideCount - 1 ? index + 1 : 0;
+
+// firefox has a bug where it doesn't update the variable colors while an element is opacity-0; use small non-zero opacity instead
 ---
 
 <label
   for={`${carouselId}-radio-${index}`}
   class:list={[
-    'z-20 mb-5 inline-block h-6 w-6 cursor-pointer rounded-full border-3 border-(--carousel-controls-normal) ring-(--carousel-controls-normal) transition-colors',
+    'z-20 mb-[1.17cqw] inline-block h-[3.9cqw] w-[3.9cqw] cursor-pointer rounded-full border-[0.6cqw] border-(--carousel-controls-normal) ring-(--carousel-controls-normal) transition-colors lg:mb-[1.95cqw] lg:h-[2.34cqw] lg:w-[2.34cqw] lg:border-[0.3cqw]',
     'hover:border-(--carousel-controls-hover) active:bg-(--carousel-controls-hover)',
-    'has-checked:border-(--carousel-controls-hover) has-checked:bg-(--carousel-controls-hover) has-checked:ring-2 has-checked:ring-(--carousel-controls-hover)',
-    'has-focus-visible:ring-3 has-focus-visible:ring-focus',
+    'has-checked:border-(--carousel-controls-hover) has-checked:bg-(--carousel-controls-hover) has-checked:ring-[0.2cqw] has-checked:ring-(--carousel-controls-hover)',
+    'has-focus-visible:ring-[0.3cqw] has-focus-visible:ring-focus',
     // tailwind is very stupid
     '[&:has(input:checked)+slide]:opacity-100',
   ]}
@@ -52,17 +54,19 @@ const nextIndex = index < slideCount - 1 ? index + 1 : 0;
     class:list={['sr-only', { 'light-controls': lightControls }]}
   />
 </label>
-<slide class='absolute h-full w-full opacity-0 transition-opacity duration-500'>
+<slide
+  class='absolute h-full w-full opacity-[0.01%] transition-opacity duration-500'
+>
   <content class:list={['relative flex h-full w-full', className]} {...rest}>
     <slot />
   </content>
   <controls
-    class='relative top-[calc(-50%-3rem)] z-20 flex w-full justify-between px-4'
+    class='relative top-[calc(-50%-4.69cqw)] z-20 flex w-full justify-between px-[1.56cqw]'
   >
     <label class='cursor-pointer' for={`${carouselId}-radio-${prevIndex}`}>
       <Icon
         icon='CircleLeft'
-        size='6rem'
+        size='9.38cqw'
         class='text-(--carousel-controls-normal) transition-all hover:text-(--carousel-controls-hover)'
       />
       <span class='sr-only'>Previous Slide</span>
@@ -70,7 +74,7 @@ const nextIndex = index < slideCount - 1 ? index + 1 : 0;
     <label class='cursor-pointer' for={`${carouselId}-radio-${nextIndex}`}>
       <Icon
         icon='CircleRight'
-        size='6rem'
+        size='9.38cqw'
         class='text-(--carousel-controls-normal) transition-all hover:text-(--carousel-controls-hover)'
       />
       <span class='sr-only'>Next Slide</span>

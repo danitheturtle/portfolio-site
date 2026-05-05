@@ -5,6 +5,8 @@ import krogerShowcase from './KrogerCarouselBackground.webp';
 import { Image } from 'astro:assets';
 import InnerSlide from '@/components/carousel-slides/InnerSlide.astro';
 // import Button from '@/components/Button.astro';
+const chipClasses =
+  'text-[1.37cqw] tracking-[0.031cqw] leading-[117.5%] border-[0.3cqw] md:border-[0.2cqw]';
 ---
 
 <style is:global>
@@ -31,16 +33,36 @@ import InnerSlide from '@/components/carousel-slides/InnerSlide.astro';
 <InnerSlide textClass='text-white' titleClass='text-white mb-2'>
   <Fragment slot='title'>Kroger</Fragment>
   <Fragment slot='chips'>
-    <Chip color='text-purple-300 border-purple-300' density='compact' size='md'>
+    <Chip
+      color='text-purple-300 border-purple-300'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       TypeScript
     </Chip>
-    <Chip color='text-sky-200 border-sky-200' density='compact' size='md'>
+    <Chip
+      color='text-sky-200 border-sky-200'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       React
     </Chip>
-    <Chip color='text-teal-200 border-teal-200' density='compact' size='md'>
+    <Chip
+      color='text-teal-200 border-teal-200'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       Redux
     </Chip>
-    <Chip color='text-yellow-300 border-yellow-300' density='compact' size='md'>
+    <Chip
+      color='text-yellow-300 border-yellow-300'
+      density='compact'
+      size='md'
+      class={chipClasses}
+    >
       Kotlin
     </Chip>
   </Fragment>
