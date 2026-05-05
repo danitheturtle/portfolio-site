@@ -4,6 +4,10 @@ export interface Props {
   [k: string]: any;
 }
 const { class: className, ...rest } = Astro.props as Props;
+
+// container sizing based on overall site max content width of 1024
+// 1cqw = 10.24px = 0.64rem
+// 1cqh = 5.76px = 0.36rem
 ---
 
 <style>
