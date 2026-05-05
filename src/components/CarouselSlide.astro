@@ -63,18 +63,24 @@ const nextIndex = index < slideCount - 1 ? index + 1 : 0;
   <controls
     class='relative top-[calc(-50%-4.69cqw)] z-20 flex w-full justify-between px-[1.56cqw]'
   >
-    <label class='cursor-pointer' for={`${carouselId}-radio-${prevIndex}`}>
+    <label
+      class='h-[9.38cqw] w-[9.38cqw] cursor-pointer'
+      for={`${carouselId}-radio-${prevIndex}`}
+    >
       <Icon
         icon='CircleLeft'
-        size='9.38cqw'
+        size='100%'
         class='text-(--carousel-controls-normal) transition-all hover:text-(--carousel-controls-hover)'
       />
       <span class='sr-only'>Previous Slide</span>
     </label>
-    <label class='cursor-pointer' for={`${carouselId}-radio-${nextIndex}`}>
+    <label
+      class='h-[9.38cqw] w-[9.38cqw] cursor-pointer'
+      for={`${carouselId}-radio-${nextIndex}`}
+    >
       <Icon
         icon='CircleRight'
-        size='9.38cqw'
+        size='100%'
         class='text-(--carousel-controls-normal) transition-all hover:text-(--carousel-controls-hover)'
       />
       <span class='sr-only'>Next Slide</span>
